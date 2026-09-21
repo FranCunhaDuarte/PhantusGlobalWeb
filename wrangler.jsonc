@@ -1,6 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "phantusglobal",
+  // Tiene que coincidir con el nombre del Worker que creó Cloudflare al
+  // conectar el repositorio. Si no coincide, el build de Cloudflare publica en
+  // un Worker distinto del que quedó enganchado a GitHub.
+  "name": "phantusglobal-site",
   "main": ".open-next/worker.js",
 
   // El adaptador pide 2024-09-23 o posterior. Va una fecha reciente para
