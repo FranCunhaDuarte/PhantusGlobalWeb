@@ -559,12 +559,37 @@ que se decide en JS no es si reproduce sino **si el elemento existe**, así que
 con la preferencia activa no hay ni pedido de red. El `<video>` se monta después
 de hidratar, o sea nunca antes que el póster.
 
-El velo es **negro al 58 %** y el número no es de gusto. El peor cuadro posible
-es blanco puro: ahí el compuesto es el gris `1 - α`, y para que el crema del
-texto (#F2ECE2, L = 0,8436) llegue a los 4,5:1 que pide el texto chico del hero
-hace falta L ≤ 0,1486, o sea sRGB 0,4217. De `1 - α ≤ 0,4217` sale `α ≥ 0,578`.
-Redondeado, 58 %, y el piso son 4,53:1 **sin mirar qué muestra el video**. No es
-"poca opacidad" y no puede serlo: al 50 % el mismo texto queda en 3,38:1.
+El velo oscurece al **42 % del original** y el número no es de gusto. El peor
+cuadro posible es blanco puro: para que el crema del texto (#F2ECE2, L = 0,8436)
+llegue a los 4,5:1 que pide el texto chico del hero hace falta L ≤ 0,1486, o sea
+sRGB 0,4217. De ahí sale el 0,42, y el piso son 4,53:1 **sin mirar qué muestra el
+video**. No es "poca opacidad" y no puede serlo: dejando pasar el 50 % el mismo
+texto queda en 3,38:1.
+
+**Y se aplica como `brightness(0.42)` sobre cada capa, no como un negro encima.**
+Fue `bg-black/58` en un `div` apoyado sobre el video, que da exactamente el mismo
+resultado —las dos operaciones son la misma multiplicación— pero se compone
+distinto. Un video opaco, sin filtro y sin transformación es justo el caso que
+Chromium puede mandar a un **plano de superposición del hardware**: en vez de
+dibujarlo con el resto de la página se lo pasa directo al controlador de
+pantalla, y lo que está dibujado encima queda del otro lado de la composición. Lo
+promueve cuando la página se queda quieta y vuelve atrás apenas algo se mueve,
+que era exactamente el síntoma reportado: **el velo se iba al frenar el scroll y
+volvía al moverse**. Un video con filtro no se puede promover, y sin velo no hay
+capa encima que perder.
+
+> **Este error no se puede ver con una captura, y eso costó un diagnóstico
+> entero.** Las capturas del navegador y la grabación de Playwright leen la
+> salida del renderizador, que es anterior a la composición del hardware: ahí el
+> velo siempre se ve bien. Una medición cuadro a cuadro dio el velo constante
+> —109,72 con rango 0,08 sobre 22 muestras— y de ahí salió una explicación
+> equivocada, que era el header pasando a crema. No lo era: el header cambia una
+> sola vez al cruzar los 8 px y no vuelve atrás. Lo único que ve este error es una
+> pantalla de verdad.
+
+**`FondoDeApertura` se queda con el `div` al 58 %** y eso no es una inconsistencia
+olvidada: las aperturas de `/nosotros`, `/mercados` y `/productos` son foto y no
+video, así que no hay nada que promover a un plano propio.
 
 Ese 4,54:1 es además el techo del hero: sobre el velo **nada se puede atenuar**,
 ni el rótulo ni el disparador del selector de idioma. Lo que quiera texto
