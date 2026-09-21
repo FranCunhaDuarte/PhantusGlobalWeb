@@ -893,6 +893,69 @@ dirección a los rastreadores de spam; el cliente la publicó en su copy y la
 decisión se tomó sabiendo ese costo. Si alguna vez hay que revertirlo, es ese
 bloque del `Footer` y la clave `email` del JSON-LD.
 
+## Deploy en Cloudflare Workers
+
+`@opennextjs/cloudflare` traduce la salida de `next build` a un Worker. Los
+comandos son `npm run cf:build`, `cf:preview` (lo levanta local con el runtime
+de verdad), `cf:deploy` y `cf:types`.
+
+**No alcanzaba con exportar el sitio estático.** Catorce de las catorce URLs se
+prerenderizan, sí, pero quedan dos cosas que necesitan servidor: el proxy de
+idioma de next-intl —que es el que manda `/` a `/es`— y la Server Action del
+formulario. Por eso va el adaptador y no `output: 'export'`.
+
+**Las dos banderas de compatibilidad no son intercambiables.** `nodejs_compat`
+es la obvia: el bundle de Next asume Node. `global_fetch_strictly_public` es la
+que se olvida, y hace que un `fetch()` del Worker a su propio dominio salga a
+internet en vez de resolverse adentro del runtime; sin ella no pasa por las
+reglas de Cloudflare ni por el caché.
+
+**`next/image` no anda sin el binding de Images.** El adaptador no trae
+optimizador propio: sin `IMAGES` declarado, las fotos salen sin optimizar y se
+pierden el `srcset` y el AVIF. Cloudflare cobra por transformación **única** y
+no por visita, y regala 5000 por mes; el sitio tiene 32 imágenes y con sus
+variantes queda en el orden de las 150 mensuales, así que entra gratis con
+mucho margen. Verificado en local: el póster del hero vuelve como WebP de
+16,7 kB contra los 276 del JPEG original.
+
+**El Worker mide 2,70 MB comprimidos contra el techo de 3 del plan gratuito**,
+o sea 8 % de aire. Es el número a mirar antes de sumar cualquier dependencia al
+servidor: una biblioteca mediana lo pasa. El plan pago ($5 al mes) lleva el
+techo a 10 MB y el problema desaparece. Los 11 MB de fotos y el video **no
+cuentan**: salen de Workers Assets, que es gratis y no consume pedidos
+facturables.
+
+**Sin caché incremental, a propósito.** Ninguna página declara `revalidate`, así
+que no hay nada que guardar. El día que alguna lo haga, se engancha KV o R2 en
+`open-next.config.ts`.
+
+> **El límite de envíos del formulario deja de servir acá, y es lo más
+> importante de esta fase.** `limite-de-envios.ts` cuenta en un `Map` del heap,
+> y el propio archivo ya avisaba que en un runtime que levanta instancias por
+> pedido el tope real pasa a ser el escrito por la cantidad de instancias.
+> Cloudflare corre muchos isolates, en muchos centros de datos, y los recicla:
+> el cupo de 5 cada 10 minutos pasa a ser 5 **por isolate**. La trampa y el
+> tiempo mínimo siguen funcionando igual, pero el tope por IP no. Lo que
+> corresponde es el binding nativo de rate limiting de Cloudflare, que es
+> gratis y no agrega servicio.
+
+> **La IP sigue saliendo bien, pero por casualidad documentada.** Cloudflare
+> agrega la IP del visitante **al final** de `x-forwarded-for`, así que leer
+> desde la derecha con `CONTACTO_PROXIES_DE_CONFIANZA=1` da la correcta. Lo
+> robusto es `CF-Connecting-IP`, que la pone el borde de Cloudflare y no se
+> puede falsificar. Es una línea en `ip-del-pedido.ts`.
+
+> **El proxy de idioma corre como middleware de Node y eso es experimental.**
+> El build lo avisa: los mantenedores de OpenNext no lo sostienen oficialmente.
+> Anda —está probado ruta por ruta— pero es lo primero a mirar si algún día una
+> actualización rompe el redirect de idioma.
+
+**Las credenciales no van en `wrangler.jsonc`**, que se commitea:
+`RESEND_API_KEY`, `CONTACTO_DESTINO` y `CONTACTO_REMITENTE` se cargan con
+`wrangler secret put`. Mientras falten, el formulario contesta igual y escribe
+el mail al log como envío simulado, así que **un sitio publicado sin ellas
+acepta consultas y no las manda a ningún lado**.
+
 ## Estado de las fases
 
 - **Fase 0 — cerrada.** Andamiaje: Next + Tailwind + next-intl, i18n, tokens de
@@ -1035,7 +1098,11 @@ bloque del `Footer` y la clave `email` del JSON-LD.
   Atlántico Sur. Con carnes de vuelta como unidad, eso es una tensión real —no un
   error—: hay que decidir si el encuadre general se abre o si carnes queda
   declaradamente en segundo plano, que es lo que hoy dice su propia página.
-- **Pendiente.** El deploy con Docker.
+- **Fase 13 — el deploy, a medio camino.** Deja de ser Docker sobre un VPS y
+  pasa a **Cloudflare Workers** con `@opennextjs/cloudflare`. El proyecto está
+  configurado, construido y probado de punta a punta en local; lo único que
+  falta es `wrangler login` y `npm run cf:deploy`, que son de Franco porque
+  publican el sitio con su cuenta. Ver **Deploy en Cloudflare Workers**.
 - **Pendiente, anterior a esta fase.** El LCP de la home con red de móvil es la
   foto del hero y está en 2,6–2,7 s, arriba del umbral de 2,5. Y hay un
   desplazamiento de 0,040 a 375 px que entra a los 1,3 s sobre una sección
