@@ -8,7 +8,11 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "assets:brand": "node scripts/generar-assets.mjs",
-    "assets:og": "node scripts/generar-og.mjs"
+    "assets:og": "node scripts/generar-og.mjs",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:types": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "next": "16.3.5",
@@ -19,6 +23,7 @@
     "zod": "4.6.5"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.6",
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -27,6 +32,7 @@
     "playwright-core": "^1.63.0",
     "sharp": "^0.35.4",
     "tailwindcss": "4.3.3",
-    "typescript": "7.0.2"
+    "typescript": "7.0.2",
+    "wrangler": "^4.136.1"
   }
 }

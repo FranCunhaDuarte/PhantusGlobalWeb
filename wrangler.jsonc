@@ -1,0 +1,59 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "phantusglobal",
+  "main": ".open-next/worker.js",
+
+  // El adaptador pide 2024-09-23 o posterior. Va una fecha reciente para
+  // estrenar los arreglos del runtime; subirla es seguro, bajarla cambia el
+  // comportamiento de Node dentro del Worker.
+  "compatibility_date": "2026-09-01",
+
+  // `nodejs_compat` es lo que hace que el bundle de Next —que asume Node—
+  // encuentre `node:buffer`, `node:crypto` y compañía.
+  //
+  // `global_fetch_strictly_public` es menos evidente y hace falta igual: sin
+  // ella, un `fetch()` del Worker a su propio dominio se resuelve adentro del
+  // runtime sin salir a internet, y entonces no pasa por las reglas de
+  // Cloudflare ni por el caché. Con ella, el sitio se ve a sí mismo como lo ve
+  // cualquier visitante.
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+
+  // Las 21 páginas prerenderizadas, el video, las fotos y los PNG de marca no
+  // los sirve el Worker: salen de Workers Assets, que es gratis y no consume
+  // pedidos facturables.
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+
+  // `next/image` no funciona en Workers sin esto: el adaptador no trae
+  // optimizador propio y sin binding las imágenes salen sin optimizar.
+  // Cloudflare cobra por transformación **única** —no por visita— y regala
+  // 5000 por mes, así que con 32 imágenes y sus variantes de srcset el sitio
+  // entra en el tramo gratuito con muchísimo margen.
+  "images": {
+    "binding": "IMAGES"
+  },
+
+  "observability": {
+    "enabled": true
+  },
+
+  "vars": {
+    // Dominio público: de acá salen el sitemap, los alternates y las URL
+    // absolutas de la metadata. Si el sitio se prueba en `*.workers.dev` antes
+    // de enganchar el dominio, este valor igual tiene que ser el definitivo o
+    // el sitemap va a declarar URLs que no son.
+    "NEXT_PUBLIC_SITIO_URL": "https://phantusglobal.com",
+
+    // Cuántos saltos hay delante para leer `x-forwarded-for`. Cloudflare
+    // agrega la IP del visitante al final de la cabecera, así que uno.
+    "CONTACTO_PROXIES_DE_CONFIANZA": "1"
+  }
+
+  // RESEND_API_KEY, CONTACTO_DESTINO y CONTACTO_REMITENTE **no van acá**: este
+  // archivo se commitea. Se cargan con `wrangler secret put <nombre>`, que las
+  // guarda cifradas del lado de Cloudflare. Mientras falten, la acción de
+  // contacto no falla: arma el mail, lo sanitiza y lo escribe al log como
+  // envío simulado.
+}
