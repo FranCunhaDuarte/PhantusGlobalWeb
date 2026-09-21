@@ -1,0 +1,537 @@
+{
+  "metadata": {
+    "title": "Phantus Global | Bróker de pescado, mariscos y carnes",
+    "description": "Abastecemos a importadores de Estados Unidos, México, Europa y Asia desde exportadores argentinos habilitados por SENASA. Langostino, merluza y calamar.",
+    "template": "%s | Phantus Global",
+    "ogAlt": "Phantus Global, bróker de pescado, mariscos y carnes con base en Mar del Plata, Argentina"
+  },
+  "marca": {
+    "nombre": "Phantus Global",
+    "slogan": "The elephant never forgets",
+    "logotipoAlt": "Logotipo de Phantus Global",
+    "isotipoAlt": "Isotipo de Phantus Global: una P que forma la cabeza y la trompa de un elefante",
+    "valores": {
+      "confianza": "Confianza",
+      "transparencia": "Transparencia",
+      "compromiso": "Compromiso"
+    }
+  },
+  "navegacion": {
+    "inicio": "Phantus Global, ir al inicio",
+    "secciones": "Secciones del sitio",
+    "menuSecciones": "Menú de secciones",
+    "menu": "Menú",
+    "abrirMenu": "Abrir el menú",
+    "cerrarMenu": "Cerrar el menú",
+    "cta": "Contactanos",
+    "saltarAlContenido": "Saltar al contenido"
+  },
+  "idioma": {
+    "etiqueta": "Idioma",
+    "disparador": "Idioma: {idioma}"
+  },
+  "secciones": {
+    "nosotros": "Nosotros",
+    "mercados": "Mercados",
+    "productos": "Productos",
+    "contacto": "Contacto"
+  },
+  "pie": {
+    "ubicacion": "Mar del Plata, Argentina",
+    "navegar": "Navegación",
+    "contacto": "Contacto",
+    "canal": "Escribinos por el formulario o directo por correo.",
+    "responsable": "Leandro Fenoy",
+    "correo": "leandro@phantusglobal.com",
+    "escribirnos": "Escribinos",
+    "derechos": "© {anio} Phantus Global"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Bróker de comercio internacional — Argentina",
+      "titulo": "Alimentos argentinos de exportación",
+      "rubros": {
+        "pescado": "Pescado y mariscos",
+        "pollo": "Pollo",
+        "carne": "Carne vacuna"
+      },
+      "cta": "Contanos qué necesitás"
+    },
+    "productos": {
+      "titulo": "Pescados y mariscos",
+      "cta": "Ver el catálogo completo",
+      "carrusel": {
+        "etiqueta": "Especies del catálogo",
+        "anterior": "Ver especies anteriores",
+        "siguiente": "Ver especies siguientes"
+      }
+    },
+    "nosotros": {
+      "titulo": "Quién <destacado>responde</destacado> por la operación.",
+      "texto": "Un bróker con origen en Argentina y estructura legal en Estados Unidos. Cada operación tiene un responsable directo, del primer contacto a la llegada del contenedor.",
+      "cta": "Quiénes somos"
+    },
+    "carnes": {
+      "titulo": "Carnes",
+      "cta": "Ver los cortes",
+      "carrusel": {
+        "etiqueta": "Cortes que trabajamos",
+        "anterior": "Ver cortes anteriores",
+        "siguiente": "Ver cortes siguientes"
+      }
+    },
+    "comoTrabajamos": {
+      "titulo": "Cinco pasos, del sourcing <destacado>al cierre</destacado>.",
+      "texto": "Elegimos exportador y producto, armamos la ficha técnica, negociamos precio e Incoterm y seguimos booking y documentación hasta el cierre. El pago va directo entre exportador e importador.",
+      "cta": "Cómo trabajamos"
+    },
+    "contacto": {
+      "titulo": "Hablemos de tu operación.",
+      "entrada": "Atendemos a importadores que buscan proveedor argentino.",
+      "telefono": "+54 223 683-8585",
+      "correo": "info@phantusglobal.com",
+      "tipo": {
+        "etiqueta": "Tipo de consulta",
+        "compra": "Quiero importar",
+        "otro": "Otra consulta",
+        "vacio": "Elegí una opción"
+      },
+      "campos": {
+        "nombre": "Nombre y apellido",
+        "email": "Correo electrónico",
+        "mensaje": "Tu mensaje"
+      },
+      "enviar": "Enviar consulta",
+      "enviando": "Enviando…",
+      "errores": {
+        "resumen": "Revisá los campos marcados y volvé a enviar.",
+        "nombre": {
+          "requerido": "Decinos cómo te llamás.",
+          "largo": "El nombre no puede pasar de 80 caracteres."
+        },
+        "email": {
+          "requerido": "Necesitamos un correo para poder contestarte.",
+          "invalido": "Ese correo no parece válido. Revisalo.",
+          "largo": "El correo no puede pasar de 254 caracteres."
+        },
+        "mensaje": {
+          "requerido": "Contanos qué necesitás.",
+          "corto": "Escribí un poco más: al menos 10 caracteres.",
+          "largo": "El mensaje no puede pasar de 2000 caracteres."
+        },
+        "tipo": {
+          "requerido": "Elegí un tipo de consulta."
+        }
+      },
+      "exito": {
+        "titulo": "Recibimos tu consulta.",
+        "texto": "Te contestamos por correo en 24 a 48 horas hábiles, a la dirección que dejaste. Si no llega nada, revisá el correo no deseado antes de volver a escribir.",
+        "otra": "Escribir otra consulta"
+      },
+      "rechazo": {
+        "limite": "Nos llegaron varias consultas tuyas seguidas. Esperá unos minutos y volvé a intentar.",
+        "envio": "No pudimos enviar tu consulta. Volvé a intentar en unos minutos o escribinos directamente por correo."
+      },
+      "mail": {
+        "titulo": "Nueva consulta desde phantusglobal.com",
+        "asunto": "{tipo}: consulta de {nombre}",
+        "tipos": {
+          "compra": "Importador",
+          "otro": "Otra consulta"
+        },
+        "campos": {
+          "tipo": "Tipo de consulta",
+          "nombre": "Nombre",
+          "email": "Correo",
+          "idioma": "Idioma del sitio",
+          "mensaje": "Mensaje"
+        }
+      }
+    }
+  },
+  "nosotros": {
+    "metaTitle": "Nosotros: bróker argentino en Mar del Plata",
+    "metaDescription": "Bróker de pescado, mariscos y carnes con base en Mar del Plata. Red de exportadores habilitados por SENASA y un responsable directo en cada operación.",
+    "titulo": "Somos bróker de pescado, mariscos y carnes.",
+    "entrada": "Un responsable directo, del primer contacto a la llegada del contenedor. Sabemos qué pedir: talla, formato y rendimiento.",
+    "datos": {
+      "origen": {
+        "rotulo": "Origen",
+        "valor": "Mar del Plata, Argentina"
+      },
+      "estructura": {
+        "rotulo": "Estructura legal",
+        "valor": "Estados Unidos"
+      },
+      "red": {
+        "rotulo": "Red",
+        "valor": "Exportadores habilitados por SENASA"
+      },
+      "respuesta": {
+        "rotulo": "Respuesta",
+        "valor": "24 a 48 horas hábiles"
+      },
+      "mercados": {
+        "rotulo": "Mercados",
+        "valor": "Estados Unidos, México, Europa y Asia"
+      }
+    },
+    "ciudad": {
+      "titulo": "Presencia en origen.",
+      "texto": "Mar del Plata es el principal puerto pesquero de la Argentina. Operar desde acá nos permite seleccionar cada exportador y confirmar la disponibilidad antes de comprometerla.",
+      "puertoAlt": "Flota de pesca amarrada en el puerto de Mar del Plata",
+      "buqueAlt": "Buque de carga navegando frente a la costa de Mar del Plata",
+      "costaAlt": "Costa rocosa de Mar del Plata con la ciudad de fondo",
+      "lanchasAlt": "Lanchas amarillas del puerto de Mar del Plata amarradas en fila",
+      "etiqueta": "Mar del Plata, en fotos",
+      "irA": "Ver la foto {numero} de {total}"
+    },
+    "elefanteTitulo": "El elefante no olvida. Nosotros tampoco.",
+    "elefanteTexto": "Phantus sale de elephantus. El elefante es memoria y trabajo en equipo que sostienen sus lazos toda la vida: un vínculo no se agota en una venta.",
+    "valoresTitulo": "En qué nos apoyamos",
+    "valores": {
+      "confianza": "Cada operación tiene un nombre y una cara, y sabés siempre cuál.",
+      "transparencia": "Cobramos una comisión sobre la operación. El dinero no pasa por nuestras manos.",
+      "compromiso": "Nos quedamos hasta el cierre, también cuando se complica."
+    },
+    "contacto": {
+      "titulo": "¿Qué querés traer?",
+      "texto": "Contanos qué especie es, en qué formato y en qué volumen. Contestamos en 24 a 48 horas hábiles.",
+      "cta": "Pedir cotización"
+    }
+  },
+  "mercados": {
+    "metaTitle": "Mercados: Estados Unidos, México, Europa y Asia",
+    "metaDescription": "Del puerto de Mar del Plata a Estados Unidos, México, Europa y Asia. Cada mercado contra su estándar: FDA, HACCP y SIMP para Estados Unidos.",
+    "eyebrow": "Alcance",
+    "titulo": "Del puerto de Mar del Plata al mundo.",
+    "entrada": "Sabés de dónde sale la mercadería y contra qué estándar llega a tu mercado.",
+    "mercadosTitulo": "Mercados de destino",
+    "mercados": {
+      "estados-unidos": "Estados Unidos",
+      "mexico": "México",
+      "europa": "Europa",
+      "asia": "Asia"
+    },
+    "origen": {
+      "titulo": "De dónde sale",
+      "texto": "Mar del Plata es el principal puerto pesquero de la Argentina: acá se descarga, se procesa y se embarca todo el año.",
+      "detalle": "Trabajamos con exportadores habilitados por SENASA, elegidos uno por uno. No tomamos posesión de la mercadería ni operamos como planta.",
+      "alt": "Flota pesquera amarrada en el puerto de Mar del Plata."
+    },
+    "destino": {
+      "titulo": "Hasta dónde llega",
+      "texto": "Cuatro mercados, cada uno con su estándar. La operación se arma contra el que corresponde al destino.",
+      "detalle": "En Estados Unidos, al origen argentino se le suma estructura legal propia.",
+      "alt": "Buque de carga saliendo, visto desde la costa."
+    },
+    "contacto": {
+      "titulo": "¿A qué mercado va tu operación?",
+      "texto": "Decinos a qué país va y qué producto es. Armamos la operación contra el estándar de ese mercado y te contestamos en 24 a 48 horas hábiles.",
+      "cta": "Pedir cotización"
+    },
+    "origenDeLasRutas": "Mar del Plata",
+    "cumplimiento": "Estados Unidos opera contra FDA, HACCP y SIMP, con la documentación sanitaria y de origen correspondiente."
+  },
+  "comoTrabajamos": {
+    "metaTitle": "Cómo trabajamos: los cinco pasos",
+    "metaDescription": "Sourcing, especificación técnica, negociación, logística y cierre. Cobramos comisión sobre la operación concretada y el pago no pasa por nosotros.",
+    "titulo": "De la primera consulta al cierre.",
+    "entrada": "Cinco pasos, sin vueltas y sin letra chica.",
+    "pasos": {
+      "sourcing": {
+        "titulo": "Sourcing",
+        "texto": "Elegimos exportador y producto según especie, formato, calibre y volumen, dentro de lo que la temporada tenga disponible."
+      },
+      "especificacion": {
+        "titulo": "Especificación técnica",
+        "texto": "Armamos la ficha: talla, formato —IQF, bloque, HOSO, HLSO o filet, entre otros—, packing y las certificaciones que pide el mercado de destino."
+      },
+      "negociacion": {
+        "titulo": "Negociación comercial",
+        "texto": "Precio, Incoterm —FOB, CFR o CIF— y condiciones de pago."
+      },
+      "logistica": {
+        "titulo": "Logística y documentación",
+        "texto": "Booking, tránsito internacional y documentación de exportación: certificado sanitario, certificado de origen, HACCP y SIMP para Estados Unidos."
+      },
+      "cierre": {
+        "titulo": "Cierre",
+        "texto": "El pago va directo entre exportador e importador. Nosotros no tocamos el dinero de la operación."
+      }
+    },
+    "comisionEyebrow": "Cómo ganamos",
+    "comision": "Cobramos una comisión sobre la operación concretada: nuestro ingreso depende de que cierre bien. En ningún momento tomamos posesión de la mercadería, y el pago va directo entre exportador e importador.",
+    "contacto": {
+      "titulo": "Empecemos por el primer paso.",
+      "texto": "Contanos qué especie es, en qué formato y en qué volumen. Contestamos en 24 a 48 horas hábiles.",
+      "cta": "Pedir cotización"
+    }
+  },
+  "notFound": {
+    "title": "No encontramos esta página",
+    "description": "El enlace puede estar mal escrito o la página ya no existe.",
+    "backHome": "Volver al inicio"
+  },
+  "productos": {
+    "metaTitle": "Catálogo de pescado, mariscos y carnes",
+    "metaDescription": "Once especies del Atlántico Sur —merluza, langostino, calamar y corvina— y el despiece de vaca y pollo. Formato, calibre y packing por operación.",
+    "titulo": "Qué comercializamos.",
+    "entrada": "Especie por especie y corte por corte. Formato, calibre y packing se definen por operación.",
+    "unidades": {
+      "pescados": {
+        "nombre": "Pescados\ny mariscos"
+      },
+      "carnes": {
+        "nombre": "Carnes"
+      }
+    },
+    "pescados": {
+      "metaTitle": "Pescados y mariscos: langostino, merluza, calamar illex y corvina",
+      "metaDescription": "Once especies del Atlántico Sur, de merluza y langostino a besugo, mero y pollo de mar. Formatos IQF, bloque, HOSO, HLSO y filet, con FOB, CFR o CIF y cumplimiento FDA, HACCP y SIMP.",
+      "titulo": "Especies del <destacado>Atlántico Sur</destacado>.",
+      "entrada": "Hay especies que se consiguen todo el año y otras que van por zafra, y ahí la disponibilidad depende de cómo venga la temporada. Las que no tienen ventana publicada se consultan por operación.",
+      "disponibilidadTitulo": "Disponibilidad",
+      "formatosTitulo": "Formatos",
+      "regimenes": {
+        "cuota": "Cuota anual",
+        "zafra": "Zafra estacional"
+      },
+      "especies": {
+        "merluza": {
+          "nombre": "Merluza hubbsi",
+          "cientifico": "Merluccius hubbsi",
+          "descripcion": "Es la pesquería de pescado blanco de mayor volumen de la Argentina, y la opción habitual de quien necesita reponer todo el año sin cortes.",
+          "disponibilidad": "Todo el año, con mejor volumen y precio de mayo a septiembre",
+          "formatos": "HG, HGT y filet; filet especial calibrado, con o sin piel y con corte en V"
+        },
+        "corvina": {
+          "nombre": "Corvina",
+          "cientifico": "Micropogonias furnieri",
+          "descripcion": "Pescado blanco de carne firme y buen rendimiento, habitual en pedidos de volumen para distribución. Se pesca en el Río de la Plata y en la zona común que Argentina y Uruguay administran en conjunto.",
+          "disponibilidad": "Zafra de abril a septiembre",
+          "formatos": "Entero, eviscerado y descamado, y HG listo para horno"
+        },
+        "calamar": {
+          "nombre": "Calamar illex",
+          "cientifico": "Illex argentinus",
+          "descripcion": "Calamar de aguas frías y ciclo de vida anual: la biomasa se renueva entera cada temporada, así que cuánto hay para colocar se define año a año.",
+          "disponibilidad": "Captura de enero a agosto",
+          "formatos": "Entero, vaina, tentáculo y aleta"
+        },
+        "langostino": {
+          "nombre": "Langostino",
+          "cientifico": "Pleoticus muelleri",
+          "descripcion": "Es el producto de mayor valor de exportación de la pesca argentina y se mueve por volumen. Conviene tener la operación conversada antes de que abra la temporada.",
+          "disponibilidad": "Temporada principal de mayo a septiembre, más una de verano de enero a marzo",
+          "formatos": "Entero, colas C1, CR y CMIX, pelado y desvenado, y cola con caparazón"
+        },
+        "pescadilla": {
+          "nombre": "Pescadilla de red",
+          "cientifico": "Cynoscion guatucupa",
+          "descripcion": "Pescado blanco costero de la misma familia que la corvina, con la que suele salir en la misma marea. De carne blanda, se coloca sobre todo en filet.",
+          "formatos": "Entero, filet con piel y filet sin piel"
+        },
+        "besugo": {
+          "nombre": "Besugo",
+          "cientifico": "Pagrus pagrus",
+          "descripcion": "Especie de fondo rocoso, de captura chica y estacional. Es producto de nicho: se vende por la calidad de la pieza y no por volumen.",
+          "formatos": "Entero, y eviscerado y descamado"
+        },
+        "pezPalo": {
+          "nombre": "Pez palo",
+          "cientifico": "Percophis brasiliensis",
+          "descripcion": "Pescado blanco alargado, de carne magra y sin espinas intermusculares, lo que deja un filet limpio. Aparece como acompañante de la pesca costera.",
+          "formatos": "Filet PBI, filet PBO y entero"
+        },
+        "mero": {
+          "nombre": "Mero",
+          "cientifico": "Acanthistius patachonicus",
+          "descripcion": "Pescado de arrecife del Atlántico Sur, de carne blanca y firme. Desembarca en volúmenes bastante menores que las pesquerías de altura, así que se trabaja por pieza antes que por tonelaje."
+        },
+        "polloDeMar": {
+          "nombre": "Pollo de mar",
+          "cientifico": "Squatina guggenheim y Squatina argentina",
+          "descripcion": "Pez cartilaginoso de fondo que se vende por lo que no tiene: carne blanca y magra, sin espinas ni escamas. De ahí el nombre comercial; en la pesquería figura como pez ángel.",
+          "formatos": "Filet"
+        },
+        "raya": {
+          "nombre": "Raya",
+          "cientifico": "Raja spp., Dipturus chilensis y Atlantoraja castelnaui",
+          "descripcion": "Bajo el mismo nombre comercial entran tres especies que se trabajan juntas: común, picuda y manchada."
+        },
+        "rebozado": {
+          "nombre": "Rebozado de merluza",
+          "cientifico": "Merluccius hubbsi",
+          "descripcion": "No es una especie sino producto elaborado a partir del filet de merluza, listo para cocinar. Es la salida de mayor valor agregado del catálogo.",
+          "formatos": "Medallones y bastones"
+        }
+      },
+      "destacada": "Mayor volumen",
+      "stock": "Trabajamos con stock de frigorífico y producto congelado, IQF y en bloque, así que hay disponibilidad buena parte del año. Las temporadas marcan los mejores momentos de precio y volumen, no la única ventana para comprar.",
+      "condiciones": {
+        "titulo": "Cómo se especifica una operación",
+        "formatos": {
+          "titulo": "Formatos",
+          "texto": "IQF, bloque, HOSO, HLSO y filet, entre otros. La ficha técnica de cada operación define talla, calibre, rendimiento y packing."
+        },
+        "comerciales": {
+          "titulo": "Condiciones comerciales",
+          "texto": "Trabajamos FOB, CFR y CIF. El pago va directo entre exportador e importador: no pasa por nosotros."
+        },
+        "cumplimiento": {
+          "titulo": "Cumplimiento",
+          "texto": "Cada mercado con su estándar: FDA, HACCP y SIMP para Estados Unidos, con la documentación sanitaria y de origen correspondiente."
+        },
+        "otras": {
+          "texto": "Pescados y mariscos y carnes son las dos unidades, y las dos están acá arriba. Fuera de esas dos hay categorías que tomamos igual, cuando podemos acompañar la operación bien.",
+          "enlace": "¿Buscás otra mercadería?"
+        }
+      },
+      "contacto": {
+        "titulo": "¿Qué especie necesitás y para cuándo?",
+        "texto": "La disponibilidad cambia con la temporada y con las resoluciones de cada año. Contanos qué buscás, en qué formato y en qué volumen, y te decimos qué hay hoy y qué conviene esperar.",
+        "ctaCompra": "Soy importador",
+        "ctaVenta": "Soy exportador"
+      }
+    },
+    "carnes": {
+      "metaTitle": "Carnes: operaciones a pedido desde la Argentina",
+      "metaDescription": "Carnes es unidad secundaria de Phantus Global: no hay catálogo publicado porque la oferta se arma contra el pedido concreto. Contanos qué necesitás.",
+      "titulo": "Carnes, <destacado>a pedido</destacado>.",
+      "entrada": "No es nuestro foco y no lo disimulamos: pescados y mariscos es la unidad que tiene catálogo. Carnes la tomamos cuando podemos llevar la operación hasta el final.",
+      "cortes": {
+        "etiqueta": "Media res con los cortes que trabajamos",
+        "azotillo": "Azotillo",
+        "palomita": "Palomita",
+        "roastBeef": "Roast beef",
+        "bifeAncho": "Bife ancho",
+        "bifeDeCostilla": "Bife de costilla",
+        "lomo": "Lomo",
+        "cuadril": "Cuadril",
+        "peceto": "Peceto",
+        "colitaDeCuadril": "Colita de cuadril",
+        "paleta": "Paleta",
+        "asado": "Asado",
+        "entrana": "Entraña",
+        "vacio": "Vacío",
+        "tapaDeNalga": "Tapa de nalga",
+        "bolaDeLomo": "Bola de lomo",
+        "matambre": "Matambre",
+        "tapaDeAsado": "Tapa de asado",
+        "osobuco": "Osobuco"
+      },
+      "contacto": {
+        "titulo": "¿Qué corte, y para qué mercado?",
+        "texto": "Decinos el corte, el volumen y el destino. Con eso salimos a buscar el exportador habilitado que pueda cumplirlo, y te contestamos en 24 a 48 horas hábiles.",
+        "ctaCompra": "Busco carne argentina",
+        "ctaVenta": "Tengo carne para exportar"
+      },
+      "vacuna": "Carne vacuna"
+    },
+    "contacto": {
+      "titulo": "¿Qué necesitás, y para cuándo?",
+      "texto": "Contanos la especie o el corte, en qué formato y en qué volumen, y a qué mercado va. Con eso te decimos qué hay hoy y qué conviene esperar.",
+      "cta": "Pedir cotización"
+    },
+    "pollo": {
+      "titulo": "Pollo",
+      "cortes": {
+        "etiqueta": "Despiece de pollo. Apuntá o enfocá un corte para ver su nombre.",
+        "cabeza": "Cabeza",
+        "cuello": "Cuello",
+        "espinazo": "Espinazo",
+        "rabadilla": "Rabadilla",
+        "pechuga": "Pechuga",
+        "pecho": "Pecho",
+        "ala": "Ala",
+        "contramuslo": "Contramuslo",
+        "muslo": "Muslo y pata"
+      },
+      "otrosTitulo": "También:",
+      "otrosTexto": "corazón, hígado y molleja, que son menudencias y no una parte del despiece, y filete, que sale de la pechuga."
+    }
+  },
+  "legales": {
+    "terminos": {
+      "enlace": "Términos y condiciones",
+      "metaTitle": "Términos y condiciones",
+      "metaDescription": "Condiciones de uso de phantusglobal.com: qué es este sitio, qué valor tiene lo que publica y qué se puede hacer con su contenido.",
+      "titulo": "Términos y condiciones",
+      "entrada": "Estas condiciones son las del sitio: qué es phantusglobal.com, qué valor tiene lo que publica y qué se puede hacer con su contenido. No son las condiciones de una operación, que se acuerdan por escrito caso por caso.",
+      "actualizado": "Última actualización: septiembre de 2026.",
+      "tramos": {
+        "objeto": {
+          "titulo": "Qué es este sitio",
+          "texto": "phantusglobal.com es el sitio institucional de Phantus Global. Sirve para presentar a qué nos dedicamos, qué productos intermediamos y cómo ponerse en contacto.\n\nNavegarlo no crea ninguna relación comercial ni obliga a nada, ni a vos ni a nosotros. Toda operación se acuerda aparte y por escrito."
+        },
+        "catalogo": {
+          "titulo": "El catálogo no es una oferta",
+          "texto": "Las especies, los cortes, los formatos y las ventanas de temporada que publicamos son información de referencia, no una oferta en firme. La disponibilidad real depende de la temporada, de las vedas y resoluciones vigentes y de la capacidad de cada exportador en ese momento.\n\nPrecios, volúmenes, formatos y plazos se confirman por operación. Nada de lo publicado acá reemplaza esa confirmación."
+        },
+        "uso": {
+          "titulo": "Uso del sitio",
+          "texto": "Podés navegar el sitio, leerlo, imprimirlo y compartir sus enlaces libremente.\n\nNo está permitido usarlo para enviar spam por el formulario, intentar acceder a partes no públicas, extraer su contenido de forma automatizada para republicarlo, ni nada que interfiera con su funcionamiento o con el de quienes lo usan."
+        },
+        "propiedad": {
+          "titulo": "Contenido y marca",
+          "texto": "Los textos, las fotografías, el diagrama de cortes y el resto del contenido son de Phantus Global o se usan con licencia. El nombre Phantus Global y su isotipo son marca propia.\n\nPodés citar el sitio y enlazarlo indicando la fuente. Reproducir su contenido como propio, o usar la marca, requiere permiso."
+        },
+        "disponibilidad": {
+          "titulo": "Disponibilidad",
+          "texto": "Procuramos que el sitio esté en línea y al día, pero no garantizamos que no vaya a estar caído ni que toda la información publicada esté vigente en todo momento. Puede haber interrupciones por mantenimiento o por causas ajenas."
+        },
+        "enlaces": {
+          "titulo": "Enlaces a otros sitios",
+          "texto": "Si el sitio enlaza páginas de terceros, es por referencia. No controlamos su contenido ni respondemos por él."
+        },
+        "cambios": {
+          "titulo": "Cambios en estas condiciones",
+          "texto": "Podemos actualizarlas. La fecha de la última actualización está arriba, y la versión publicada es la que rige."
+        }
+      }
+    },
+    "privacidad": {
+      "enlace": "Privacidad",
+      "metaTitle": "Política de privacidad",
+      "metaDescription": "Qué datos recibe phantusglobal.com, para qué se usan y qué no hacemos con ellos. Sin analítica, sin píxeles y con una sola cookie.",
+      "titulo": "Privacidad",
+      "entrada": "Esta política es la del sitio: qué datos recibe phantusglobal.com cuando lo navegás o escribís por el formulario, para qué los usamos y qué no hacemos con ellos.",
+      "actualizado": "Última actualización: septiembre de 2026.",
+      "tramos": {
+        "queRecibimos": {
+          "titulo": "Qué datos recibimos",
+          "texto": "Sólo los que dejás en el formulario de contacto: el tipo de consulta, tu nombre, tu correo electrónico y el mensaje. Se suma el idioma en el que estabas leyendo, para contestarte en ese idioma.\n\nNo pedimos ningún dato más y no hay ningún otro formulario en el sitio."
+        },
+        "paraQue": {
+          "titulo": "Para qué los usamos",
+          "texto": "Para leer tu consulta y contestarla, y nada más. Los datos llegan como un correo a nuestra casilla: el sitio no tiene base de datos y no guarda una copia.\n\nLos conservamos mientras la consulta siga abierta y mientras una operación pueda retomarse. Si querés que los borremos antes, escribinos y los borramos."
+        },
+        "cookies": {
+          "titulo": "Cookies",
+          "texto": "El sitio usa una sola cookie, NEXT_LOCALE, que guarda en qué idioma elegiste leerlo para que no tengas que volver a elegirlo. Dura un año y podés borrarla desde tu navegador.\n\nNo hay cookies de terceros, ni de publicidad, ni de medición. Por eso tampoco hay un cartel pidiéndote que las aceptes: no hay nada que aceptar."
+        },
+        "queNoHacemos": {
+          "titulo": "Qué no hacemos",
+          "texto": "No usamos Google Analytics ni ninguna otra herramienta de medición. No hay píxeles de Meta, de LinkedIn ni de ninguna red. No armamos perfiles de quien navega y no seguimos a nadie entre sitios.\n\nLas tipografías se sirven desde nuestro propio dominio, así que abrir el sitio no le avisa a Google que estuviste acá. No vendemos, alquilamos ni cedemos datos con fines comerciales."
+        },
+        "abuso": {
+          "titulo": "Tu dirección IP",
+          "texto": "Para que un robot no pueda inundar el formulario, el servidor cuenta cuántos envíos llegaron desde una misma dirección IP en los últimos diez minutos. Ese conteo vive en la memoria del proceso, se descarta solo pasados los diez minutos y no se escribe en ningún archivo.\n\nTu IP no viaja en el correo que recibimos ni queda asociada a tu consulta."
+        },
+        "terceros": {
+          "titulo": "Quién más ve tu consulta",
+          "texto": "El correo con tu consulta se envía a través de un proveedor de correo transaccional, que lo procesa para hacerlo llegar a nuestra casilla. Es el único tercero que interviene, y sólo para eso.\n\nNo hay ningún otro servicio externo corriendo en el sitio."
+        },
+        "derechos": {
+          "titulo": "Tus datos son tuyos",
+          "texto": "Podés pedirnos en cualquier momento que te digamos qué datos tuyos tenemos, que los corrijamos o que los borremos. Alcanza con escribirnos al correo que figura en el pie de esta página.\n\nNo hace falta que expliques por qué."
+        },
+        "cambios": {
+          "titulo": "Cambios en esta política",
+          "texto": "Podemos actualizarla. La fecha de la última actualización está arriba, y la versión publicada es la que rige."
+        }
+      }
+    }
+  }
+}

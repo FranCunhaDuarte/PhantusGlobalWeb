@@ -1,0 +1,308 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Crema cálido (H≈36) para todo lo que sea superficie o separador. */
+  --color-surface: #f2ece2;
+  --color-surface-raised: #fbf8f4;
+  --color-line: #e4daca;
+  --color-line-strong: #d8cbb6;
+
+  /* Tinta fría (H≈215) para texto y para los bloques oscuros de sección. */
+  --color-ink: #0b1421;
+  --color-ink-muted: #5a6a7e;
+  --color-ink-inverse: #f2ece2;
+  --color-ink-inverse-muted: #cdc5b9;
+  --color-line-inverse: rgb(242 236 226 / 0.22);
+  --color-deep: #162b4c;
+  --color-deep-hover: #1e3b67;
+
+  --color-accent: #64192e;
+
+  /* Rojo de error, en dos versiones porque un solo valor no puede servir sobre
+     crema y sobre los oscuros. El oscuro da 7,05:1 contra el crema elevado y el
+     claro 7,15:1 contra el bordó, que es el peor de los tres fondos oscuros:
+     los dos pasan AA de texto y sobran para el 3:1 que pide un borde que
+     comunica estado. Es un rojo propio y no el bordó de marca, que ya significa
+     otra cosa en la página. */
+  --color-error: #a3231c;
+  --color-error-inverse: #f2b8b5;
+
+  /* Ancho a partir del cual el logotipo completo entra en el header con el aire
+     que pide el manual, junto al selector de idioma y al botón de menú. */
+  --breakpoint-xs: 26.25rem;
+
+  /* Tope de ancho del sitio: lo aplica `Container` con medida `plena` y de él
+     cuelgan el header, el pie y todas las secciones. Va como token y no como
+     valor arbitrario porque hay cuentas que se apoyan en él —la mitad del
+     contenedor en el hero, el `sizes` de la grilla de unidades— y tienen que
+     poder señalar de dónde sale el número. */
+  --container-sitio: 72rem;
+
+  /* Montserrat es la única familia del sitio: la secundaria salió y con ella
+     el token --font-display. */
+  --font-body: var(--fuente-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  /* Ritmo vertical. `seccion` es fluido para no arrastrar una cadena de
+     breakpoints por cada bloque; `ancla` es el alto del header más aire, y es
+     lo que separa un título de sección del borde inferior del header sticky.
+     El alto del header lo fija el caso más apretado: el isotipo del header
+     mide 55 px y su área de seguridad son 20 px por lado, o sea 95 px de caja;
+     por debajo de eso la línea inferior del header le come el aire al logo. */
+  --spacing-header: 6rem;
+  --spacing-ancla: 7.5rem;
+  --spacing-seccion: clamp(3.5rem, 1.5rem + 8vw, 6.5rem);
+
+  /* Escala tipográfica: se define acá y en ningún otro lado. */
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.14em;
+  --text-eyebrow--font-weight: 600;
+
+  --text-titulo: clamp(1.625rem, 1.1rem + 2.2vw, 2.5rem);
+  --text-titulo--line-height: 1.15;
+  --text-titulo--letter-spacing: -0.02em;
+
+  --text-titulo-mayor: clamp(2.125rem, 1.3rem + 3.4vw, 3.5rem);
+  --text-titulo-mayor--line-height: 1.08;
+  --text-titulo-mayor--letter-spacing: -0.025em;
+
+  --text-entrada: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  --text-entrada--line-height: 1.6;
+}
+
+@layer base {
+  /* Cada fondo de marca declara su paleta completa. Lo que cuelga adentro hereda
+     color de texto, línea, foco y botón: ninguna sección invierte nada a mano. */
+  :root,
+  [data-fondo='crema'],
+  [data-fondo='crema-elevado'] {
+    --fondo-superficie: var(--color-surface);
+    --fondo-texto: var(--color-ink);
+    --fondo-texto-suave: var(--color-ink-muted);
+    --fondo-linea: var(--color-line);
+    --fondo-separador: color-mix(in srgb, var(--color-ink) 50%, transparent);
+    --fondo-realce: var(--color-accent);
+    --fondo-error: var(--color-error);
+    --fondo-foco: var(--color-deep);
+    --boton-fondo: var(--color-deep);
+    --boton-fondo-activo: var(--color-deep-hover);
+    --boton-texto: var(--color-ink-inverse);
+  }
+
+  [data-fondo='crema-elevado'] {
+    --fondo-superficie: var(--color-surface-raised);
+  }
+
+  [data-fondo='azul'],
+  [data-fondo='bordo'],
+  [data-fondo='tinta'] {
+    --fondo-superficie: var(--color-deep);
+    --fondo-texto: var(--color-ink-inverse);
+    --fondo-texto-suave: var(--color-ink-inverse-muted);
+    --fondo-linea: var(--color-line-inverse);
+    /* El límite de un control no es una línea de sección: tiene que llegar a
+       3:1. Sobre crema la tinta al 50 % lo cumple; sobre oscuro el peor fondo
+       posible no es el del token sino el del hero con el velo sobre blanco
+       puro (#6B6B6B), y ahí el crema recién llega al 50 % a 2,34:1. Al 70 % da
+       3,11:1 y sigue siendo un pelo. */
+    --fondo-separador: color-mix(
+      in srgb,
+      var(--color-ink-inverse) 70%,
+      transparent
+    );
+    --fondo-realce: var(--color-ink-inverse);
+    --fondo-error: var(--color-error-inverse);
+    --fondo-foco: var(--color-surface);
+    --boton-fondo: var(--color-surface);
+    --boton-fondo-activo: var(--color-surface-raised);
+    --boton-texto: var(--color-ink);
+  }
+
+  [data-fondo='bordo'] {
+    --fondo-superficie: var(--color-accent);
+  }
+
+  [data-fondo='tinta'] {
+    --fondo-superficie: var(--color-ink);
+  }
+
+  [data-fondo] {
+    background-color: var(--fondo-superficie);
+    color: var(--fondo-texto);
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--fondo-superficie);
+    color: var(--fondo-texto);
+    font-family: var(--font-body);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* La barra de desplazamiento es superficie de marca como cualquier otra: por
+     defecto la pinta el sistema y sobre el crema queda una cinta gris que no es
+     de ninguna de las dos paletas.
+
+     Va en `html`, y de las dos propiedades **sólo el color se hereda**:
+     comprobado, el `body` y el contenedor del diagrama de cortes salen con el
+     color de marca y con `scrollbar-width: auto`. Eso es lo que se quiere: la
+     barra de la página va fina porque recorre un documento largo, y las de los
+     contenedores de adentro se quedan con el ancho del sistema, que es el que
+     se puede agarrar con el mouse en una caja chica.
+
+     El que quiera esconder la suya lo declara en sí mismo; es lo que hace la
+     pista del carrusel con `scrollbar-width: none`.
+
+     El pulgar no va redondeado: es la misma decisión que las tarjetas y los
+     botones del sitio. */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-ink-muted) var(--color-surface);
+  }
+
+  /* Safari todavía no implementa las dos de arriba. Lo de abajo no las pisa
+     donde sí existen —los navegadores que entienden `scrollbar-color` ignoran
+     estos pseudoelementos— así que conviven sin repetir el color. */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-ink-muted);
+    /* El borde del color de la pista deja el pulgar más fino que el canal, que
+       es lo que lo separa del borde de la ventana sin dibujar una línea. */
+    border: 3px solid var(--color-surface);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ink);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--color-surface);
+  }
+
+  /* Montserrat SemiBold es la voz de titulares y subtítulos. El énfasis
+     dentro de un titular lo pone `Destacado`, con peso y color. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  /* Un único anillo de foco, del color que el fondo vigente haya declarado.
+     Así el foco de teclado se ve tanto sobre crema como sobre los tres oscuros.
+
+     El color va acá, en todos los elementos y no dentro de `:focus-visible`:
+     Tailwind cuenta `outline-color` entre las propiedades de `transition-colors`,
+     así que declarándolo recién al enfocar el anillo entraba desvaneciéndose
+     desde el color del texto —150 ms en los que un botón sólido lo tiene del
+     mismo tono que su propio fondo—. Puesto de antemano, al enfocar sólo
+     cambian el estilo y el grosor, que no se animan, y el anillo está entero en
+     el primer cuadro. */
+  *,
+  ::before,
+  ::after {
+    outline-color: var(--fondo-foco);
+  }
+
+  /* `data-foco-forzado` lo pone `lib/foco.ts` cuando el foco lo mueve el
+     código y no el visitante. Va acá y no en una regla aparte para que el
+     anillo sea literalmente el mismo: un foco que el visitante no pidió es el
+     que más necesita verse, y Chromium no le concede `:focus-visible` si la
+     interacción previa fue con el mouse. El `:focus` del selector es el
+     seguro: sin foco, la marca no pinta nada. */
+  :focus-visible,
+  [data-foco-forzado]:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 3px;
+  }
+}
+
+@utility texto-suave {
+  color: var(--fondo-texto-suave);
+}
+
+@utility texto-realce {
+  color: var(--fondo-realce);
+}
+
+@utility borde-seccion {
+  border-color: var(--fondo-linea);
+}
+
+@utility texto-error {
+  color: var(--fondo-error);
+}
+
+
+@layer components {
+
+  /* El realce nace donde entró el puntero, no en el centro: dos personas que
+     llegan al botón por lados distintos ven dos animaciones distintas. Las
+     coordenadas las escribe `RealceDeBotones`; sin JavaScript el valor por
+     defecto lo deja naciendo del centro.
+
+     Lento y blando a propósito: 700 ms con una curva que frena casi hasta
+     detenerse sobre el final. El botón es la acción principal de cada sección y
+     un realce seco lo volvía nervioso.
+
+     El círculo mide 260 % del ancho para que cubra la caja entera aunque nazca
+     en una esquina, y va detrás del texto con `z-index` negativo sobre un
+     contexto de apilado propio. */
+  .boton-realce {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .boton-realce::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: var(--realce-y, 50%);
+    left: var(--realce-x, 50%);
+    width: 260%;
+    aspect-ratio: 1;
+    /* Redondo: el resto del sitio va a canto recto, pero esto no es una caja,
+       es la onda que sale del punto donde entró el puntero. Cuadrado se leía
+       como un panel apareciendo. */
+    border-radius: 50%;
+    translate: -50% -50%;
+    background-color: var(--boton-fondo-activo);
+    scale: 0;
+    transition: scale 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .boton-realce:hover::before,
+  .boton-realce:focus-visible::before {
+    scale: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .boton-realce::before {
+      transition-duration: 1ms;
+    }
+  }
+}

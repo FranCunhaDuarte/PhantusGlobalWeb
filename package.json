@@ -1,0 +1,32 @@
+{
+  "name": "phantusglobal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "assets:brand": "node scripts/generar-assets.mjs",
+    "assets:og": "node scripts/generar-og.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "next-intl": "4.14.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "resend": "6.28.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "ffmpeg-static": "^5.3.0",
+    "playwright-core": "^1.63.0",
+    "sharp": "^0.35.4",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "logotipo": {
+    "tinta": {
+      "src": "/brand/logotipo-tinta.png",
+      "width": 1200,
+      "height": 426
+    },
+    "crema": {
+      "src": "/brand/logotipo-crema.png",
+      "width": 1200,
+      "height": 426
+    }
+  },
+  "isotipo": {
+    "tinta": {
+      "src": "/brand/isotipo-tinta.png",
+      "width": 480,
+      "height": 512
+    },
+    "crema": {
+      "src": "/brand/isotipo-crema.png",
+      "width": 480,
+      "height": 512
+    }
+  }
+}

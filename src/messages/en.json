@@ -1,0 +1,537 @@
+{
+  "metadata": {
+    "title": "Phantus Global | Argentine seafood and beef broker",
+    "description": "We supply importers in the United States, Mexico, Europe and Asia from SENASA-approved Argentine exporters. Red shrimp, hake, squid and croaker.",
+    "template": "%s | Phantus Global",
+    "ogAlt": "Phantus Global, a seafood and beef trade broker based in Mar del Plata, Argentina"
+  },
+  "marca": {
+    "nombre": "Phantus Global",
+    "slogan": "The elephant never forgets",
+    "logotipoAlt": "Phantus Global logotype",
+    "isotipoAlt": "Phantus Global symbol: a P shaped into the head and trunk of an elephant",
+    "valores": {
+      "confianza": "Trust",
+      "transparencia": "Transparency",
+      "compromiso": "Commitment"
+    }
+  },
+  "navegacion": {
+    "inicio": "Phantus Global, go to home",
+    "secciones": "Site sections",
+    "menuSecciones": "Sections menu",
+    "menu": "Menu",
+    "abrirMenu": "Open the menu",
+    "cerrarMenu": "Close the menu",
+    "cta": "Get in touch",
+    "saltarAlContenido": "Skip to content"
+  },
+  "idioma": {
+    "etiqueta": "Language",
+    "disparador": "Language: {idioma}"
+  },
+  "secciones": {
+    "nosotros": "About us",
+    "mercados": "Markets",
+    "productos": "Products",
+    "contacto": "Contact"
+  },
+  "pie": {
+    "ubicacion": "Mar del Plata, Argentina",
+    "navegar": "Navigation",
+    "contacto": "Contact",
+    "canal": "Write through the form, or straight to the inbox.",
+    "responsable": "Leandro Fenoy",
+    "correo": "leandro@phantusglobal.com",
+    "escribirnos": "Write to us",
+    "derechos": "© {anio} Phantus Global"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "International trade broker — Argentina",
+      "titulo": "Export-grade food from Argentina",
+      "rubros": {
+        "pescado": "Seafood",
+        "pollo": "Poultry",
+        "carne": "Beef"
+      },
+      "cta": "Tell us what you need"
+    },
+    "productos": {
+      "titulo": "Seafood",
+      "cta": "See the full catalogue",
+      "carrusel": {
+        "etiqueta": "Species in the catalogue",
+        "anterior": "See previous species",
+        "siguiente": "See next species"
+      }
+    },
+    "nosotros": {
+      "titulo": "Who <destacado>answers</destacado> for the deal.",
+      "texto": "A broker based in Argentina with a US legal entity. Every transaction has one person answering for it, from first contact to the container's arrival.",
+      "cta": "About us"
+    },
+    "carnes": {
+      "titulo": "Meat",
+      "cta": "See the cuts",
+      "carrusel": {
+        "etiqueta": "Cuts we handle",
+        "anterior": "See previous cuts",
+        "siguiente": "See next cuts"
+      }
+    },
+    "comoTrabajamos": {
+      "titulo": "Five steps, from sourcing <destacado>to closing</destacado>.",
+      "texto": "We pick the exporter and the product, build the spec sheet, negotiate price and Incoterm, and follow booking and documentation through to the close. Payment goes direct between exporter and importer.",
+      "cta": "How we work"
+    },
+    "contacto": {
+      "titulo": "Let us discuss your requirement.",
+      "entrada": "We work with importers sourcing Argentine suppliers.",
+      "telefono": "+54 223 683-8585",
+      "correo": "info@phantusglobal.com",
+      "tipo": {
+        "etiqueta": "Enquiry type",
+        "compra": "I want to import",
+        "otro": "Something else",
+        "vacio": "Choose an option"
+      },
+      "campos": {
+        "nombre": "Full name",
+        "email": "Email address",
+        "mensaje": "Your message"
+      },
+      "enviar": "Send enquiry",
+      "enviando": "Sending…",
+      "errores": {
+        "resumen": "Check the fields marked below and send again.",
+        "nombre": {
+          "requerido": "Tell us your name.",
+          "largo": "Your name cannot be longer than 80 characters."
+        },
+        "email": {
+          "requerido": "We need an email address to write back to.",
+          "invalido": "That email does not look right. Please check it.",
+          "largo": "The email address cannot be longer than 254 characters."
+        },
+        "mensaje": {
+          "requerido": "Tell us what you need.",
+          "corto": "Please write a bit more: at least 10 characters.",
+          "largo": "The message cannot be longer than 2000 characters."
+        },
+        "tipo": {
+          "requerido": "Choose an enquiry type."
+        }
+      },
+      "exito": {
+        "titulo": "We got your enquiry.",
+        "texto": "We will answer by email within 24 to 48 business hours, at the address you left. If nothing arrives, check your spam folder before writing again.",
+        "otra": "Send another enquiry"
+      },
+      "rechazo": {
+        "limite": "We received several enquiries from you in a row. Give it a few minutes and try again.",
+        "envio": "We could not send your enquiry. Try again in a few minutes, or write to us directly by email."
+      },
+      "mail": {
+        "titulo": "New enquiry from phantusglobal.com",
+        "asunto": "{tipo}: enquiry from {nombre}",
+        "tipos": {
+          "compra": "Importer",
+          "otro": "Something else"
+        },
+        "campos": {
+          "tipo": "Enquiry type",
+          "nombre": "Name",
+          "email": "Email",
+          "idioma": "Site language",
+          "mensaje": "Message"
+        }
+      }
+    }
+  },
+  "nosotros": {
+    "metaTitle": "About us: Argentine broker in Mar del Plata",
+    "metaDescription": "A seafood and beef broker based in Mar del Plata. A network of SENASA-approved exporters and one person answering for every transaction.",
+    "titulo": "We broker Argentine seafood and beef.",
+    "entrada": "One person answering for it, from first contact to the container’s arrival. We know what to ask for: size, format and yield.",
+    "datos": {
+      "origen": {
+        "rotulo": "Based in",
+        "valor": "Mar del Plata, Argentina"
+      },
+      "estructura": {
+        "rotulo": "Legal entity",
+        "valor": "United States"
+      },
+      "red": {
+        "rotulo": "Network",
+        "valor": "SENASA-approved exporters"
+      },
+      "respuesta": {
+        "rotulo": "Reply time",
+        "valor": "24 to 48 business hours"
+      },
+      "mercados": {
+        "rotulo": "Markets",
+        "valor": "United States, Mexico, Europe and Asia"
+      }
+    },
+    "ciudad": {
+      "titulo": "A presence at origin.",
+      "texto": "Mar del Plata is Argentina’s main fishing port. Working from here lets us select each exporter and confirm availability before we commit to it.",
+      "puertoAlt": "Fishing fleet moored at the port of Mar del Plata",
+      "buqueAlt": "Cargo ship sailing off the coast of Mar del Plata",
+      "costaAlt": "Rocky shoreline of Mar del Plata with the city behind",
+      "lanchasAlt": "Yellow fishing launches moored in a row at the port of Mar del Plata",
+      "etiqueta": "Mar del Plata, in pictures",
+      "irA": "Show picture {numero} of {total}"
+    },
+    "elefanteTitulo": "An elephant never forgets. Neither do we.",
+    "elefanteTexto": "Phantus comes from elephantus. The elephant is memory and teamwork, holding its bonds for life: a relationship does not end with one sale.",
+    "valoresTitulo": "What we stand on",
+    "valores": {
+      "confianza": "Every deal has a name and a face behind it, and you always know whose.",
+      "transparencia": "We earn a commission on the deal. The money never passes through us.",
+      "compromiso": "We stay until it closes, including when it gets complicated."
+    },
+    "contacto": {
+      "titulo": "What do you want to bring in?",
+      "texto": "Tell us the species, the format and the volume. We answer within 24 to 48 business hours.",
+      "cta": "Request a quote"
+    }
+  },
+  "mercados": {
+    "metaTitle": "Markets: United States, Mexico, Europe and Asia",
+    "metaDescription": "From the port of Mar del Plata to the United States, Mexico, Europe and Asia. Each market to its own standard: FDA, HACCP and SIMP for the US.",
+    "eyebrow": "Where we reach",
+    "titulo": "From the port of Mar del Plata to the world.",
+    "entrada": "You know where the goods ship from, and to what standard they land in your market.",
+    "mercadosTitulo": "Destination markets",
+    "mercados": {
+      "estados-unidos": "United States",
+      "mexico": "Mexico",
+      "europa": "Europe",
+      "asia": "Asia"
+    },
+    "origen": {
+      "titulo": "Where it ships from",
+      "texto": "Mar del Plata is Argentina's main fishing port: this is where it is landed, processed and loaded, all year round.",
+      "detalle": "We work with SENASA-approved exporters, picked one by one. We do not take title to the goods and we do not operate as a processing plant.",
+      "alt": "Fishing fleet moored in the port of Mar del Plata."
+    },
+    "destino": {
+      "titulo": "How far it goes",
+      "texto": "Four markets, each with its own standard. The transaction is built to whichever one applies.",
+      "detalle": "In the United States, the Argentine origin is backed by a legal entity of our own.",
+      "alt": "A cargo ship heading out, seen from the shore."
+    },
+    "contacto": {
+      "titulo": "Which market is your shipment headed to?",
+      "texto": "Tell us which country it is going to and what the product is. We build the transaction to that market’s standard and get back to you within 24 to 48 business hours.",
+      "cta": "Request a quote"
+    },
+    "origenDeLasRutas": "Mar del Plata",
+    "cumplimiento": "The United States runs against FDA, HACCP and SIMP, with the corresponding sanitary and origin documentation."
+  },
+  "comoTrabajamos": {
+    "metaTitle": "How we work: the five steps",
+    "metaDescription": "Sourcing, technical specification, negotiation, logistics and closing. We charge a commission on the closed deal and the payment never passes through us.",
+    "titulo": "From the first message to the close.",
+    "entrada": "Five steps, no detours and no fine print.",
+    "pasos": {
+      "sourcing": {
+        "titulo": "Sourcing",
+        "texto": "We pick the exporter and the product by species, format, size and volume, within what the season has available."
+      },
+      "especificacion": {
+        "titulo": "Technical specification",
+        "texto": "We build the spec sheet: size, format — IQF, block, HOSO, HLSO or fillet, among others —, packing and the certifications the destination market asks for."
+      },
+      "negociacion": {
+        "titulo": "Commercial negotiation",
+        "texto": "Price, Incoterm — FOB, CFR or CIF — and payment terms."
+      },
+      "logistica": {
+        "titulo": "Logistics and documentation",
+        "texto": "Booking, international transit and export documentation: sanitary certificate, certificate of origin, HACCP and SIMP for the United States."
+      },
+      "cierre": {
+        "titulo": "Closing",
+        "texto": "Payment goes direct between exporter and importer. We never touch the money on the deal."
+      }
+    },
+    "comisionEyebrow": "How we get paid",
+    "comision": "We charge a commission on the deal once it closes: we only earn if it works out. At no point do we take title to the goods, and payment goes direct between exporter and importer.",
+    "contacto": {
+      "titulo": "Let's start with step one.",
+      "texto": "Tell us the species, the format and the volume. We answer within 24 to 48 business hours.",
+      "cta": "Request a quote"
+    }
+  },
+  "notFound": {
+    "title": "We couldn't find this page",
+    "description": "The link may be misspelled or the page no longer exists.",
+    "backHome": "Back to home"
+  },
+  "productos": {
+    "metaTitle": "Seafood, beef and poultry catalogue",
+    "metaDescription": "Eleven South Atlantic species — hake, red shrimp, squid and croaker — plus beef and poultry cuts. Format, grading and packing set per transaction.",
+    "titulo": "What we trade.",
+    "entrada": "Species by species and cut by cut. Format, grading and packing are set per transaction.",
+    "unidades": {
+      "pescados": {
+        "nombre": "Seafood"
+      },
+      "carnes": {
+        "nombre": "Meat"
+      }
+    },
+    "pescados": {
+      "metaTitle": "Seafood: Argentine red shrimp, hake, Illex squid and croaker",
+      "metaDescription": "Eleven South Atlantic species, from hake and red shrimp to red porgy, seabass and angel shark. IQF, block, HOSO, HLSO and fillet formats, on FOB, CFR or CIF terms, with FDA, HACCP and SIMP compliance.",
+      "titulo": "Species from the <destacado>South Atlantic</destacado>.",
+      "entrada": "Some species are available year-round and others run on a season, and there availability depends on how the year turns out. The ones with no published window are quoted per transaction.",
+      "disponibilidadTitulo": "Availability",
+      "formatosTitulo": "Formats",
+      "regimenes": {
+        "cuota": "Annual quota",
+        "zafra": "Seasonal opening"
+      },
+      "especies": {
+        "merluza": {
+          "nombre": "Hake",
+          "cientifico": "Merluccius hubbsi",
+          "descripcion": "Argentina's largest whitefish fishery by volume, and the usual pick for anyone who needs to restock all year without a gap.",
+          "disponibilidad": "Year-round, with the best volume and price from May to September",
+          "formatos": "H&G, HGT and fillet; special fillet, calibrated, skin-on or skin-off, with V-cut"
+        },
+        "corvina": {
+          "nombre": "Whitemouth croaker",
+          "cientifico": "Micropogonias furnieri",
+          "descripcion": "Firm-fleshed whitefish with good yield, a regular in volume orders for distribution. It is fished in the Río de la Plata and in the shared zone that Argentina and Uruguay manage together.",
+          "disponibilidad": "Season from April to September",
+          "formatos": "Whole round, gutted and scaled, and pan-ready H&G"
+        },
+        "calamar": {
+          "nombre": "Illex squid",
+          "cientifico": "Illex argentinus",
+          "descripcion": "A cold-water squid with a one-year life cycle: the stock renews entirely every season, so how much there is to place is settled year by year.",
+          "disponibilidad": "Caught from January to August",
+          "formatos": "Whole round, tube, tentacle and fin"
+        },
+        "langostino": {
+          "nombre": "Argentine red shrimp",
+          "cientifico": "Pleoticus muelleri",
+          "descripcion": "The highest-value export in Argentine fishing, and it moves in volume. It pays to have the deal talked through before the season opens.",
+          "disponibilidad": "Main season May to September, plus a summer run from January to March",
+          "formatos": "Whole round, C1, CR and CMIX tails, P&D, and tail-on"
+        },
+        "pescadilla": {
+          "nombre": "Striped weakfish",
+          "cientifico": "Cynoscion guatucupa",
+          "descripcion": "A coastal whitefish from the same family as croaker, and it often comes up in the same haul. Soft-fleshed, it mostly places as fillet.",
+          "formatos": "Whole round, skin-on fillet and skinless fillet"
+        },
+        "besugo": {
+          "nombre": "Red porgy",
+          "cientifico": "Pagrus pagrus",
+          "descripcion": "A rocky-bottom species, caught in small and seasonal quantities. It is a niche product: it sells on the quality of the piece, not on volume.",
+          "formatos": "Whole round, and gutted and scaled"
+        },
+        "pezPalo": {
+          "nombre": "Brazilian flathead",
+          "cientifico": "Percophis brasiliensis",
+          "descripcion": "A long, lean whitefish with no intermuscular bones, which leaves a clean fillet. It comes up alongside the coastal fishery.",
+          "formatos": "PBI fillet, PBO fillet and whole round"
+        },
+        "mero": {
+          "nombre": "Argentine seabass",
+          "cientifico": "Acanthistius patachonicus",
+          "descripcion": "A South Atlantic reef fish with firm white flesh. It lands in far smaller volumes than the offshore fisheries, so it is worked by the piece rather than by the tonne."
+        },
+        "polloDeMar": {
+          "nombre": "Angel shark",
+          "cientifico": "Squatina guggenheim and Squatina argentina",
+          "descripcion": "A bottom-dwelling cartilaginous fish that sells on what it lacks: lean white flesh, no bones and no scales. Argentina trades it under a market name that means sea chicken.",
+          "formatos": "Fillet"
+        },
+        "raya": {
+          "nombre": "Skate",
+          "cientifico": "Raja spp., Dipturus chilensis and Atlantoraja castelnaui",
+          "descripcion": "Three species trade under the same commercial name and are worked together: common, longnose and spotback."
+        },
+        "rebozado": {
+          "nombre": "Breaded hake",
+          "cientifico": "Merluccius hubbsi",
+          "descripcion": "Not a species but a product made from hake fillet, ready to cook. It is the highest value-added line in the catalogue.",
+          "formatos": "Medallions and sticks"
+        }
+      },
+      "destacada": "Highest volume",
+      "stock": "We work with cold-storage stock and frozen product, both IQF and block, so there is availability for much of the year. The seasons mark the best moments for price and volume, not the only window to buy.",
+      "condiciones": {
+        "titulo": "How a transaction is specified",
+        "formatos": {
+          "titulo": "Formats",
+          "texto": "IQF, block, HOSO, HLSO and fillet, among others. The spec sheet for each transaction sets size, count, yield and packing."
+        },
+        "comerciales": {
+          "titulo": "Commercial terms",
+          "texto": "We work FOB, CFR and CIF. Payment goes direct between exporter and importer: it never passes through us."
+        },
+        "cumplimiento": {
+          "titulo": "Compliance",
+          "texto": "Each market to its own standard: FDA, HACCP and SIMP for the United States, with the corresponding sanitary and origin documentation."
+        },
+        "otras": {
+          "texto": "Seafood and beef are the two units, and both are right above. Beyond those two there are categories we still take on, when we can see the deal through properly.",
+          "enlace": "Looking for something else?"
+        }
+      },
+      "contacto": {
+        "titulo": "Which species, and for when?",
+        "texto": "Availability shifts with the season and with each year's resolutions. Tell us what you are after, in what format and in what volume, and we will tell you what there is today and what is worth waiting for.",
+        "ctaCompra": "I'm an importer",
+        "ctaVenta": "I'm an exporter"
+      }
+    },
+    "carnes": {
+      "metaTitle": "Meat: sourced to order from Argentina",
+      "metaDescription": "Meat is a secondary unit at Phantus Global: there is no published catalogue because the offer is built against the actual request. Tell us what you need.",
+      "titulo": "Meat, <destacado>to order</destacado>.",
+      "entrada": "It is not our focus and we do not pretend otherwise: seafood is the unit with a catalogue. We take meat on when we can see the deal through to the end.",
+      "cortes": {
+        "etiqueta": "Beef side with the cuts we handle",
+        "azotillo": "Azotillo",
+        "palomita": "Palomita",
+        "roastBeef": "Roast beef",
+        "bifeAncho": "Cube roll",
+        "bifeDeCostilla": "Striploin",
+        "lomo": "Tenderloin",
+        "cuadril": "Rump",
+        "peceto": "Eye round",
+        "colitaDeCuadril": "Rump tail",
+        "paleta": "Shoulder clod",
+        "asado": "Short ribs",
+        "entrana": "Skirt",
+        "vacio": "Flank",
+        "tapaDeNalga": "Tapa de nalga",
+        "bolaDeLomo": "Knuckle",
+        "matambre": "Matambre",
+        "tapaDeAsado": "Tapa de asado",
+        "osobuco": "Shank"
+      },
+      "contacto": {
+        "titulo": "Which cut, and for which market?",
+        "texto": "Tell us the cut, the volume and the destination. We take it from there to find the approved exporter who can meet it, and we answer within 24 to 48 business hours.",
+        "ctaCompra": "I am looking for Argentine meat",
+        "ctaVenta": "I have meat to export"
+      },
+      "vacuna": "Beef"
+    },
+    "contacto": {
+      "titulo": "What do you need, and when?",
+      "texto": "Tell us the species or the cut, in what format and what volume, and the market it is going to. We will tell you what is available today and what is worth waiting for.",
+      "cta": "Request a quote"
+    },
+    "pollo": {
+      "titulo": "Poultry",
+      "cortes": {
+        "etiqueta": "Poultry cuts. Point at or focus a cut to see its name.",
+        "cabeza": "Head",
+        "cuello": "Neck",
+        "espinazo": "Back",
+        "rabadilla": "Tail",
+        "pechuga": "Breast",
+        "pecho": "Front",
+        "ala": "Wing",
+        "contramuslo": "Thigh",
+        "muslo": "Drumstick and leg"
+      },
+      "otrosTitulo": "Also:",
+      "otrosTexto": "heart, liver and gizzard, which are giblets rather than a part of the carcass, and fillet, which comes off the breast."
+    }
+  },
+  "legales": {
+    "terminos": {
+      "enlace": "Terms and conditions",
+      "metaTitle": "Terms and conditions",
+      "metaDescription": "Terms of use for phantusglobal.com: what this site is, what the information on it is worth, and what you may do with its content.",
+      "titulo": "Terms and conditions",
+      "entrada": "These terms are about the site: what phantusglobal.com is, what the information on it is worth, and what you may do with its content. They are not the terms of a transaction, which are agreed in writing case by case.",
+      "actualizado": "Last updated: September 2026.",
+      "tramos": {
+        "objeto": {
+          "titulo": "What this site is",
+          "texto": "phantusglobal.com is the corporate site of Phantus Global. It exists to explain what we do, which products we broker and how to reach us.\n\nBrowsing it creates no commercial relationship and commits neither you nor us to anything. Every transaction is agreed separately and in writing."
+        },
+        "catalogo": {
+          "titulo": "The catalogue is not an offer",
+          "texto": "The species, cuts, formats and season windows we publish are reference information, not a firm offer. Actual availability depends on the season, on the closures and resolutions in force, and on each exporter’s capacity at the time.\n\nPrices, volumes, formats and lead times are confirmed per transaction. Nothing published here replaces that confirmation."
+        },
+        "uso": {
+          "titulo": "Using the site",
+          "texto": "You are free to browse the site, read it, print it and share its links.\n\nYou may not use it to send spam through the form, attempt to reach non-public areas, scrape its content to republish it, or do anything that interferes with how it works for you or for anyone else."
+        },
+        "propiedad": {
+          "titulo": "Content and trade mark",
+          "texto": "The texts, photographs, the cuts diagram and the rest of the content belong to Phantus Global or are used under licence. The name Phantus Global and its symbol are our own marks.\n\nYou may quote and link to the site with attribution. Reproducing its content as your own, or using the mark, requires permission."
+        },
+        "disponibilidad": {
+          "titulo": "Availability",
+          "texto": "We aim to keep the site online and current, but we do not guarantee that it will never be down, nor that everything published is up to date at any given moment. There may be interruptions for maintenance or for reasons outside our control."
+        },
+        "enlaces": {
+          "titulo": "Links to other sites",
+          "texto": "Where the site links to third-party pages, it does so for reference. We neither control their content nor answer for it."
+        },
+        "cambios": {
+          "titulo": "Changes to these terms",
+          "texto": "We may update them. The date of the last update is at the top, and the published version is the one that applies."
+        }
+      }
+    },
+    "privacidad": {
+      "enlace": "Privacy",
+      "metaTitle": "Privacy policy",
+      "metaDescription": "What data phantusglobal.com receives, what it is used for and what we do not do with it. No analytics, no pixels and a single cookie.",
+      "titulo": "Privacy",
+      "entrada": "This policy is about the site: what data phantusglobal.com receives when you browse it or write through the form, what we use it for, and what we do not do with it.",
+      "actualizado": "Last updated: September 2026.",
+      "tramos": {
+        "queRecibimos": {
+          "titulo": "What data we receive",
+          "texto": "Only what you enter in the contact form: the enquiry type, your name, your email address and your message. The language you were reading in is added, so we answer in that language.\n\nWe ask for nothing else, and there is no other form on the site."
+        },
+        "paraQue": {
+          "titulo": "What we use it for",
+          "texto": "To read your enquiry and answer it, and nothing else. The data arrives as an email in our inbox: the site has no database and keeps no copy.\n\nWe keep it while the enquiry is open and while a transaction could still be picked up again. If you want it deleted sooner, write to us and we will delete it."
+        },
+        "cookies": {
+          "titulo": "Cookies",
+          "texto": "The site uses a single cookie, NEXT_LOCALE, which remembers the language you chose so you do not have to choose it again. It lasts a year and you can delete it from your browser.\n\nThere are no third-party, advertising or measurement cookies. That is also why there is no banner asking you to accept them: there is nothing to accept."
+        },
+        "queNoHacemos": {
+          "titulo": "What we do not do",
+          "texto": "We do not use Google Analytics or any other measurement tool. There are no Meta, LinkedIn or other network pixels. We do not profile visitors and we do not track anyone across sites.\n\nThe fonts are served from our own domain, so opening the site does not tell Google you were here. We do not sell, rent or pass on data for commercial purposes."
+        },
+        "abuso": {
+          "titulo": "Your IP address",
+          "texto": "So that a bot cannot flood the form, the server counts how many submissions arrived from the same IP address in the last ten minutes. That count lives in the process memory, is discarded on its own after those ten minutes and is never written to a file.\n\nYour IP does not travel in the email we receive and is not attached to your enquiry."
+        },
+        "terceros": {
+          "titulo": "Who else sees your enquiry",
+          "texto": "The email carrying your enquiry is sent through a transactional email provider, which processes it to deliver it to our inbox. That is the only third party involved, and only for that.\n\nThere is no other external service running on the site."
+        },
+        "derechos": {
+          "titulo": "Your data is yours",
+          "texto": "You can ask us at any time to tell you what data of yours we hold, to correct it or to delete it. Writing to the address in the footer of this page is enough.\n\nYou do not have to explain why."
+        },
+        "cambios": {
+          "titulo": "Changes to this policy",
+          "texto": "We may update it. The date of the last update is at the top, and the published version is the one that applies."
+        }
+      }
+    }
+  }
+}

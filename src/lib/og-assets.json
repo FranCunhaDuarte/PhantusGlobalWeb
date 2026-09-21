@@ -1,0 +1,10 @@
+{
+  "medida": {
+    "ancho": 1200,
+    "alto": 630
+  },
+  "imagenes": {
+    "es": "/og/es.png",
+    "en": "/og/en.png"
+  }
+}

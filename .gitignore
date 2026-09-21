@@ -1,0 +1,32 @@
+# dependencias
+/node_modules
+/.pnp
+.pnp.*
+
+# build
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# testing
+/coverage
+
+# entorno
+.env*
+!.env.example
+
+# sistema
+.DS_Store
+Thumbs.db
+*.pem
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# hosting
+.vercel
