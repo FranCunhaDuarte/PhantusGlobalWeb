@@ -30,7 +30,17 @@ export const SECCIONES_NAVEGABLES = [
 /** La sección de contacto se navega desde el CTA, no desde la lista de anclas. */
 export const SECCION_CONTACTO = 'contacto';
 
+/**
+ * La home como entrada de la barra. **No entra en `SECCIONES_NAVEGABLES`** y eso
+ * no es un detalle: esa lista es también la de las tarjetas del índice de la
+ * home, y una tarjeta que lleva a la página en la que ya estás no es una
+ * entrada del índice. Por eso hay dos vistas de la misma lista —la barra y el
+ * pie— y una sola fuente.
+ */
+export const SECCION_INICIO = 'inicio';
+
 export const SECCIONES = [
+  SECCION_INICIO,
   ...SECCIONES_NAVEGABLES,
   SECCION_CONTACTO
 ] as const;
@@ -38,6 +48,25 @@ export const SECCIONES = [
 export type IdSeccion = (typeof SECCIONES)[number];
 export type SeccionNavegable = (typeof SECCIONES_NAVEGABLES)[number];
 
+/**
+ * Lo que listan la barra y el panel mobile. Contacto no está: vive en el botón
+ * sólido, que es la única acción real de la página.
+ */
+export const SECCIONES_DEL_HEADER = [
+  SECCION_INICIO,
+  ...SECCIONES_NAVEGABLES
+] as const;
+
+/**
+ * Lo que lista el pie. **Inicio no va acá**: el logotipo del pie ya lleva a la
+ * home y está a dos centímetros de la lista.
+ */
+export const SECCIONES_DEL_PIE = [
+  ...SECCIONES_NAVEGABLES,
+  SECCION_CONTACTO
+] as const;
+
+export const RUTA_DE_INICIO = '/' satisfies Ruta;
 export const RUTA_DE_NOSOTROS = '/nosotros' satisfies Ruta;
 export const RUTA_DE_MERCADOS = '/mercados' satisfies Ruta;
 export const RUTA_DE_PRODUCTOS = '/productos' satisfies Ruta;
@@ -52,6 +81,7 @@ export const RUTA_DE_PRODUCTOS = '/productos' satisfies Ruta;
  * subpágina— porque eso puede volver a cambiar sin tocar a quien lo monta.
  */
 const PAGINA_DE_SECCION: { readonly [K in IdSeccion]?: Ruta } = {
+  inicio: RUTA_DE_INICIO,
   nosotros: RUTA_DE_NOSOTROS,
   mercados: RUTA_DE_MERCADOS,
   productos: RUTA_DE_PRODUCTOS

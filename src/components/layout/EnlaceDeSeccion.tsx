@@ -1,7 +1,12 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { ancla, paginaDeSeccion, type IdSeccion } from '@/content/secciones';
+import {
+  RUTA_DE_INICIO,
+  ancla,
+  paginaDeSeccion,
+  type IdSeccion
+} from '@/content/secciones';
 import { Link, usePathname } from '@/i18n/navigation';
 
 type EnlaceDeSeccionProps = {
@@ -33,11 +38,18 @@ export default function EnlaceDeSeccion({
   const pagina = paginaDeSeccion(seccion);
 
   if (pagina) {
+    // **La home se compara por igualdad y el resto por prefijo.** Con
+    // `startsWith` alcanzaría para las tres rutas con subpáginas, pero la home
+    // es `/` y toda ruta empieza con `/`: la entrada Inicio quedaría marcada
+    // como página vigente en las siete.
+    const vigente =
+      pagina === RUTA_DE_INICIO ? ruta === pagina : ruta.startsWith(pagina);
+
     return (
       <Link
         href={pagina}
         onClick={onClick}
-        aria-current={ruta.startsWith(pagina) ? 'page' : undefined}
+        aria-current={vigente ? 'page' : undefined}
         className={className}
       >
         {children}

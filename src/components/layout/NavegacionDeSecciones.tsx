@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import EnlaceDeSeccion from '@/components/layout/EnlaceDeSeccion';
-import { SECCIONES_NAVEGABLES, type IdSeccion } from '@/content/secciones';
+import { SECCIONES_DEL_HEADER, type IdSeccion } from '@/content/secciones';
 import { clases } from '@/lib/clases';
 
 type NavegacionDeSeccionesProps = {
@@ -60,7 +60,7 @@ const ENLACE_DE_PANEL = clases(
  */
 export default function NavegacionDeSecciones({
   etiqueta,
-  secciones = SECCIONES_NAVEGABLES,
+  secciones = SECCIONES_DEL_HEADER,
   orientacion = 'horizontal',
   alNavegar,
   className

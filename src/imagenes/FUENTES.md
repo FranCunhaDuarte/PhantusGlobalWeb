@@ -139,27 +139,29 @@ carne siguen la regla opuesta, en castellano, porque los manda el frigorífico.
 
 ### Los iconos del hero
 
-Son tres y **no tienen todos el mismo origen**.
+Son tres y **los tres son de Lucide** (https://lucide.dev), licencia **ISC**: uso
+comercial permitido, sin atribución obligatoria. Son `fish-symbol`, `drumstick` y
+`beef`. Están **copiados dentro del componente** y no vienen del paquete: son
+tres iconos de los más de mil que trae `lucide-react`, y una dependencia de
+tiempo de ejecución para eso no se paga sola. Copiados, además, el grosor y el
+tamaño los decide el sitio.
 
-**Pescado y corte de carne son de Lucide** (https://lucide.dev), licencia
-**ISC**: uso comercial permitido, sin atribución obligatoria. Están **copiados
-dentro del componente** y no vienen del paquete: son dos iconos de los más de mil
-que trae `lucide-react`, y una dependencia de tiempo de ejecución para eso no se
-paga sola. Copiados, además, el grosor y el tamaño los decide el sitio.
+**Hubo una gallina dibujada a mano acá y se fue.** Tenía cresta, pico y ojo, y al
+lado de un titular en mayúsculas sobre video se leía como ilustración infantil.
+El pedido fue bajar el registro a algo más sobrio, y ahí la gallina era el
+problema: `drumstick` es la pata, o sea el producto y no el animal, que es el
+registro del resto del sitio. Con eso los tres pasaron a ser producto y el juego
+quedó parejo.
 
-**La gallina está dibujada en este repo**, a mano, dentro de `IconosDeRubro`. No
-sale de ninguna librería y no hay nada que atribuir. Lucide no tiene pollo
-entero: lo más cerca es `drumstick`, que es lo que hubo hasta ahora y a 32 px se
-lee como dos manchas unidas; `bird` es un pájaro cantor y `egg`, un huevo, que es
-otro producto. Está dibujada para el trazo de 1,5 del sitio —con uno más grueso,
-la cresta y el pico se empastan— y la cresta va integrada al contorno de la
-cabeza, que es lo que la hace leerse a ese tamaño.
+> **El pescado es `fish-symbol` y esa es la forma del ichthys.** Dos arcos que se
+> cruzan en la cola es el símbolo cristiano, no un icono de pescado. Se planteó y
+> la decisión de usarlo igual fue de Franco. Lo que lo desactiva, si alguna vez
+> molesta, es un punto de ojo —con ojo se lee como pez, sin ojo como símbolo—; la
+> alternativa entera es volver a `fish`, que es el que estaba.
 
 **No hay vaca en Lucide**, así que el rubro de carne va con un corte. Dibujarla a
 mano sí se intentó en este proyecto, para el diagrama de cortes, y no salió: lo
-que no se resuelve es la anatomía, no el trazo. Una gallina de perfil es una
-silueta cerrada con una cresta encima y entra en ese presupuesto; una vaca
-reconocible, no.
+que no se resuelve es la anatomía, no el trazo.
 
 **Hubo una copa de vino y se sacó**: era el único rubro sin nada detrás en el
 sitio —ni página, ni catálogo, ni copy—, así que prometía una unidad de negocio

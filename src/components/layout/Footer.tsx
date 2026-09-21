@@ -3,7 +3,7 @@ import EnlaceDeSeccion from '@/components/layout/EnlaceDeSeccion';
 import NavegacionDeSecciones from '@/components/layout/NavegacionDeSecciones';
 import Container from '@/components/ui/Container';
 import Logo from '@/components/ui/Logo';
-import { SECCIONES, SECCION_CONTACTO } from '@/content/secciones';
+import { SECCIONES_DEL_PIE, SECCION_CONTACTO } from '@/content/secciones';
 import { LEGALES, RUTA_DE_LEGAL } from '@/content/legales';
 import { Link } from '@/i18n/navigation';
 
@@ -37,7 +37,7 @@ export default function Footer() {
             <h2 className="text-eyebrow uppercase texto-suave">{t('navegar')}</h2>
             <NavegacionDeSecciones
               etiqueta={t('navegar')}
-              secciones={SECCIONES}
+              secciones={SECCIONES_DEL_PIE}
               orientacion="vertical"
             />
           </div>
