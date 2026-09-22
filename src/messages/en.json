@@ -42,8 +42,7 @@
     "navegar": "Navigation",
     "contacto": "Contact",
     "canal": "Write through the form, or straight to the inbox.",
-    "responsable": "Leandro Fenoy",
-    "correo": "leandro@phantusglobal.com",
+    "correo": "info@phantusglobal.com",
     "escribirnos": "Write to us",
     "derechos": "© {anio} Phantus Global"
   },
@@ -89,7 +88,7 @@
     "contacto": {
       "titulo": "Let us discuss your requirement.",
       "entrada": "We work with importers sourcing Argentine suppliers.",
-      "telefono": "+54 223 683-8585",
+      "telefono": "+54 9 223 683-8585",
       "correo": "info@phantusglobal.com",
       "tipo": {
         "etiqueta": "Enquiry type",

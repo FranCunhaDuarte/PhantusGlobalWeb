@@ -45,20 +45,24 @@ export default function Footer() {
           {/* El correo va en texto plano desde la Fase 11. Hasta entonces el
               único canal era el formulario, justamente para no exponerlo a los
               rastreadores de direcciones; el cliente lo publicó en su copy y la
-              decisión se toma sabiendo ese costo. El responsable no es adorno:
-              es el dato que el copy pone al lado de la dirección. */}
+              decisión se toma sabiendo ese costo.
+
+              **Al lado iba el nombre del responsable y se sacó por pedido.** Con
+              él se fue también la dirección personal, que llevaba su nombre:
+              `pie.correo` pasó a la casilla genérica, que es la que la sección
+              de contacto ya publicaba. De paso quedan las dos iguales, que era
+              una inconsistencia anotada desde que entraron los canales
+              directos. El JSON-LD lee esta misma clave, así que el correo de la
+              organización siguió sin tocarse. */}
           <div className="flex flex-col gap-4">
             <h2 className="text-eyebrow uppercase texto-suave">{t('contacto')}</h2>
             <p className="texto-suave">{t('canal')}</p>
-            <div className="flex flex-col gap-1">
-              <p className="font-medium">{t('responsable')}</p>
-              <a
-                href={`mailto:${t('correo')}`}
-                className="w-fit break-all underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
-              >
-                {t('correo')}
-              </a>
-            </div>
+            <a
+              href={`mailto:${t('correo')}`}
+              className="w-fit break-all font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
+            >
+              {t('correo')}
+            </a>
             <EnlaceDeSeccion
               seccion={SECCION_CONTACTO}
               className="w-fit font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"

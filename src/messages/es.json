@@ -42,8 +42,7 @@
     "navegar": "Navegación",
     "contacto": "Contacto",
     "canal": "Escribinos por el formulario o directo por correo.",
-    "responsable": "Leandro Fenoy",
-    "correo": "leandro@phantusglobal.com",
+    "correo": "info@phantusglobal.com",
     "escribirnos": "Escribinos",
     "derechos": "© {anio} Phantus Global"
   },
@@ -89,7 +88,7 @@
     "contacto": {
       "titulo": "Hablemos de tu operación.",
       "entrada": "Atendemos a importadores que buscan proveedor argentino.",
-      "telefono": "+54 223 683-8585",
+      "telefono": "+54 9 223 683-8585",
       "correo": "info@phantusglobal.com",
       "tipo": {
         "etiqueta": "Tipo de consulta",

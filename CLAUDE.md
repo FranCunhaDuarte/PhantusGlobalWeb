@@ -5,8 +5,10 @@
 Sitio institucional de **Phantus Global**, bróker de comercio internacional de
 **pescado y mariscos del Atlántico Sur**, con origen en **Mar del Plata,
 Argentina** y estructura legal en **Estados Unidos**. Dominio:
-`phantusglobal.com`. Contacto público: Leandro Fenoy —
-`leandro@phantusglobal.com`.
+`phantusglobal.com`. Contacto público: `info@phantusglobal.com` y
+`+54 9 223 683-8585`. **El sitio no nombra a ninguna persona**: hubo un
+responsable con nombre y apellido en el pie y se sacó por pedido, junto con la
+dirección personal que lo llevaba.
 
 ## Qué hace la empresa
 
@@ -897,15 +899,16 @@ hay quien no completa un formulario y llama.
 > cero de más no conecta desde el exterior, que es de donde llaman los
 > importadores. El enlace va en E.164 (`+542236838585`, en
 > `src/content/contacto-directo.ts`) y el texto a la vista lleva la separación
-> que se lee mejor. **Está escrito como línea fija de Mar del Plata**; si fuera
-> un celular hay que meter un `9` entre país y área. Conviene confirmarlo.
+> que se lee mejor. **Es un celular, confirmado por Franco**, así que lleva el
+> `9` entre país y área: `+5492236838585`. Ese nueve hace el mismo trabajo que
+> el cero pero al revés —desde el exterior es obligatorio y desde adentro del
+> país no se marca—, y los dos juntos no existen.
 
-> **Hay dos direcciones publicadas y no son la misma.** La sección de contacto
-> lleva `info@phantusglobal.com`, que es la que mandó el cliente para este
-> bloque, y el pie sigue con `leandro@phantusglobal.com`, que es la que ya estaba
-> y la que el JSON-LD declara como correo de la organización. **No se unificaron
-> porque nadie lo pidió**, pero en la home se leen las dos a dos pantallas de
-> distancia. Es decisión de Franco cuál manda.
+**Hay una sola dirección publicada y es `info@phantusglobal.com`.** Estuvo
+partida en dos —esa en la sección de contacto y una personal en el pie, que era
+además la que el JSON-LD declaraba como correo de la organización— y se
+unificaron al sacar el nombre del responsable. El pie y el JSON-LD leen la misma
+clave, `pie.correo`, así que hay un solo lugar donde cambiarla.
 
 El teléfono **sí entró al JSON-LD** como `telephone`, en E.164. Era uno de los
 huecos declarados —"no hay dato real"— y dejó de serlo. Horarios, redes e
