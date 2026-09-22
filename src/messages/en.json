@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Phantus Global | Argentine seafood and beef broker",
+    "title": "Phantus Global | Argentine seafood and meat broker",
     "description": "We supply importers in the United States, Mexico, Europe and Asia from SENASA-approved Argentine exporters. Red shrimp, hake, squid and croaker.",
     "template": "%s | Phantus Global",
-    "ogAlt": "Phantus Global, a seafood and beef trade broker based in Mar del Plata, Argentina"
+    "ogAlt": "Phantus Global, a seafood and meat trade broker based in Mar del Plata, Argentina"
   },
   "marca": {
     "nombre": "Phantus Global",
@@ -151,8 +151,8 @@
   },
   "nosotros": {
     "metaTitle": "About us: Argentine broker in Mar del Plata",
-    "metaDescription": "A seafood and beef broker based in Mar del Plata. A network of SENASA-approved exporters and one person answering for every transaction.",
-    "titulo": "We broker Argentine seafood and beef.",
+    "metaDescription": "A seafood and meat broker based in Mar del Plata. A network of SENASA-approved exporters and one person answering for every transaction.",
+    "titulo": "We broker Argentine seafood and meat.",
     "entrada": "One person answering for it, from first contact to the container’s arrival. We know what to ask for: size, format and yield.",
     "datos": {
       "origen": {
@@ -274,8 +274,8 @@
     "backHome": "Back to home"
   },
   "productos": {
-    "metaTitle": "Seafood, beef and poultry catalogue",
-    "metaDescription": "Eleven South Atlantic species — hake, red shrimp, squid and croaker — plus beef and poultry cuts. Format, grading and packing set per transaction.",
+    "metaTitle": "Seafood and meat catalogue",
+    "metaDescription": "Eleven South Atlantic species — hake, red shrimp, squid and croaker — plus the meat cuts we handle. Format, grading and packing set per transaction.",
     "titulo": "What we trade.",
     "entrada": "Species by species and cut by cut. Format, grading and packing are set per transaction.",
     "unidades": {
@@ -384,7 +384,7 @@
           "texto": "Each market to its own standard: FDA, HACCP and SIMP for the United States, with the corresponding sanitary and origin documentation."
         },
         "otras": {
-          "texto": "Seafood and beef are the two units, and both are right above. Beyond those two there are categories we still take on, when we can see the deal through properly.",
+          "texto": "Seafood and meat are the two units, and both are right above. Beyond those two there are categories we still take on, when we can see the deal through properly.",
           "enlace": "Looking for something else?"
         }
       },
