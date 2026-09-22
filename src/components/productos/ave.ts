@@ -60,6 +60,24 @@
  * pelo entre dos regiones muestre tinta y no la página— los 14 no le hacen
  * falta a nadie.
  *
+ * ## La cabeza está dibujada a mano
+ *
+ * Es el único corte que no sale de la extracción. Lo que daba la lámina, ya
+ * suavizado, era un bulto con dos jorobas: sin cresta, sin pico y sin barbilla,
+ * y a los 283 px que mide el ave en la página no se leía como una gallina.
+ *
+ * **Los ocho primeros puntos de su anillo no se tocaron**: son el borde que
+ * comparte con el cuello, y están identificados por distancia a los segmentos
+ * de las regiones vecinas, no por distancia entre puntos —después de
+ * simplificar, los dos lados de una arista compartida no conservan los mismos
+ * vértices, así que comparar punto contra punto los da por distintos—. Lo
+ * redibujado es el resto, que da al fondo.
+ *
+ * El recorrido va garganta, barbilla, pico, cara, cresta y nuca. Dos cosas que
+ * costaron una pasada: **la barbilla necesita un entrante propio** o se lee como
+ * una sola masa con el pico, y **los valles de la cresta van poco profundos**,
+ * porque en punta se lee como sierra y no como cresta.
+ *
  * Los rótulos de la lámina **se descartaron**: estaban quemados en el dibujo.
  * Los nombres visibles salen de `productos.pollo.cortes.<id>`.
  *
@@ -88,7 +106,7 @@ export const SILUETA =
  */
 export const REGIONES_DE_CORTE: Record<string, readonly string[]> = {
   cabeza: [
-    'M530 211L526 216L520 219L479 230L419 256L365 284L318 319L310 322L303 322L288 324L268 337L262 336L255 322L247 291L238 277L212 260L165 249L160 243L159 237L190 214L204 194L209 179L215 123L220 108L226 103L248 94L262 68L285 67L300 62L324 30L338 31L358 43L389 36L395 38L399 44L401 76L410 90L440 116L499 157L523 189Z'
+    'M530 211L526 216L520 219L479 230L419 256L365 284L318 319L310 322L300 330L291 341L280 351L268 354L257 349L250 338L248 324L243 304L237 288L206 270L174 253L150 242L145 234L171 228L200 222L227 216L239 202L245 184L246 164L243 144L238 124L234 110L247 100L257 84L269 90L281 72L294 56L307 66L320 46L334 30L347 42L357 60L370 50L383 40L392 54L398 72L409 94L426 113L450 134L478 155L505 174L523 189Z'
   ],
   cuello: [
     'M535 217L637 317L716 366L715 376L704 393L682 419L653 450L606 492L583 509L557 524L549 528L537 531L519 544L510 542L500 544L422 574L393 583L357 591L307 599L290 599L282 595L279 571L280 475L267 403L269 380L278 360L311 328L311 323L313 320L328 307L403 265L500 221L520 216Z'

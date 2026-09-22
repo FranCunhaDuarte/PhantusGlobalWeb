@@ -100,6 +100,15 @@ cuerpo y el límite entre dos vecinas es una arista compartida. El trazo de cada
 una la pinta desde su lado y los dos se superponen, de modo que la línea mide
 `GROSOR_DE_LINEA` y no el doble. Cambiarla es cambiar esa constante.
 
+**`GROSOR_DE_LINEA` está en píxeles de pantalla, no en unidades del lienzo**, y
+esa distinción arregló un desnivel que no se veía venir. El número era el mismo
+para los dos animales, pero los lienzos no miden lo mismo ni se rinden al mismo
+ancho: medido a 1280, con 1,5 unidades la res dibujaba a **0,80 px y el ave a
+0,24**, tres veces más fina, y al lado de la otra el ave se leía como un dibujo
+de otro juego. Con `vector-effect: non-scaling-stroke` el trazo sale de la
+transformación del `viewBox` y el número es el que se ve, igual en los dos y a
+cualquier ancho. Hoy son 1,8 px.
+
 Llenar hasta el último píxel importa: mientras los píxeles en disputa quedaban
 sin asignar, en los cruces de tres regiones se veía el fondo de la página como
 una mota blanca. Un píxel que dos regiones alcanzan en la misma vuelta se lo

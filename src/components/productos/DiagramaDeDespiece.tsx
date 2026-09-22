@@ -36,12 +36,22 @@ type DiagramaDeDespieceProps = {
 };
 
 /**
- * Grosor de la línea divisoria. Las regiones se extrajeron creciendo hasta
- * tocarse, así que el límite entre dos vecinas es una arista compartida: el
- * trazo de cada una la pinta desde su lado y los dos se superponen, de modo que
- * la línea mide esto y no el doble.
+ * Grosor de la línea divisoria, **en píxeles de pantalla y no en unidades del
+ * lienzo**. Esa distinción es el arreglo: el número era el mismo para los dos
+ * animales y salía muy distinto en cada uno, porque los lienzos no miden lo
+ * mismo ni se rinden al mismo ancho. Medido a 1280, con 1,5 unidades, la res
+ * dibujaba a **0,80 px** y el ave a **0,24**, tres veces más fina; al lado de la
+ * otra el ave se leía como un dibujo de otro juego.
+ *
+ * `vector-effect: non-scaling-stroke` saca el trazo de la transformación del
+ * `viewBox`, así que este número es el que se ve, igual en los dos y a
+ * cualquier ancho.
+ *
+ * Las regiones se extrajeron creciendo hasta tocarse, así que el límite entre
+ * dos vecinas es una arista compartida: el trazo de cada una la pinta desde su
+ * lado y los dos se superponen, de modo que la línea mide esto y no el doble.
  */
-const GROSOR_DE_LINEA = 1.5;
+const GROSOR_DE_LINEA = 1.8;
 
 /** Aire entre el puntero y el borde de abajo de la tarjeta. */
 const AIRE = 12;
@@ -135,6 +145,7 @@ export default function DiagramaDeDespiece({
       onFocus={() => desdeElCentroide(corte, indice)}
       onBlur={() => setApuntado(null)}
       strokeWidth={GROSOR_DE_LINEA}
+      vectorEffect="non-scaling-stroke"
       strokeLinejoin="round"
       className={clases(
         'cursor-pointer stroke-surface transition-colors duration-200 outline-none motion-reduce:transition-none',
@@ -163,6 +174,7 @@ export default function DiagramaDeDespiece({
           <path
             d={silueta}
             strokeWidth={GROSOR_DE_LINEA}
+            vectorEffect="non-scaling-stroke"
             strokeLinejoin="round"
             className="fill-ink stroke-surface"
           />
