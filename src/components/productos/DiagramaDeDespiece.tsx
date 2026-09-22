@@ -182,7 +182,7 @@ export default function DiagramaDeDespiece({
             top: apuntado.y - ALTO_DE_TARJETA - AIRE
           }}
         >
-          <TarjetaDeCorte corte={apuntado.corte} nombre={nombre(apuntado.corte)} />
+          <TarjetaDeCorte nombre={nombre(apuntado.corte)} />
         </div>
       )}
     </div>

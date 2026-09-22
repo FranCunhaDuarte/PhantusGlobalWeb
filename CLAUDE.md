@@ -158,9 +158,22 @@ resultado baja de 1500 píxeles.
 **El dibujo no lleva los nombres escritos encima.** Los llevó: eran dieciocho
 rótulos, varios girados y otros achicados para entrar, y aun así tres se pasaban
 del borde de su región. Ahora el dibujo es sólo el dibujo y el nombre vive en una
-**tarjeta que se abre al apuntar** un corte, donde además entra la foto del corte
-—`TarjetaDeCorte`, con su mapa parcial `IMAGEN_DE_CORTE` y el mismo hueco con
-isotipo al 7 % que el catálogo de especies mientras falta el PNG—.
+**tarjeta que se abre al apuntar** un corte (`TarjetaDeCorte`).
+
+**La tarjeta es sólo el nombre, y llevó la foto del corte.** Se sacó por pedido,
+y el motivo de fondo es que de los veintisiete cortes entre la res y el ave
+**trece no tienen PNG**: la mayoría de las veces lo que se abría era el hueco con
+la marca de agua, una caja de 150 px de alto que no mostraba nada y empujaba el
+nombre lejos del puntero. Medida en el navegador, la tarjeta pasó de **203 px de
+alto a 46** y quedó pegada al cursor. `ImagenDeCorte` sigue vivo: lo usa el
+adelanto de la home, que ahí sí muestra sólo los cortes que tienen foto. Volver
+atrás es devolverle el `<ImagenDeCorte>` y subir `ALTO_DE_TARJETA`.
+
+**El ancho de la tarjeta es fijo y no `fit-content`**, y eso no es pereza: la
+tarjeta se centra sobre el puntero restándole la mitad del ancho, así que con
+ancho automático saltaría de lugar al pasar de "Lomo" a "Colita de cuadril". Los
+192 px entran el nombre más largo de los dos idiomas —diecisiete caracteres— en
+un solo renglón; uno más largo parte en dos y obliga a subir el alto.
 
 **La tarjeta sigue al puntero y va siempre por encima de él.** Se ancla al mouse
 y no al centro de la región porque una región grande —el asado, el vacío— tiene
@@ -1697,11 +1710,11 @@ medida la que decide si hay carrusel**: a 288 px la pista pide 1212 contra los
 solo bloque lo convertiría en una grilla.
 
 El hueco 4:3 con la marca de agua al 7 % vive en `HuecoDeImagen`, y lo usan la
-ficha de especie, los dos adelantos y la tarjeta del diagrama de cortes.
-`ImagenDeEspecie` e `ImagenDeCorte` son lo que queda de propio de cada dominio:
-buscar el archivo en su mapa. `anchoDeMarcaGrande` es opcional —sin él la marca
-mide lo mismo en todos los anchos, que es lo que quiere una caja de medida fija
-como la tarjeta del diagrama—.
+ficha de especie y los dos adelantos. **La tarjeta del diagrama lo usó y ya no**:
+se quedó sólo con el nombre. `ImagenDeEspecie` e `ImagenDeCorte` son lo que queda
+de propio de cada dominio: buscar el archivo en su mapa. `anchoDeMarcaGrande`
+quedó **sin consumidor** al salir la tarjeta —era el que pedía una medida fija de
+marca en una caja de medida fija— y no se borró.
 
 #### El hueco de imagen, y qué se publica
 

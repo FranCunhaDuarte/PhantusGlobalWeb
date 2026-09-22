@@ -1,48 +1,48 @@
-import ImagenDeCorte from '@/components/productos/ImagenDeCorte';
 import Panel from '@/components/ui/Panel';
 
 /**
  * Medidas de la tarjeta, en píxeles y no en clases: quien la coloca necesita el
  * número para ponerla por encima del puntero sin medirla en cada movimiento.
- * Son los mismos que la clase de abajo: 14rem de ancho, y el alto que salen del
- * relleno, la foto en 4:3 y el rótulo. Si cambia una clase, cambian estos.
+ * Salen del ancho fijo, del relleno, del borde y de la altura de línea del
+ * nombre. **Si cambia una clase de abajo, cambian estos dos**, y se comprueban
+ * midiendo la tarjeta en el navegador.
  */
-export const ANCHO_DE_TARJETA = 224;
-export const ALTO_DE_TARJETA = 203;
-
-/** Ancho de render de la foto dentro de la tarjeta. */
-const MEDIDAS = '224px';
-
-/** La tarjeta mide siempre lo mismo, así que la marca de agua también: una sola
- *  medida, la mínima del manual para el isotipo suelto. */
-const ANCHO_DE_MARCA = 50;
+export const ANCHO_DE_TARJETA = 192;
+export const ALTO_DE_TARJETA = 46;
 
 type TarjetaDeCorteProps = {
-  corte: string;
   nombre: string;
 };
 
 /**
- * Lo que aparece al apuntar un corte: su nombre y la foto del corte. La media
- * res dejó de llevar los nombres escritos encima —eran dieciocho rótulos, varios
- * girados y otros achicados para entrar— y pasaron acá, donde hay lugar para el
- * nombre entero y para mostrar de qué se está hablando.
+ * Lo que aparece al apuntar un corte: su nombre, y nada más. La media res dejó
+ * de llevar los nombres escritos encima —eran dieciocho rótulos, varios girados
+ * y otros achicados para entrar— y pasaron acá, donde hay lugar para el nombre
+ * entero.
  *
- * El hueco es el mismo del catálogo de especies: con foto o sin ella la tarjeta
- * mide lo mismo, así que enchufar los PNG no la hace saltar.
+ * **Llevó también la foto del corte y se sacó por pedido.** De los veintisiete
+ * cortes que hay entre la res y el ave, trece no tienen PNG, así que la mayoría
+ * de las veces lo que se abría era el hueco con la marca de agua: una caja de
+ * 150 px de alto que no mostraba nada y empujaba el nombre lejos del puntero.
+ * Sin ella la tarjeta bajó de 203 px de alto a 46 y quedó pegada al cursor, que
+ * es donde se la está mirando. `ImagenDeCorte` sigue vivo: lo usa el adelanto de
+ * la home, que ahí sí muestra sólo los cortes que tienen foto.
+ *
+ * **El ancho es fijo y no `fit-content`.** Con ancho automático la tarjeta
+ * cambiaría de medida entre "Lomo" y "Colita de cuadril", y como se centra sobre
+ * el puntero restándole la mitad del ancho, saltaría de lugar al pasar de un
+ * corte al de al lado. Los 192 px entran el nombre más largo de los dos idiomas
+ * —"Colita de cuadril" y "Drumstick and leg", diecisiete caracteres— en un solo
+ * renglón; si alguna vez entra uno más largo, el nombre parte en dos y hay que
+ * subir `ALTO_DE_TARJETA`.
  */
-export default function TarjetaDeCorte({ corte, nombre }: TarjetaDeCorteProps) {
+export default function TarjetaDeCorte({ nombre }: TarjetaDeCorteProps) {
   return (
     <Panel
       fondo="crema-elevado"
-      className="w-56 border borde-seccion p-3 shadow-lg"
+      className="w-48 border borde-seccion px-3 py-3 shadow-lg"
     >
-      <ImagenDeCorte
-        corte={corte}
-        medidas={MEDIDAS}
-        anchoDeMarca={ANCHO_DE_MARCA}
-      />
-      <p className="mt-2 text-center text-sm font-semibold">{nombre}</p>
+      <p className="text-center text-sm font-semibold">{nombre}</p>
     </Panel>
   );
 }
