@@ -50,7 +50,7 @@ export default function Contacto() {
           <p className="text-entrada">{t('entrada')}</p>
           {/* Debajo de la bajada y separados por una línea: son la alternativa
               al formulario, no un pie de página del encuadre. */}
-          <CanalesDeContacto className="mt-2 border-t border-(--fondo-linea) pt-6" />
+          <CanalesDeContacto className="mt-4" />
         </div>
 
         <Panel fondo={FONDO} className="max-w-4xl p-6 sm:p-9 xl:max-w-none">

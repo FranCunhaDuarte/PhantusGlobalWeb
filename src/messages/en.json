@@ -89,6 +89,10 @@
     "contacto": {
       "titulo": "Let us discuss your requirement.",
       "entrada": "We work with importers sourcing Argentine suppliers.",
+      "canales": {
+        "telefono": "Phone",
+        "correo": "Email"
+      },
       "telefono": "+54 9 223 683-8585",
       "correo": "sales@phantusglobal.com",
       "tipo": {

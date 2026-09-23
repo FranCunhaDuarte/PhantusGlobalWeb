@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import IconoDeWhatsApp from '@/components/contacto/IconoDeWhatsApp';
+import { clasesDeBoton } from '@/components/ui/Button';
 import { TELEFONO_MARCABLE, WHATSAPP } from '@/content/contacto-directo';
 import { LINKEDIN_DEL_RESPONSABLE } from '@/content/redes';
 import { clases } from '@/lib/clases';
@@ -10,10 +11,30 @@ const ENLACE =
   'w-fit break-all font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70';
 
 /**
- * Teléfono y correo al lado del formulario. No compiten con él —el formulario
- * sigue siendo la conversión, y es el único camino que llega con el tipo de
- * consulta ya elegido—, pero hay quien no completa un formulario y llama, y
- * hasta acá no tenía a dónde.
+ * Teléfono, correo y WhatsApp al lado del formulario. No compiten con él —el
+ * formulario sigue siendo la conversión, y es el único camino que llega con el
+ * tipo de consulta ya elegido—, pero hay quien no completa un formulario y
+ * llama, y hasta la Fase 11 no tenía a dónde.
+ *
+ * ## Los dos datos van con rótulo, y el tercero es un botón
+ *
+ * **Fue una lista de tres enlaces subrayados y se leía como un pie de página.**
+ * Tres renglones chicos, sin rótulo, sobre el bordó y al lado de un panel crema
+ * de 700 px de alto: la columna no sostenía su mitad. Ahora el teléfono y el
+ * correo van como **término y definición** —`<dl>`, versalita gris arriba y el
+ * dato en el color del texto—, que es exactamente el mismo gesto que los cuatro
+ * datos duros de `/nosotros`, incluida la hairline propia de cada uno. Un dato
+ * con su rótulo se lee de un vistazo, y de paso el bloque gana el alto que le
+ * faltaba.
+ *
+ * **WhatsApp sale de la lista y pasa a botón de borde**, y no es decoración: de
+ * los tres es el único que no es un dato sino una acción —abre una conversación,
+ * no muestra un número—, y como enlace suelto tenía que explicarse con un glifo
+ * al lado para que se entendiera qué hacía. De botón se entiende solo. Va de
+ * borde y no sólido porque el sólido es del envío del formulario, que está a la
+ * derecha y es la conversión de la página.
+ *
+ * El glifo se queda igual: es lo que hace reconocible la marca de un vistazo.
  *
  * **Van como `tel:` y `mailto:` y no como texto suelto**: en un teléfono el
  * número se marca de un toque, que es donde más se usa. El precio es el mismo
@@ -32,41 +53,51 @@ export default function CanalesDeContacto({
   const tResponsable = useTranslations('nosotros.responsable');
 
   return (
-    <ul className={clases('flex flex-col gap-2', className)}>
-      <li>
-        <a href={`tel:${TELEFONO_MARCABLE}`} className={ENLACE}>
-          {t('telefono')}
-        </a>
-      </li>
-      <li>
-        <a href={`mailto:${t('correo')}`} className={ENLACE}>
-          {t('correo')}
-        </a>
-      </li>
-      {/* **Es el único de los tres que lleva glifo**, y no es un descuido: el
-          teléfono y el correo se leen solos, y "WhatsApp" a secas no dice si es
-          un número o un enlace que abre la conversación. El dibujo va en el
-          color del texto y no en el verde de la marca: acá no hay fondo propio
-          que lo sostenga, y el verde sobre el crema del panel queda a 1,69:1. */}
-      <li>
-        <a
-          href={WHATSAPP}
-          target="_blank"
-          rel="noreferrer"
-          className={clases(ENLACE, 'inline-flex items-center gap-2 no-underline')}
-        >
-          <IconoDeWhatsApp className="size-4 flex-none" />
-          <span className="underline decoration-1 underline-offset-4">
-            {tWhatsapp('etiqueta')}
-          </span>
-        </a>
-      </li>
-      {/* **Quién contesta, al pie de los tres canales.** No es un cuarto canal
-          —no se le escribe por LinkedIn— así que va separado por su propio aire
-          y con el nombre en el color del texto contra el cargo en gris. Es el
-          mismo dato que abre `/nosotros`, y acá está porque el que va a escribir
+    <div className={clases('flex flex-col gap-6', className)}>
+      <dl className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+        <div className="flex flex-col gap-1 border-t border-(--fondo-linea) pt-3">
+          <dt className="text-eyebrow uppercase texto-suave">
+            {t('canales.telefono')}
+          </dt>
+          <dd>
+            <a href={`tel:${TELEFONO_MARCABLE}`} className={ENLACE}>
+              {t('telefono')}
+            </a>
+          </dd>
+        </div>
+
+        <div className="flex flex-col gap-1 border-t border-(--fondo-linea) pt-3">
+          <dt className="text-eyebrow uppercase texto-suave">
+            {t('canales.correo')}
+          </dt>
+          <dd>
+            <a href={`mailto:${t('correo')}`} className={ENLACE}>
+              {t('correo')}
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      {/* El glifo va en el color del texto y no en el verde de la marca: acá no
+          hay fondo propio que lo sostenga, y el verde sobre el bordó de la
+          sección no llega a contraste. El verde sólo vive en el botón flotante,
+          que sí se trae el suyo. */}
+      <a
+        href={WHATSAPP}
+        target="_blank"
+        rel="noreferrer"
+        className={clasesDeBoton({ variante: 'borde', className: 'w-fit' })}
+      >
+        <IconoDeWhatsApp className="size-4 flex-none" />
+        {tWhatsapp('etiqueta')}
+      </a>
+
+      {/* **Quién contesta, al pie de los canales.** No es un cuarto canal —no se
+          le escribe por LinkedIn— así que va separado por su propia línea y con
+          el nombre en el color del texto contra el cargo en gris. Es el mismo
+          dato que abre `/nosotros`, y acá está porque el que va a escribir
           quiere saber a quién le escribe. */}
-      <li className="mt-4 flex flex-col gap-1 border-t border-(--fondo-linea) pt-4">
+      <div className="flex flex-col gap-1 border-t border-(--fondo-linea) pt-4">
         <p className="font-medium">{tResponsable('nombre')}</p>
         <a
           href={LINKEDIN_DEL_RESPONSABLE}
@@ -76,7 +107,7 @@ export default function CanalesDeContacto({
         >
           {tResponsable('cargo')} · {tResponsable('enlace')}
         </a>
-      </li>
-    </ul>
+      </div>
+    </div>
   );
 }

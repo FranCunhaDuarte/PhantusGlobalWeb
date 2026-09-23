@@ -89,6 +89,10 @@
     "contacto": {
       "titulo": "Hablemos de tu operación.",
       "entrada": "Atendemos a importadores que buscan proveedor argentino.",
+      "canales": {
+        "telefono": "Teléfono",
+        "correo": "Correo"
+      },
       "telefono": "+54 9 223 683-8585",
       "correo": "sales@phantusglobal.com",
       "tipo": {

@@ -1551,6 +1551,29 @@ necesitás"** y la bajada, de enumerar las dos puntas a nombrar los tres caminos
 La promesa de 24 a 48 horas salió de la bajada porque ya está debajo del botón,
 en `respuesta`, y decirla dos veces en la misma pantalla no la hace más cierta.
 
+### Los canales, que son dos datos y una acción
+
+**Fueron tres enlaces subrayados en una lista y se leían como un pie de página.**
+Tres renglones chicos, sin rótulo, sobre el bordó y al lado de un panel crema de
+528 px de alto: la columna no sostenía su mitad. Hoy:
+
+- **El teléfono y el correo van con rótulo**, como término y definición (`<dl>`,
+  versalita gris arriba y el dato en el color del texto, cada uno con su
+  hairline). Es el mismo gesto que los cuatro datos duros de `/nosotros`, y es
+  lo que hace que se lea el dato y no el rótulo. Desde `sm` y hasta `xl` van en
+  dos columnas, porque ahí el encuadre está encima del formulario y a lo ancho.
+- **WhatsApp salió de la lista y es un botón de borde.** De los tres es el único
+  que no es un dato sino una acción —abre una conversación, no muestra un
+  número—, y como enlace suelto necesitaba el glifo al lado para explicarse. Va
+  de borde y no sólido porque el sólido es del envío del formulario. El glifo se
+  queda: es lo que lo hace reconocible de un vistazo.
+- **Quién responde cierra el bloque**, separado por su línea. No es un cuarto
+  canal —no se le escribe por LinkedIn—: está porque el que va a escribir quiere
+  saber a quién le escribe.
+
+Medido a 1440: la columna pasó a medir **528 px, exactamente lo que mide el
+panel del formulario**, así que las dos mitades se emparejan.
+
 El envío es el botón `grande`, de ancho completo mientras la pantalla es
 angosta, separado por una línea y acompañado de una sola línea gris que dice por
 dónde llega la respuesta. Es la única acción real de la página y con el tamaño
