@@ -4,8 +4,19 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import IconoDeWhatsApp from '@/components/contacto/IconoDeWhatsApp';
 import { WHATSAPP } from '@/content/contacto-directo';
-import { SECCION_CONTACTO } from '@/content/secciones';
+import { usePathname } from '@/i18n/navigation';
 import { clases } from '@/lib/clases';
+
+/**
+ * Dónde se esconde: **sobre cualquier cierre de página**.
+ *
+ * El bordó es el fondo del cierre y de ningún otro bloque del sitio —lo usan la
+ * sección de contacto de la home y `LlamadaAContacto`, que es el cierre de las
+ * demás—, así que `data-fondo` alcanza para encontrarlos sin que cada página
+ * tenga que marcarse. El pie entra a la lista porque `/nosotros` no cierra con
+ * bordó y sin él ahí el botón no se escondería nunca.
+ */
+const ZONAS = '[data-fondo="bordo"], footer';
 
 /**
  * El único elemento fijo del sitio: el acceso a WhatsApp, abajo a la derecha y
@@ -46,9 +57,10 @@ import { clases } from '@/lib/clases';
  * el cruce es un fundido y no un salto, y el nodo no entra y sale del árbol de
  * accesibilidad en cada scroll.
  *
- * La sección de contacto **sólo existe en la home**, así que en las otras seis
- * rutas el observador no encuentra nada y el botón se queda visible, que es lo
- * correcto.
+ * **Observaba sólo `#contacto` y ése era el error**: esa sección existe nada más
+ * que en la home, así que en las otras seis rutas el botón no se escondía jamás.
+ * Ahora la lista es `ZONAS` —todo cierre en bordó, más el pie— y se vuelve a
+ * armar en cada ruta. Ver ahí y en el efecto.
  *
  * ## El apilado
  *
@@ -63,17 +75,30 @@ import { clases } from '@/lib/clases';
 export default function BotonDeWhatsApp() {
   const t = useTranslations('whatsapp');
   const [sobreContacto, setSobreContacto] = useState(false);
+  const ruta = usePathname();
 
+  // **Se vuelve a enganchar en cada ruta**, y ésa es la mitad del arreglo. El
+  // botón vive en el layout, así que sobrevive a la navegación del cliente: con
+  // la lista de dependencias vacía, el observador se quedaba mirando los nodos
+  // de la página anterior —ya desmontados— y no volvía a avisar nunca.
   useEffect(() => {
-    const contacto = document.getElementById(SECCION_CONTACTO);
-    if (!contacto) return;
+    const zonas = document.querySelectorAll(ZONAS);
+    if (!zonas.length) return;
 
-    const observador = new IntersectionObserver(([entrada]) =>
-      setSobreContacto(entrada.isIntersecting)
-    );
-    observador.observe(contacto);
+    // Son varias —el cierre y el pie— así que no alcanza con la última entrada:
+    // hay que saber si queda alguna a la vista.
+    const aLaVista = new Set<Element>();
+    const observador = new IntersectionObserver((entradas) => {
+      for (const entrada of entradas) {
+        if (entrada.isIntersecting) aLaVista.add(entrada.target);
+        else aLaVista.delete(entrada.target);
+      }
+      setSobreContacto(aLaVista.size > 0);
+    });
+
+    for (const zona of zonas) observador.observe(zona);
     return () => observador.disconnect();
-  }, []);
+  }, [ruta]);
 
   return (
     <a

@@ -514,6 +514,19 @@ scripts/              generar-assets.mjs (derivados de marca e iconos)
   verdad abriendo una ventana propia con Playwright en `headless: false`, que es
   lo que hace `flotante.mjs` en el scratchpad.
 
+  > **Y el corolario, que costó un defecto publicado:** si con el panel
+  > escondido *no se puede* ver el error, tampoco se puede ver que no lo haya.
+  > El botón de WhatsApp quedó semanas sin esconderse en cinco de las seis rutas
+  > y la verificación de entonces lo había dado por bueno, porque lo único que
+  > se había comprobado es que la clase cambiaba. **Cuando algo depende del
+  > observador, la ventana de verdad no es opcional.**
+
+- **Un observador montado en el layout hay que rearmarlo en cada ruta.** El
+  layout sobrevive a la navegación del cliente, así que un `useEffect` con la
+  lista de dependencias vacía se queda mirando nodos de la página anterior, ya
+  desmontados, y no vuelve a avisar nunca. La dependencia es `usePathname()`. Le
+  pasó al botón de WhatsApp.
+
 - **Al agregar una clase de Tailwind que el proyecto no usaba todavía, verificar
   que la hoja se haya regenerado antes de mirar una captura.** El `next dev`
   sirvió CSS viejo tras cambiar un componente a `grid-cols-2 sm:grid-cols-3
