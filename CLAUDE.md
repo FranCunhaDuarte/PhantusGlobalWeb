@@ -1843,11 +1843,35 @@ publicado y no lo va a tener mientras la especificación se arme contra el pedid
 lo que sí tiene es el despiece, que es dato real y está dibujado. El bloque dejó
 de mostrar producto y pasó a invitar a ir a verlo.
 
-**La línea no es copy nuevo.** Es `productos.carnes.entrada`, del archivo del
-cliente, que quedó sin consumidor cuando `/productos/carnes` se plegó adentro de
-`/productos` y su hoja perdió el titular y la entrada. Dice lo que hace falta
-decir acá —que carnes no es el foco y que el catálogo es el de pescados—, así que
-explica sola por qué debajo ya no hay una pista de fotos.
+**Ahora es texto de un lado y las dos fotos del otro.** Fueron sólo texto un
+rato y así era el bloque más flaco de la home. Las fotos son **las mismas que
+identifican a carnes y a pollo en el índice de `/productos`**, que es a donde el
+botón lleva: llegar y reencontrarlas confirma que se llegó a donde se quería,
+igual que la apertura de `/nosotros` repite la foto de su tarjeta. Van **sin velo
+y sin nombre encima**, a diferencia de `TarjetaConFoto` —el titular de al lado ya
+las nombra y sin texto encima el velo no tiene qué proteger—, y por eso tampoco
+hay que medirles el píxel más claro.
+
+**Van apiladas, sin aire entre las dos y tomando el alto entero de la columna.**
+Desde `lg` la fila no centra sus celdas, así que la columna de fotos mide lo que
+mide la de texto y las dos se reparten ese alto: medido a 1280, **672 × 173 cada
+una** dentro de una columna de 346, que es exactamente el alto del texto. **El
+alto del bloque lo sigue poniendo el texto**: las fotos lo llenan, no lo estiran.
+Por debajo de `lg` no hay alto del que repartirse, así que cada una vuelve a su
+3:2 y se apilan.
+
+> **Las fotos van después del texto en el DOM y antes en pantalla**, por `order`.
+> Leído en orden primero está de qué se habla; mirado, la vista entra por la
+> imagen. No desordena la tabulación porque el único control del bloque es el
+> botón.
+
+**La línea es propia (`home.carnes.texto`) y reemplazó a una del cliente.** Acá
+estuvo `productos.carnes.entrada` —"No es nuestro foco y no lo disimulamos…"—,
+que explicaba bien por qué no hay catálogo pero **se leía como una disculpa**: en
+un CTA, abrir por lo que no se hace suena a que no se sabe del tema. La que está
+dice lo mismo por el lado del oficio —a pedido, con el frigorífico habilitado que
+pide cada mercado— y remata apuntando al despiece. `productos.carnes.entrada`
+volvió a quedar sin consumidor y no se borró.
 
 **El botón apunta a `#carnes`**, que desde que la res y el ave comparten bloque
 muestra los dos despieces. Sigue siendo el de borde y no el sólido: el sólido es

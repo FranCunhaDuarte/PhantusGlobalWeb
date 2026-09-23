@@ -15,10 +15,10 @@ const FONDO = 'crema-elevado';
 const FOTOS = ['carnes', 'pollo'] as const;
 
 /**
- * Anchos que llega a medir cada foto: la mitad de la columna del dibujo desde
- * `lg` —unos 330 px— y media pantalla por debajo, donde van en dos columnas.
+ * Anchos que llega a medir cada foto: la columna entera desde `lg` —unos 680 px,
+ * porque van apiladas y no lado a lado— y el ancho de la pantalla por debajo.
  */
-const MEDIDAS = '(min-width: 64rem) 330px, 50vw';
+const MEDIDAS = '(min-width: 64rem) 680px, 100vw';
 
 /**
  * La segunda y la tercera unidad de negocio en la home, en un solo bloque:
@@ -85,7 +85,7 @@ export default function ResumenDeCarnes() {
           **El texto no se lleva la mitad**: se fija en 22rem, que es medida
           cómoda para un párrafo de cinco renglones, y el resto se lo quedan las
           fotos. A mitades quedaban en 250 px de ancho cada una. */}
-      <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
+      <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
         <div className="lg:w-[22rem] lg:shrink-0">
           <SectionHeading className="uppercase">{t('titulo')}</SectionHeading>
           <p className="mt-4 text-entrada">{t('texto')}</p>
@@ -97,9 +97,21 @@ export default function ResumenDeCarnes() {
           </BotonSaberMas>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-4 lg:order-first lg:flex-1">
+        {/* **Apiladas, sin aire entre las dos y tomando el alto entero de la
+            columna.** Desde `lg` la fila no centra sus celdas —`items-stretch`,
+            que es el valor por defecto— así que esta columna mide lo que mide la
+            de texto, y las dos fotos se reparten ese alto con `flex-1`. El alto
+            del bloque lo sigue poniendo el texto: las fotos lo llenan, no lo
+            estiran.
+
+            Por debajo de `lg` no hay alto del que repartirse, así que cada una
+            vuelve a su 3:2 y se apilan una tras otra. */}
+        <div className="flex w-full flex-col lg:order-first lg:flex-1">
           {FOTOS.map((unidad) => (
-            <div key={unidad} className="relative aspect-[3/2] overflow-hidden">
+            <div
+              key={unidad}
+              className="relative aspect-[3/2] overflow-hidden lg:aspect-auto lg:flex-1"
+            >
               <Image
                 src={FOTO_DE_UNIDAD[unidad]}
                 alt=""

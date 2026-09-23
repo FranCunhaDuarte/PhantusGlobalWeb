@@ -8,7 +8,7 @@ identificables ni marcas visibles.
 | --- | --- | --- | --- |
 | `hero-mar.jpg` | https://www.pexels.com/photo/32843666/ | Pexels License | 2026-09-15 |
 | `contacto-mar.jpg` | https://www.pexels.com/photo/36638038/ | Pexels License | 2026-09-15 |
-| `pescados-y-mariscos.jpg` | https://www.pexels.com/photo/38725339/ | Pexels License | 2026-09-23 |
+| `pescados-y-mariscos.jpg` | https://www.pexels.com/photo/17924401/ | Pexels License | 2026-09-23 |
 | `carnes.jpg` | https://www.pexels.com/photo/18518279/ | Pexels License | 2026-09-21 |
 | `pollo.jpg` | https://www.pexels.com/photo/18474429/ | Pexels License | 2026-09-23 |
 | `nosotros.jpg` | https://www.pexels.com/photo/15716526/ | Pexels License | 2026-09-21 |
@@ -23,8 +23,9 @@ identificables ni marcas visibles.
 Tres de esas fotos son las tarjetas del índice de la home. `nosotros.jpg` es una
 flota de pesca comercial amarrada; `mercados.jpg`, una terminal de contenedores
 vista desde arriba; `pescados-y-mariscos.jpg`, pescado entero sobre hielo, y esa
-es además la tarjeta de la unidad en `/productos`. Las tres se recortan a
-1280 × 800 centradas.
+es además la tarjeta de la unidad en `/productos`. Dos se recortan a
+1280 × 800 centradas; la de pescados, a **1080 × 1350**, y el porqué está más
+abajo.
 
 **`nosotros.jpg` y `pescados-y-mariscos.jpg` se reemplazaron el 21/09.** La
 primera era el frente de Mar del Plata: correcta como dato —la empresa está ahí—
@@ -39,10 +40,33 @@ Aires**, a 60 km de Mar del Plata. La anterior era un primer plano de tres Angus
 entre eucaliptos y pastura seca, con caravanas rojas: leía australiana, no
 pampeana.
 
-**`pescados-y-mariscos.jpg` se volvió a reemplazar el 23/09**, y esta vez por lo
-que muestra: la anterior era **un pescado solo**, y la tarjeta dice "pescados y
-mariscos". La nueva es pescado entero y vieiras sobre hielo con alga, así que
-cumple las dos mitades del nombre.
+**`pescados-y-mariscos.jpg` se reemplazó tres veces el 23/09**, y cada vuelta
+descartó la anterior por un motivo distinto. Vale la pena dejarlas escritas,
+porque son los tres filtros que tiene que pasar cualquier reemplazo.
+
+1. **Lo que muestra.** La primera era **un pescado solo** y la tarjeta dice
+   "pescados y mariscos", así que cumplía media frase.
+2. **El recorte.** La segunda traía pescado y vieiras, pero guardada apaisada a
+   1280 × 800 y recortada después a 4:5 por la tarjeta, lo que quedaba era medio
+   pescado y dos vieiras: leía "conchas". **Guardar apaisada una foto que la
+   tarjeta muestra vertical es recortar dos veces**, y ésa es la regla a
+   recordar para `nosotros.jpg` y `mercados.jpg` si alguna vez quedan raras.
+3. **Qué marisco.** La tercera es la que decidió: **el marisco tiene que ser uno
+   de los del catálogo**, y el catálogo tiene dos —calamar illex y langostino—.
+   Vieiras, cangrejo, ostras, mejillones y langosta quedan afuera por más que la
+   foto sea buena, porque la tarjeta es la puerta a un catálogo donde esa especie
+   no está.
+
+La que quedó es **langostino sobre hielo con pescado entero a los dos lados**:
+las dos mitades del nombre y las dos del catálogo. Se guarda **en 4:5, a
+1080 × 1350**, que es la forma de la tarjeta desde `md`; en el teléfono, que es
+3:2, el navegador toma la banda del medio y ahí siguen el langostino y dos
+pescados. Con el velo al 50 % el naranja se apaga y los pescados de los costados
+se leen mejor que en limpio.
+
+> **Se descartó una de calamar en cajón** —calamar sí es del catálogo— porque el
+> cajón de plástico azul se come el cuadro y bajo el velo sigue leyendo cajón y
+> no producto.
 
 **`pollo.jpg` entró con la unidad nueva**: dos gallinas coloradas sobre pasto. Es
 a propósito **el mismo registro que `carnes.jpg`** —animal vivo en el campo y no
