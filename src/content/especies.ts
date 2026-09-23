@@ -47,20 +47,21 @@ export const REGIMEN_DE_ESPECIE: Partial<Record<Especie, Regimen>> = {
  * operación y no del recurso —cambia con el negocio, no con la pesquería—, por
  * eso vive acá y no en el régimen.
  *
- * **Fue una sola especie y ahora es un mapa.** Hasta acá era `ESPECIE_DESTACADA`,
- * un único id con un único texto; con dos especies etiquetadas por motivos
- * distintos —la merluza por volumen, el langostino por decisión comercial— un
- * solo campo ya no alcanzaba. El valor es la clave de i18n bajo
- * `productos.pescados.etiquetas` y no el texto: el nombre dice el rol y el
- * catálogo dice las palabras, que ya cambiaron una vez.
+ * **Hoy está vacío y eso es el estado, no un pendiente.** Llegó a tener dos
+ * —la merluza con "Mayor volumen" y el langostino con "Destacado"— y las dos se
+ * sacaron por pedido: con el langostino ya primero en la lista, el chip decía
+ * dos veces lo mismo que su posición.
  *
- * Es `Partial` a propósito: la mayoría de las once no lleva ninguna, y una ficha
- * sin etiqueta no es un caso especial sino el normal.
+ * **Se deja el mecanismo y no sólo los datos.** Volver a poner una es una línea
+ * acá —`langostino: 'destacado'`— porque `EtiquetaDestacada`, el prop de la
+ * ficha y los textos de `productos.pescados.etiquetas` siguen en su lugar. Esos
+ * textos quedan sin consumidor mientras el mapa esté vacío.
+ *
+ * El valor es la clave de i18n y no el texto: el nombre dice el rol y el
+ * catálogo dice las palabras, que ya cambiaron una vez. Y es `Partial` a
+ * propósito: una ficha sin etiqueta no es un caso especial sino el normal.
  */
-export const ETIQUETA_DE_ESPECIE: Partial<Record<Especie, string>> = {
-  merluza: 'volumen',
-  langostino: 'destacado'
-};
+export const ETIQUETA_DE_ESPECIE: Partial<Record<Especie, string>> = {};
 
 /**
  * Qué especies muestra el adelanto de la home. Es una selección editorial y no
