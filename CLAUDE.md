@@ -59,11 +59,10 @@ existe como dato es la especificación (congelado o enfriado, certificación del
 frigorífico, calibre, destino), que es lo que cambia entre un pedido y otro, así
 que no hay ficha por corte.
 
-La home **ya no adelanta cortes**. Llevó un carrusel de cuatro cortes con foto y
-se sacó por pedido: con la misma forma que el de pescados, prometía un catálogo
-de carnes que no existe ni va a existir mientras la especificación se arme contra
-el pedido. En su lugar `ResumenDeCarnes` es un CTA —titular, una línea y un botón
-a los despieces—, que manda a lo único que de carnes sí es dato publicado.
+**La home no muestra producto**, ni de carnes ni de pescados. Llevó un carrusel
+de cortes con foto, después un CTA a los despieces, y los dos se sacaron por
+pedido; el carrusel de especies también. Hoy la home es hero, índice y contacto,
+y todo lo que se comercializa vive en `/productos`.
 
 ### El diagrama de cortes
 
@@ -542,8 +541,8 @@ scripts/              generar-assets.mjs (derivados de marca e iconos)
   de la página.
 - `SECCIONES` es **el orden de la navegación** y la única lista: el header, el
   menú mobile, el pie y el índice de tarjetas de la home la leen de ahí. Fue el
-  orden de la home mientras cada id tenía su bloque ahí; hoy sólo `productos` y
-  `contacto` abren ancla en la home. Las tres navegables se declaran a mano en
+  orden de la home mientras cada id tenía su bloque ahí; hoy el único que abre
+  ancla en la home es `contacto`, y es justamente el que no resuelve a ruta. Las tres navegables se declaran a mano en
   `SECCIONES_NAVEGABLES` y contacto se suma después, para que `SeccionNavegable`
   sea la unión de esas tres: es lo que deja que `FOTO_DE_ACCESO` exija una foto
   por tarjeta sin pedir una para contacto. Que una sección sea ruta o ancla lo
@@ -1183,17 +1182,32 @@ pegadas al hero, que es la misma pieza que el índice de unidades de `/productos
 sus rutas viven en `src/content/accesos.ts`.
 
 **Van arriba, no abajo**: son el índice del sitio, así que su trabajo es dejar
-elegir antes de leer nada. Debajo quedan los dos bloques de producto —pescados y
-carnes— y el formulario cierra, que es la única acción real de la página.
+elegir antes de leer nada. Debajo ya no queda nada más que el formulario, que es
+la única acción real de la página: los dos bloques de producto que había en el
+medio —el carrusel de especies y el de carnes y pollo— se sacaron por pedido.
 
-**La home quedó en cinco bloques**: hero, índice, pescados, carnes, contacto.
-Salieron los dos escaparates de prosa, nosotros y cómo trabajamos, y las dos
-páginas siguen enteras y listadas en el header. De los cuatro ids de `SECCIONES`
-sólo `productos` y `contacto` abren ancla en la home; `nosotros` y
-`como-trabajamos` son ruta y nada más, que es lo que `paginaDeSeccion` ya
-resolvía. `ResumenDeNosotros` y `ResumenDeComoTrabajamos` quedaron sin
-consumidor y **no se borraron**, junto con `home.nosotros.*` y
-`home.comoTrabajamos.*`: es copia del cliente y el repo no tiene historial.
+**La home quedó en tres bloques**: hero, índice y contacto. Es un escaparate de
+verdad: presentar, dejar elegir a dónde ir y ofrecer el formulario.
+
+Se fueron en tres tandas y todas por pedido. Primero los dos escaparates de
+prosa —nosotros y cómo trabajamos—, para que entraran las tarjetas. Después los
+dos bloques de producto: el carrusel de especies y el CTA de carnes y pollo. Las
+páginas siguen enteras y listadas en el header; **lo que se perdió no es
+contenido sino una segunda puerta al mismo lugar**, porque todo eso vive en
+`/productos`, a un clic de la tarjeta del índice.
+
+> **Ningún enlace se rompe con eso**, y conviene saber por qué: `productos`
+> resuelve como **ruta** en `PAGINA_DE_SECCION`, no como ancla, así que el
+> header, el menú y el pie siempre apuntaron a `/productos` y no a `#productos`.
+> **De los ids de `SECCIONES`, el único que abre ancla en la home es
+> `contacto`**, que es justamente el que no está en esa tabla.
+
+**Lo que quedó sin consumidor y no se borró**: `ResumenDeNosotros`,
+`ResumenDeProductos`, `ResumenDeCarnes`, `AdelantoDelCatalogo`, `Carrusel` —que
+ya había perdido al otro, `AdelantoDeCortes`—, `ESPECIES_DEL_ADELANTO`, y las
+claves `home.nosotros.*`, `home.comoTrabajamos.*`, `home.productos.*` y
+`home.carnes.*`. `ResumenDeComoTrabajamos` sí se borró, pero porque dejó de
+compilar cuando su id salió de `SECCIONES`.
 
 **El bloque de nosotros salió de la home para que entraran.** Era titular, una
 línea y un botón —"Quién responde por la operación"— y lo que decía sigue entero
@@ -1815,86 +1829,51 @@ y nada más. No hay un bloque nuevo al lado, porque el contenido de una ficha
 —nombre, nombre científico, régimen, ventana— es exactamente el que ya estaba
 publicado y repetirlo en la misma página sería decir dos veces lo mismo.
 
-La home lleva un adelanto (`ResumenDeProductos`), y desde la Fase 11 **ese
-adelanto es la sección `productos` de la home**: hasta entonces eran dos bloques
-—la vidriera de unidades de negocio y el carrusel de especies— que apuntaban al
-mismo lugar.
+**La home tuvo un adelanto (`ResumenDeProductos`) y se sacó por pedido.** Era
+titular en mayúsculas, carrusel de seis especies y una salida al catálogo, y
+desde la Fase 11 era además la sección `productos` de la home —hasta entonces
+eran dos bloques, la vidriera de unidades y el carrusel, apuntando al mismo
+lugar—. Hoy la home no muestra producto: lo que hay está en `/productos`, a un
+clic de la tarjeta del índice.
 
-**Va sin rótulo ni bajada**: titular, carrusel y salida al catálogo, nada más.
-El de cómo trabajamos sigue con los tres. La asimetría es a propósito: acá el
-rótulo decía exactamente lo mismo que dice ahora el titular, y la bajada
-enumeraba cuatro especies que están justo debajo, con foto. El titular va en
-mayúsculas, como el de las tarjetas de unidad. Lleva el carrusel de especies y
-una sola salida al catálogo, y abre el ancla `#productos`.
+Con él quedaron sin consumidor `AdelantoDelCatalogo`, `Carrusel`,
+`ESPECIES_DEL_ADELANTO` y las claves `home.productos.*`. **Nada se borró**, así
+que devolverlo es volver a montarlo en `page.tsx`.
 
-**Dejó de ir pegado al hero** cuando las tres tarjetas se pusieron en el medio:
-es el segundo bloque y va en crema base, porque el elevado se lo lleva el índice.
+### El bloque de carnes y pollo en la home, que ya no está
 
-### El CTA de carnes en la home
+**`ResumenDeCarnes` existe y nadie lo monta.** Pasó por tres formas en un día y
+al final se sacó entero, así que lo que sigue es historia: sirve si alguna vez
+vuelve, y explica por qué hay tanto huérfano alrededor.
 
-`ResumenDeCarnes` es **titular, una línea y una salida a los despieces**, y nada
-más. No es un adelanto de catálogo, y ahí está el cambio.
+1. **Carrusel de cortes con foto**, con la misma forma que el de pescados. Ése
+   era el problema: dos pistas de fotos al hilo prometían dos catálogos del mismo
+   peso, que es justo lo que la unidad de carnes se ocupa de desmentir. Carnes no
+   tiene catálogo publicado y no lo va a tener mientras la especificación se arme
+   contra el pedido.
+2. **Sólo texto**: titular, una línea y un botón a los despieces. Quedó siendo el
+   bloque más flaco de la home.
+3. **Texto de un lado y las dos fotos de unidad del otro**, apiladas, sin aire
+   entre ellas y de borde a borde del bloque. Ahí aparecieron dos cosas que vale
+   la pena recordar: las fotos iban **sin velo y sin nombre**, porque el titular
+   de al lado ya las nombraba y sin texto encima el velo no tiene qué proteger
+   —por eso tampoco había que medirles el píxel más claro—; y el sangrado lo daba
+   **`-my-seccion`**, porque un margen negativo en un ítem estirado se lo suma al
+   alto y la celda pasa a medir la sección entera sin que nadie sepa cuánto vale
+   su relleno.
 
-**Llevaba un carrusel de cortes con foto y se sacó por pedido.** Tenía la misma
-forma que el de pescados —titular, carrusel, salida— y ése era el problema: dos
-pistas de fotos al hilo prometían dos catálogos del mismo peso, que es justo lo
-que la unidad de carnes se ocupa de desmentir. Carnes no tiene catálogo
-publicado y no lo va a tener mientras la especificación se arme contra el pedido;
-lo que sí tiene es el despiece, que es dato real y está dibujado. El bloque dejó
-de mostrar producto y pasó a invitar a ir a verlo.
+También pasó por dos textos. El primero era `productos.carnes.entrada`, copia del
+cliente: explicaba bien por qué no hay catálogo pero **se leía como una
+disculpa** —en un CTA, abrir por lo que no se hace suena a que no se sabe del
+tema—. El segundo, `home.carnes.texto`, decía lo mismo por el lado del oficio.
+Los dos siguen en los catálogos y ninguno tiene consumidor.
 
-**Ahora es texto de un lado y las dos fotos del otro.** Fueron sólo texto un
-rato y así era el bloque más flaco de la home. Las fotos son **las mismas que
-identifican a carnes y a pollo en el índice de `/productos`**, que es a donde el
-botón lleva: llegar y reencontrarlas confirma que se llegó a donde se quería,
-igual que la apertura de `/nosotros` repite la foto de su tarjeta. Van **sin velo
-y sin nombre encima**, a diferencia de `TarjetaConFoto` —el titular de al lado ya
-las nombra y sin texto encima el velo no tiene qué proteger—, y por eso tampoco
-hay que medirles el píxel más claro.
-
-**Van apiladas, sin aire entre las dos y de borde a borde del bloque.** Desde
-`lg` la fila no centra sus celdas, así que la columna de fotos mide lo que mide
-la de texto y las dos se reparten ese alto. Lo que las lleva hasta el borde es
-**`-my-seccion`**: sin él llegaban hasta donde llega el texto y quedaban los
-104 px de relleno de la sección en crema arriba y abajo. Un margen negativo en un
-ítem estirado se lo suma al alto, así que la celda pasa a medir el alto entero de
-la sección. Medido a 1280: la columna arranca en 0 y termina en **554**, que es
-justo el alto del bloque, con **672 × 277 cada foto**. **El alto del bloque lo
-sigue poniendo el texto**: las fotos lo llenan, no lo estiran. Por debajo de `lg`
-no hay alto del que repartirse ni relleno que comerse, así que cada una vuelve a
-su 3:2 y se apilan.
-
-> **Las fotos van después del texto en el DOM y antes en pantalla**, por `order`.
-> Leído en orden primero está de qué se habla; mirado, la vista entra por la
-> imagen. No desordena la tabulación porque el único control del bloque es el
-> botón.
-
-**La línea es propia (`home.carnes.texto`) y reemplazó a una del cliente.** Acá
-estuvo `productos.carnes.entrada` —"No es nuestro foco y no lo disimulamos…"—,
-que explicaba bien por qué no hay catálogo pero **se leía como una disculpa**: en
-un CTA, abrir por lo que no se hace suena a que no se sabe del tema. La que está
-dice lo mismo por el lado del oficio —a pedido, con el frigorífico habilitado que
-pide cada mercado— y remata apuntando al despiece. `productos.carnes.entrada`
-volvió a quedar sin consumidor y no se borró.
-
-**El botón apunta a `#carnes`**, que desde que la res y el ave comparten bloque
-muestra los dos despieces. Sigue siendo el de borde y no el sólido: el sólido es
-del CTA de contacto, que es la única acción real de la home.
-
-**No abre ancla y no entra en `SECCIONES`.** La navegación lleva a `Productos`,
-que es el índice de las tres unidades: sumar una entrada al header por un bloque
-de la home sería contar dos veces la misma estructura. Por eso su `Section` va
-sin `id`.
-
-> **Lo que quedó huérfano al sacar el carrusel**, y hay que decidir si se borra:
-> el componente `AdelantoDeCortes`, y con él **toda la cadena de fotos de corte**
-> —`ImagenDeCorte`, `IMAGEN_DE_CORTE` y `CORTES_CON_RECORTE` en
-> `imagenes-de-corte.ts`, y los cuatro PNG de `src/imagenes/cortes`—, más las
-> claves `home.carnes.carrusel.*` de los dos catálogos. **Los cuatro PNG dejaron
-> de servirse en todo el sitio**: la tarjeta del despiece ya no muestra foto
-> —quedó sólo con el nombre— y ése era el otro consumidor. No se borró nada: son
-> material del cliente y el repo no tiene historial. Volver atrás es devolverle
-> el `<AdelantoDeCortes>` al bloque.
+> **La cadena de fotos de corte quedó huérfana entera** y hay que decidir si se
+> borra: `AdelantoDeCortes`, `ImagenDeCorte`, `IMAGEN_DE_CORTE` y
+> `CORTES_CON_RECORTE` en `imagenes-de-corte.ts`, y **los cuatro PNG de
+> `src/imagenes/cortes`, que ya no se sirven en ninguna parte del sitio**: el
+> otro consumidor era la tarjeta del despiece, que perdió la foto antes. No se
+> borró nada.
 
 #### La pista, y el hueco, son de los dos
 
