@@ -5,7 +5,7 @@
 Sitio institucional de **Phantus Global**, bróker de comercio internacional de
 **pescado y mariscos del Atlántico Sur**, con origen en **Mar del Plata,
 Argentina** y estructura legal en **Estados Unidos**. Dominio:
-`phantusglobal.com`. Contacto público: `info@phantusglobal.com` y
+`phantusglobal.com`. Contacto público: `sales@phantusglobal.com` y
 `+54 9 223 683-8585`. **El sitio no nombra a ninguna persona**: hubo un
 responsable con nombre y apellido en el pie y se sacó por pedido, junto con la
 dirección personal que lo llevaba.
@@ -919,7 +919,7 @@ es peor que la ausencia del campo. El domicilio vive en `src/content/domicilio.t
 donde se agrega calle y código postal cuando aparezcan.
 
 **Teléfono y correo directo**, desde que el cliente los pasó: `+54 223 683-8585`
-e `info@phantusglobal.com`, al lado del formulario en la sección de contacto
+e `sales@phantusglobal.com`, al lado del formulario en la sección de contacto
 (`CanalesDeContacto`), como `tel:` y `mailto:`. El formulario sigue siendo la
 conversión —es el único camino que llega con el tipo de consulta ya elegido— pero
 hay quien no completa un formulario y llama.
@@ -935,7 +935,7 @@ hay quien no completa un formulario y llama.
 > el cero pero al revés —desde el exterior es obligatorio y desde adentro del
 > país no se marca—, y los dos juntos no existen.
 
-**Hay una sola dirección publicada y es `info@phantusglobal.com`.** Estuvo
+**Hay una sola dirección publicada y es `sales@phantusglobal.com`.** Estuvo
 partida en dos —esa en la sección de contacto y una personal en el pie, que era
 además la que el JSON-LD declaraba como correo de la organización— y se
 unificaron al sacar el nombre del responsable. El pie y el JSON-LD leen la misma

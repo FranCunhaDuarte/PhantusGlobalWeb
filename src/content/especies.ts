@@ -10,10 +10,10 @@
  * clave taxonómica; su ficha lo dice con todas las letras.
  */
 export const ESPECIES = [
+  'langostino',
   'merluza',
   'corvina',
   'calamar',
-  'langostino',
   'pescadilla',
   'besugo',
   'pezPalo',
@@ -74,10 +74,10 @@ export const ETIQUETA_DE_ESPECIE: Partial<Record<Especie, string>> = {
  * editorial y no "las que tienen foto".
  */
 export const ESPECIES_DEL_ADELANTO: readonly Especie[] = [
+  'langostino',
   'merluza',
   'corvina',
   'calamar',
-  'langostino',
   'pescadilla',
   'besugo'
 ];
