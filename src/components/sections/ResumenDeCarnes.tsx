@@ -97,16 +97,22 @@ export default function ResumenDeCarnes() {
           </BotonSaberMas>
         </div>
 
-        {/* **Apiladas, sin aire entre las dos y tomando el alto entero de la
-            columna.** Desde `lg` la fila no centra sus celdas —`items-stretch`,
-            que es el valor por defecto— así que esta columna mide lo que mide la
-            de texto, y las dos fotos se reparten ese alto con `flex-1`. El alto
-            del bloque lo sigue poniendo el texto: las fotos lo llenan, no lo
-            estiran.
+        {/* **Apiladas, sin aire entre las dos y de borde a borde del bloque.**
+            Desde `lg` la fila no centra sus celdas —`items-stretch`, que es el
+            valor por defecto— así que esta columna mide lo que mide la de texto,
+            y las dos fotos se reparten ese alto con `flex-1`.
 
-            Por debajo de `lg` no hay alto del que repartirse, así que cada una
-            vuelve a su 3:2 y se apilan una tras otra. */}
-        <div className="flex w-full flex-col lg:order-first lg:flex-1">
+            **`-my-seccion` es lo que las lleva hasta el borde.** Sin él las
+            fotos llegaban hasta donde llega el texto y quedaba el relleno de la
+            sección —104 px arriba y otros tantos abajo— en crema. Un margen
+            negativo en un ítem estirado se lo suma al alto: la celda pasa a medir
+            el alto de la fila más los dos márgenes, o sea el alto entero de la
+            sección. **El alto del bloque lo sigue poniendo el texto**, que es lo
+            que se quería: las fotos lo llenan, no lo estiran.
+
+            Por debajo de `lg` no hay alto del que repartirse ni relleno que
+            comerse, así que cada una vuelve a su 3:2 y se apilan una tras otra. */}
+        <div className="flex w-full flex-col lg:-my-seccion lg:order-first lg:flex-1">
           {FOTOS.map((unidad) => (
             <div
               key={unidad}

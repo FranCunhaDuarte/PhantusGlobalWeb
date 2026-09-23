@@ -1852,13 +1852,17 @@ y sin nombre encima**, a diferencia de `TarjetaConFoto` —el titular de al lado
 las nombra y sin texto encima el velo no tiene qué proteger—, y por eso tampoco
 hay que medirles el píxel más claro.
 
-**Van apiladas, sin aire entre las dos y tomando el alto entero de la columna.**
-Desde `lg` la fila no centra sus celdas, así que la columna de fotos mide lo que
-mide la de texto y las dos se reparten ese alto: medido a 1280, **672 × 173 cada
-una** dentro de una columna de 346, que es exactamente el alto del texto. **El
-alto del bloque lo sigue poniendo el texto**: las fotos lo llenan, no lo estiran.
-Por debajo de `lg` no hay alto del que repartirse, así que cada una vuelve a su
-3:2 y se apilan.
+**Van apiladas, sin aire entre las dos y de borde a borde del bloque.** Desde
+`lg` la fila no centra sus celdas, así que la columna de fotos mide lo que mide
+la de texto y las dos se reparten ese alto. Lo que las lleva hasta el borde es
+**`-my-seccion`**: sin él llegaban hasta donde llega el texto y quedaban los
+104 px de relleno de la sección en crema arriba y abajo. Un margen negativo en un
+ítem estirado se lo suma al alto, así que la celda pasa a medir el alto entero de
+la sección. Medido a 1280: la columna arranca en 0 y termina en **554**, que es
+justo el alto del bloque, con **672 × 277 cada foto**. **El alto del bloque lo
+sigue poniendo el texto**: las fotos lo llenan, no lo estiran. Por debajo de `lg`
+no hay alto del que repartirse ni relleno que comerse, así que cada una vuelve a
+su 3:2 y se apilan.
 
 > **Las fotos van después del texto en el DOM y antes en pantalla**, por `order`.
 > Leído en orden primero está de qué se habla; mirado, la vista entra por la
