@@ -1,6 +1,11 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import IconoDeWhatsApp from '@/components/contacto/IconoDeWhatsApp';
 import { WHATSAPP } from '@/content/contacto-directo';
+import { SECCION_CONTACTO } from '@/content/secciones';
+import { clases } from '@/lib/clases';
 
 /**
  * El único elemento fijo del sitio: el acceso a WhatsApp, abajo a la derecha y
@@ -20,12 +25,25 @@ import { WHATSAPP } from '@/content/contacto-directo';
  * que lo despega; sin ella, sobre el crema el botón se lee como una mancha
  * apoyada y no como un control.
  *
- * ## Por qué es cuadrado
+ * ## Se esconde sobre la sección de contacto, y por dos motivos
  *
- * Un botón flotante de WhatsApp suele ser un círculo, y acá no: las tarjetas,
- * los botones y hasta el pulgar de la barra de desplazamiento son cuadrados, y
- * un círculo sería la única forma redonda del sitio. Lo que tiene que
- * reconocerse es el glifo y el verde, no la silueta.
+ * El primero es medido: en un teléfono de 375 px, con el botón de enviar del
+ * formulario a la altura del flotante, **el flotante le tapa 32 px del borde
+ * derecho —el 11 %— y ahí el toque cae en el glifo** en vez de en Enviar.
+ *
+ * El segundo es que ahí sobra: la sección de contacto ya lista WhatsApp al lado
+ * del teléfono y del correo, así que el flotante repite un camino que está a la
+ * vista.
+ *
+ * Lo resuelve el mismo mecanismo que el header: un `IntersectionObserver` sobre
+ * la sección, que avisa sólo en el cruce y no deja nada corriendo mientras se
+ * scrollea. **Se oculta con `opacity` y `pointer-events` y no desmontando**: así
+ * el cruce es un fundido y no un salto, y el nodo no entra y sale del árbol de
+ * accesibilidad en cada scroll.
+ *
+ * La sección de contacto **sólo existe en la home**, así que en las otras seis
+ * rutas el observador no encuentra nada y el botón se queda visible, que es lo
+ * correcto.
  *
  * ## El apilado
  *
@@ -39,6 +57,18 @@ import { WHATSAPP } from '@/content/contacto-directo';
  */
 export default function BotonDeWhatsApp() {
   const t = useTranslations('whatsapp');
+  const [sobreContacto, setSobreContacto] = useState(false);
+
+  useEffect(() => {
+    const contacto = document.getElementById(SECCION_CONTACTO);
+    if (!contacto) return;
+
+    const observador = new IntersectionObserver(([entrada]) =>
+      setSobreContacto(entrada.isIntersecting)
+    );
+    observador.observe(contacto);
+    return () => observador.disconnect();
+  }, []);
 
   return (
     <a
@@ -46,7 +76,17 @@ export default function BotonDeWhatsApp() {
       target="_blank"
       rel="noreferrer"
       aria-label={t('aria')}
-      className="fixed right-5 bottom-5 z-20 flex size-14 items-center justify-center bg-[#25D366] text-ink shadow-lg transition-transform duration-200 hover:scale-105 focus-visible:outline-[3px] focus-visible:outline-offset-0 focus-visible:outline-ink motion-reduce:transition-none motion-reduce:hover:scale-100"
+      // Escondido de verdad y no sólo transparente: sin esto seguiría recibiendo
+      // el toque encima del botón de enviar, que es justo lo que se quiere
+      // evitar, y el tabulador pasaría por un control invisible.
+      aria-hidden={sobreContacto}
+      tabIndex={sobreContacto ? -1 : undefined}
+      className={clases(
+        'fixed right-5 bottom-5 z-20 flex size-14 items-center justify-center bg-[#25D366] text-ink shadow-lg',
+        'transition-[opacity,transform] duration-200 hover:scale-105 focus-visible:outline-[3px] focus-visible:outline-offset-0 focus-visible:outline-ink',
+        'motion-reduce:transition-none motion-reduce:hover:scale-100',
+        sobreContacto ? 'pointer-events-none opacity-0' : 'opacity-100'
+      )}
     >
       <IconoDeWhatsApp className="size-7" />
     </a>

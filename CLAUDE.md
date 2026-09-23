@@ -499,6 +499,15 @@ scripts/              generar-assets.mjs (derivados de marca e iconos)
   tsconfig.tsbuildinfo` y vuelve a pasar limpio. Si además se borró `.next` justo
   antes, hay que correr el build primero, que es lo que regenera los tipos.
 
+- **Nada que dependa de `IntersectionObserver` se puede verificar con el panel
+  del navegador escondido.** Con la ventana detrás de otra, la página deja de
+  pintarse —`document.hidden` en true y **cero cuadros por segundo**— y el
+  observador no dispara nunca, así que el header no cambia de fondo y el botón
+  de WhatsApp no se esconde. **Parece un error del código y no lo es.** Se
+  comprueba midiendo los cuadros con `requestAnimationFrame`, y se verifica de
+  verdad abriendo una ventana propia con Playwright en `headless: false`, que es
+  lo que hace `flotante.mjs` en el scratchpad.
+
 - **Al agregar una clase de Tailwind que el proyecto no usaba todavía, verificar
   que la hoja se haya regenerado antes de mirar una captura.** El `next dev`
   sirvió CSS viejo tras cambiar un componente a `grid-cols-2 sm:grid-cols-3
