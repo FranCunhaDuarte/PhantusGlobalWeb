@@ -1582,7 +1582,7 @@ sitio tenía dos unidades.
 > 52 % del contenido— para no pesar lo mismo estando al lado; sin esa vecindad
 > la restricción se cae y más ancho sólo mejora la puntería. Medido a 1280: la
 > res sigue en 560 px y el ave pasó de 283 a **416**. Su región más chica es el
-> muslo, **78 × 66 px**. La res sigue con el osobuco en 15 px de ancho, que es
+> muslo, **72 × 64 px**. La res sigue con el osobuco en 15 px de ancho, que es
 > de antes.
 
 ### El dibujo del ave, que es el segundo
@@ -1599,15 +1599,37 @@ Lo que está hoy es **una silueta maciza de pollo faenado visto desde arriba**,
 que aportó Franco, vectorizada. Origen y licencia, en `src/imagenes/FUENTES.md`.
 
 **Que sea una silueta y no una lámina parte el trabajo en dos, y sólo la primera
-mitad sale de la imagen.** De la imagen sale el borde de afuera: umbral a 128
-—el histograma parte limpio—, **cierre morfológico de radio 16** para tapar las
-ranuras blancas del dibujo, el componente más grande, relleno de agujeros,
-contorno por vecindad de Moore y Douglas-Peucker. Salen 134 puntos y un lienzo
-de **1000 × 916**, que es más ancho que alto; la lámina vieja era 1792 × 1381.
-Adentro no hay divisiones que extraer, así que **las seis se escriben a mano**
-como polilíneas, se queman sobre un ráster a triple resolución, y de ahí es lo
-mismo que en la res: etiquetar, descartar semillas por debajo de 2000 px,
-recrecer contra la máscara sin partir y trazar. Cero píxeles sin dueño.
+mitad sale de la imagen.** De la imagen sale **el dibujo entero**: el contorno de
+afuera —umbral a 128, el componente conexo más grande, contorno por vecindad de
+Moore y Douglas-Peucker a 1,2— y las **tres ranuras blancas** de adentro: el
+pliegue del ala, la curva del cuello y la quilla que baja por el medio del
+cuerpo. Las ranuras salen aparte, como agujeros: el fondo que **no** se alcanza
+inundando desde el borde es interior. Son 166 puntos de contorno más tres
+ranuras de 23, 21 y 14, en un lienzo de **1000 × 916**, más ancho que alto; la
+lámina vieja era 1792 × 1381. Adentro no hay ninguna división que extraer, así
+que **las seis se escriben a mano** como polilíneas, se queman sobre un ráster a
+triple resolución, y de ahí es lo mismo que en la res: etiquetar, descartar
+semillas por debajo de 2000 px, recrecer contra la máscara sin partir y trazar.
+Cero píxeles sin dueño.
+
+> **No se cierra nada, y ésa fue la corrección.** El primer intento pasaba un
+> **cierre morfológico de radio 16** para que el contorno de afuera no se metiera
+> por las ranuras, y de paso **redondeó todas las esquinas cóncavas**: las alas
+> dejaron de ser aletas en punta, las muescas entre ala y cuerpo se rellenaron y
+> las tres ranuras desaparecieron. Parecía bien hasta que se midió. Con
+> `verificar-ave.mjs` —que es a la silueta lo que `verificar.mjs` a la res—
+> aquello dibujaba un **2,51 % de más** y esto, **0,19 %**, con 0,46 % sin
+> dibujar: el mapa de diferencias es una línea de un píxel en todo el perímetro y
+> ningún manchón. **Eyeballear no alcanzó**: las dos siluetas se parecían.
+
+**Las ranuras son dibujo y no división**, así que no son regiones: no se apuntan,
+no se tabulan y no tienen nombre. Van en `DETALLES_DEL_DIBUJO` y el componente
+las pinta **al final, en el color del fondo**, de modo que sobreviven al resalte
+—al apuntar un corte su región pasa a bordó y la ranura se sigue viendo—. No van
+como agujeros de su región porque habría que emitir subtrazados con `evenodd` y,
+sobre todo, porque **la quilla cruza el límite entre pechuga y rabadilla**: no
+pertenece a ninguna de las dos. `Despiece` las recibe en `detalles`, que es
+opcional; la res no manda ninguna.
 
 **Acá se curva todo y en la res casi nada.** La res emite polilínea salvo en
 cinco óvalos, porque sus divisiones son rectas y curvarlas las deja onduladas;

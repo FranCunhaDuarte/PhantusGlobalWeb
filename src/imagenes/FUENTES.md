@@ -254,10 +254,19 @@ página no se leía como un ave. En su lugar entró una **silueta maciza de poll
 faenado visto desde arriba**, JPEG de 1920 x 1920, gris plano sobre blanco, que
 también aportó él. La licencia la tiene él, igual que las dos anteriores.
 
-**Es una silueta y no una lámina**, y eso cambia el reparto del trabajo: de la
-imagen sale el borde de afuera y nada más, porque adentro no hay divisiones que
-extraer. Las seis que parten el ave en cinco cortes **están escritas a mano**
-contra el dibujo, en `cortes.mjs`; el procedimiento entero está en `ave.ts`.
+**Es una silueta y no una lámina**, y eso cambia el reparto del trabajo. De la
+imagen sale **el dibujo entero**: el contorno de afuera y las tres ranuras
+blancas de adentro —el pliegue del ala, la curva del cuello y la quilla—. Lo que
+no sale de la imagen son las divisiones entre cortes, porque no las tiene: las
+seis que parten el ave en cinco **están escritas a mano** contra el dibujo, en
+`cortes2.mjs`. El procedimiento entero está en `ave.ts`.
+
+**La fidelidad está medida**, no mirada: `verificar-ave.mjs` compara el trazado
+contra la imagen píxel a píxel y da **0,46 % del cuerpo sin dibujar y 0,19 % de
+más**, todo repartido en una línea de un píxel del perímetro. Un primer intento
+que cerraba morfológicamente la máscara llegaba a **2,51 % de más** —rellenaba
+las muescas entre ala y cuerpo y se comía las tres ranuras— y a ojo las dos
+siluetas se parecían.
 
 Como la imagen no trae rótulos, no hubo nada que descartar: los nombres visibles
 salen de `productos.pollo.cortes.<id>`, igual que antes.

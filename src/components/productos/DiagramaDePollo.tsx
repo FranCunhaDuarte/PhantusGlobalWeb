@@ -2,6 +2,7 @@
 
 import {
   CENTROS_DE_CORTE,
+  DETALLES_DEL_DIBUJO,
   LIENZO,
   REGIONES_DE_CORTE,
   SILUETA
@@ -17,14 +18,15 @@ import { useTranslations } from 'next-intl';
  *
  * **El ave aguanta el achique bastante mejor que la res**, y no es de gusto: son
  * cinco cortes grandes en ocho regiones contra dieciocho, varios de ellos finos.
- * La más chica es el muslo, 190 x 160 de las 1000 x 916 del lienzo, así que a
- * los 416 px que mide el bloque sale de 79 x 67 px; la res a 528 px ya tiene
+ * La más chica es el muslo, 180 x 157 de las 1000 x 916 del lienzo, así que a
+ * los 416 px que mide el bloque sale de 72 x 64 px; la res a 528 px ya tiene
  * tres regiones por debajo del área de toque.
  *
  * **Por eso el ave va sin piso de ancho y la res conserva el suyo.** Un mínimo
  * de 17rem acá no protegería de nada: obligaría a desplazarse de costado dentro
- * de la caja para mostrar un dibujo que a ese tamaño se entiende igual. Aun
- * apilada en el teléfono, el muslo se queda bien por encima de los 24 px.
+ * de la caja para mostrar un dibujo que a ese tamaño se entiende igual. Medido a
+ * 375 de viewport el dibujo queda en 335 px y el muslo en **58 x 52**, todavía
+ * bien por encima de los 24.
  */
 export default function DiagramaDePollo({
   className
@@ -40,7 +42,8 @@ export default function DiagramaDePollo({
         silueta: SILUETA,
         regiones: REGIONES_DE_CORTE,
         centros: CENTROS_DE_CORTE,
-        cortes: CORTES_DE_POLLO
+        cortes: CORTES_DE_POLLO,
+        detalles: DETALLES_DEL_DIBUJO
       }}
       nombre={(corte) => t(corte)}
       etiqueta={t('etiqueta')}

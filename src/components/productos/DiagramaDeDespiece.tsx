@@ -18,6 +18,12 @@ export type Despiece = {
   regiones: Record<string, readonly string[]>;
   centros: Record<string, readonly (readonly [number, number])[]>;
   cortes: readonly string[];
+  /** Trazos que son **dibujo y no división**: el ave los trae —el pliegue del
+   *  ala, la curva del cuello, la quilla— y la res no. Se pintan al final, en el
+   *  color del fondo, así que sobreviven al resalte de la región que los
+   *  contiene. No reciben puntero ni entran al árbol de accesibilidad: no son
+   *  cortes y no tienen nombre. */
+  detalles?: readonly string[];
 };
 
 type DiagramaDeDespieceProps = {
@@ -101,7 +107,7 @@ export default function DiagramaDeDespiece({
   anchoMinimo,
   className
 }: DiagramaDeDespieceProps) {
-  const { lienzo, silueta, regiones, centros, cortes } = despiece;
+  const { lienzo, silueta, regiones, centros, cortes, detalles } = despiece;
   const [LIENZO_X, LIENZO_Y, LIENZO_ANCHO, LIENZO_ALTO] = lienzo
     .split(' ')
     .map(Number);
@@ -182,6 +188,15 @@ export default function DiagramaDeDespiece({
           {cortes.map((corte) =>
             regiones[corte].map((d, indice) => region(corte, d, indice))
           )}
+
+          {detalles?.map((d) => (
+            <path
+              key={d}
+              d={d}
+              aria-hidden
+              className="pointer-events-none fill-surface"
+            />
+          ))}
         </svg>
       </div>
 
