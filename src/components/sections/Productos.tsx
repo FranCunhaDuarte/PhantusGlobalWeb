@@ -126,7 +126,13 @@ export default function Productos() {
             arranca en `min-width: auto`, o sea que no se deja achicar por debajo
             de su contenido; sin esto, el piso de ancho de la res estira su celda
             y desborda la página en vez de desplazarse dentro de su caja. */}
-        <div className="flex flex-col items-center gap-16 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
+        {/* **La fila arranca a la izquierda y no centrada.** Los dos dibujos
+            suman 52,5rem contra los 68 del contenido, así que centrados
+            quedaban sangrados respecto del texto de toda la página: la res
+            arrancaba 104 px adentro del borde del contenedor a 1280. Pegada al
+            borde, el dibujo empieza donde empieza cualquier otro bloque. El aire
+            que sobra queda del lado del ave, que es la unidad secundaria. */}
+        <div className="flex flex-col items-center gap-16 lg:flex-row lg:items-center lg:gap-10">
           <div
             id={ANCLA_DE_UNIDAD.carnes}
             className="w-full min-w-0 max-w-[35rem] scroll-mt-ancla lg:basis-[35rem]"

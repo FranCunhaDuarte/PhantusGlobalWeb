@@ -1597,6 +1597,13 @@ Antes había un solo `h2` —el de carnes— y el ave colgaba de él.
 > ave quedaría más ancha que la res. Desde 900 para abajo se apilan y cada uno
 > vuelve a su tope. Sin desborde horizontal en ninguno de los anchos probados.
 
+> **La fila arranca a la izquierda y no centrada.** Los dos dibujos suman
+> 52,5rem contra los 68 del contenido, así que centrados quedaban sangrados
+> respecto del resto de la página: la res arrancaba 104 px adentro del borde del
+> contenedor. Pegada al borde arranca en **91 px a 1280**, que es exactamente
+> donde arranca la primera ficha del catálogo de especies. El aire que sobra
+> —240 px— queda del lado del ave, que es la unidad secundaria.
+
 > **El ave volvió a la mitad de la res.** Ésa fue su proporción mientras
 > compartieron bloque la primera vez —26 % contra 52 % del contenido—; creció a
 > 26rem cuando tuvo sección propia, porque sin la res al lado la restricción se
