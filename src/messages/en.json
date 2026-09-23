@@ -73,6 +73,7 @@
     },
     "carnes": {
       "titulo": "Meat and chicken",
+      "texto": "Meat and chicken cuts to order, through the approved plant each destination market calls for. The cut charts show which ones we handle.",
       "cta": "See the cuts",
       "carrusel": {
         "etiqueta": "Cuts we handle",

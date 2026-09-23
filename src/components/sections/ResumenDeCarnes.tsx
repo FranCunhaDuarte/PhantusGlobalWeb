@@ -53,11 +53,16 @@ const MEDIDAS = '(min-width: 64rem) 330px, 50vw';
  * así el pollo no aparecía en ninguna parte de la home salvo en un icono del
  * hero.
  *
- * **La línea no es copy nuevo**: es `productos.carnes.entrada`, del archivo del
- * cliente, que quedó sin consumidor cuando `/productos/carnes` se plegó adentro
- * de `/productos` y su hoja perdió el titular y la entrada. Dice lo que hace
- * falta decir acá —que carnes no es el foco y que el catálogo es el de
- * pescados—, así que explica sola por qué debajo no hay una pista de fotos.
+ * **La línea es propia (`home.carnes.texto`) y reemplazó a una del cliente.**
+ * Acá estuvo `productos.carnes.entrada` —"No es nuestro foco y no lo
+ * disimulamos: pescados y mariscos es la unidad que tiene catálogo. Carnes la
+ * tomamos cuando podemos llevar la operación hasta el final"— que explicaba bien
+ * por qué no hay catálogo pero **se leía como una disculpa**: en un CTA, decir
+ * primero lo que no se hace suena a que no se sabe del tema. La que está ahora
+ * dice lo mismo por el lado del oficio —a pedido, con el frigorífico habilitado
+ * que pide cada destino, especificación por operación—: explica igual por qué no
+ * hay catálogo, sin pedir permiso. `productos.carnes.entrada` vuelve a quedar
+ * sin consumidor y no se borró.
  *
  * **El botón sigue siendo el de borde y no el sólido.** El sólido es del CTA de
  * contacto, que es la única acción real de la home; esto es una salida a otra
@@ -69,7 +74,6 @@ const MEDIDAS = '(min-width: 64rem) 330px, 50vw';
  */
 export default function ResumenDeCarnes() {
   const t = useTranslations('home.carnes');
-  const tUnidad = useTranslations('productos.carnes');
 
   return (
     <Section fondo={FONDO}>
@@ -79,12 +83,12 @@ export default function ResumenDeCarnes() {
           la tabulación, porque acá adentro el único control es el botón.
 
           **El texto no se lleva la mitad**: se fija en 22rem, que es medida
-          cómoda para un párrafo de tres renglones, y el resto se lo quedan las
+          cómoda para un párrafo de cinco renglones, y el resto se lo quedan las
           fotos. A mitades quedaban en 250 px de ancho cada una. */}
       <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
         <div className="lg:w-[22rem] lg:shrink-0">
           <SectionHeading className="uppercase">{t('titulo')}</SectionHeading>
-          <p className="mt-4 text-entrada">{tUnidad('entrada')}</p>
+          <p className="mt-4 text-entrada">{t('texto')}</p>
           <BotonSaberMas
             className="mt-8"
             href={{ pathname: '/productos', hash: ANCLA_DE_UNIDAD.carnes }}

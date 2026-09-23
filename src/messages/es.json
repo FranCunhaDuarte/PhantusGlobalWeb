@@ -73,6 +73,7 @@
     },
     "carnes": {
       "titulo": "Carnes y pollo",
+      "texto": "Cortes vacunos y de pollo a pedido, con el frigorífico habilitado que pide cada mercado de destino. El despiece muestra con cuáles trabajamos.",
       "cta": "Ver los cortes",
       "carrusel": {
         "etiqueta": "Cortes que trabajamos",
