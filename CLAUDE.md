@@ -1574,16 +1574,35 @@ una es un ancla dentro de `/productos`.
 ave ya existía pero colgado del bloque de carnes, al lado de la media res:
 apuntaba a que el pollo fuera un subproducto de la vacuna, y no lo es —otro
 frigorífico, otra habilitación, otro comprador—. Ahora son tres tarjetas en el
-índice, tres anclas y tres bloques, y **eso cierra la tensión que el hero tenía
-anotada**: ahí se muestran tres rubros desde que salió la copa de vino, y el
-sitio tenía dos unidades.
+índice y **tres anclas**, y **eso cierra la tensión que el hero tenía anotada**:
+ahí se muestran tres rubros desde que salió la copa de vino, y el sitio tenía dos
+unidades.
 
-> **El ave creció al quedarse sola.** Medía la mitad que la res —26 % contra
-> 52 % del contenido— para no pesar lo mismo estando al lado; sin esa vecindad
-> la restricción se cae y más ancho sólo mejora la puntería. Medido a 1280: la
-> res sigue en 560 px y el ave pasó de 283 a **416**. Su región más chica es el
-> muslo, **72 × 64 px**. La res sigue con el osobuco en 15 px de ancho, que es
-> de antes.
+**Los dos despieces volvieron a compartir bloque**, por pedido: la res y el ave
+van lado a lado desde `lg` y apiladas abajo. Eso **no vuelve a subordinar el
+pollo**, que es lo que había motivado separarlos: cada dibujo conserva su propia
+ancla y su propio `h2`, así que para la navegación y para el lector de pantalla
+siguen siendo dos unidades, y lo único que comparten es la franja y el fondo.
+Antes había un solo `h2` —el de carnes— y el ave colgaba de él.
+
+> **El ancla dejó de ponerla `Section`.** El prop `ancla` admite una y la sección
+> tiene dos destinos de salto, así que los ids viven en las dos celdas, cada una
+> con `scroll-mt-ancla`, que es exactamente lo que la sección les daba.
+
+> **Las medidas mandan por `basis` y no por `width`.** Los dos topes —35rem la
+> res, 26rem el ave— suman 61rem, que a 1280 entra en los 68rem del contenido
+> pero a 1024 no. Con la base en esas mismas medidas los dos se achican en
+> proporción y la razón se mantiene: medido, **560 / 416 a 1280 y 522 / 388 a
+> 1024, las dos veces 1,346**, que es 35 sobre 26. Con `w-full` para los dos el
+> reparto pasaría a ser mitad y mitad y el ave quedaría más ancha que la res.
+> Desde 900 para abajo se apilan y cada uno vuelve a su tope; a 375 los dos miden
+> 335. Sin desborde horizontal en ninguno de los cuatro anchos.
+
+> **El ave no volvió a achicarse al reencontrarse con la res.** Medía la mitad
+> —26 % contra 52 % del contenido— cuando estaban juntas, para no pesar lo mismo;
+> hoy va a 416 px contra los 560 de la res, que es la proporción que le dejó
+> haberse quedado sola. Su región más chica es el muslo, **72 × 64 px**. La res
+> sigue con el osobuco en 15 px de ancho, que es de antes.
 
 ### El dibujo del ave, que es el segundo
 

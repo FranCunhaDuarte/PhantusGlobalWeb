@@ -87,56 +87,54 @@ export default function Productos() {
         <CatalogoDeEspecies />
       </Section>
 
-      {/* **Los dos despieces entran en el contenedor y no salen a ancho de
-          pantalla**, que es como estuvieron un rato. A ancho completo cada uno
-          se llevaba la mitad del viewport —unos 940 px a 1920— pero se comían el
-          tope de 72rem que respeta todo el resto de la página, y el bloque
-          quedaba pegado a los bordes mientras el texto de arriba y el de abajo
-          no.
+      {/* **Los dos despieces vuelven a un solo bloque**, que es de donde
+          salieron: estuvieron juntos bajo el titular de carnes, se separaron en
+          dos secciones cuando el pollo pasó a ser unidad propia —tenerlo colgado
+          del bloque de carnes decía que es un subproducto de la vacuna, y no lo
+          es— y ahora vuelven a compartir bloque por pedido.
 
-          **El costo es que se achican, y está aceptado.** A 1280 la res queda en
-          566 px y el ave en 283. Eso obligó a bajar el piso de ancho de la res,
-          que era de 48rem —ver `DiagramaDeCortes`—.
+          **Que compartan bloque no vuelve a subordinar el pollo**, y ésa es la
+          diferencia con la disposición vieja. Cada dibujo conserva **su propia
+          ancla y su propio `h2`**, así que para la navegación y para el lector de
+          pantalla siguen siendo dos unidades; lo que comparten es la franja y el
+          fondo. Antes había un solo `h2` —el de carnes— y el ave colgaba de él.
 
-          **Abajo de `lg` se apilan**, porque dos dibujos de este ancho en media
-          pantalla angosta no se leen. Apiladas mantienen la misma proporción de
-          2 a 1: la res a ancho completo y el ave a la mitad. */}
-      {/* **Los dos despieces estuvieron en este mismo bloque y ahora son dos.**
-          Iban uno al lado del otro bajo el titular de carnes, la res al 52 % del
-          contenido y el ave al 26 %, con el sobrante repartido en el medio. Eso
-          decía que el pollo es una parte de la carne vacuna, y no lo es: otro
-          frigorífico, otra habilitación y otro comprador. Ahora cada unidad abre
-          su propia ancla.
-
-          **El ave creció al quedarse sola.** Medía la mitad que la res para no
-          pesar lo mismo estando al lado; sin esa vecindad la restricción se cae,
-          y más ancho sólo mejora la puntería sobre sus ocho regiones. Queda
-          igual por debajo de la res, que tiene dieciocho cortes y varios finos.
+          **El ancla ya no la pone `Section` sino cada celda**, porque la sección
+          tiene dos destinos de salto y el prop admite uno. Las dos llevan
+          `scroll-mt-ancla`, que es lo mismo que la sección les daba.
 
           **Los dos entran en el contenedor y no salen a ancho de pantalla**, que
           es como estuvieron un rato: a ancho completo se comían el tope de 72rem
           que respeta el resto de la página y el bloque quedaba pegado a los
           bordes mientras el texto no. */}
-      <Section fondo="crema" ancla={ANCLA_DE_UNIDAD.carnes}>
-        {/* **Un solo encabezado por bloque y no dos.** Con los dos dibujos
-            juntos hacía falta un `h2` de la unidad y un `h3` por animal, o el
-            lector de pantalla encontraba dos grupos de regiones seguidos sin
-            nada que dijera cuál era cuál. Separados, el `h3` repetía el `h2`. */}
-        <h2 className="sr-only">{tUnidades('carnes.nombre')}</h2>
-        {/* **`min-w-0` se queda aunque el dibujo ya entre.** Un ítem de flex
-            arranca en `min-width: auto`, o sea que no se deja achicar por debajo
-            de su contenido; sin esto, cualquier mínimo que vuelva a aparecer
-            adentro estira la celda y desborda la página en vez de desplazarse
-            dentro de su caja. Es el seguro, no el mecanismo. */}
-        <div className="mx-auto min-w-0 max-w-[35rem]">
-          <DiagramaDeCortes />
-        </div>
-      </Section>
+      <Section fondo="crema">
+        {/* **Las medidas mandan por `basis` y no por `width`.** Los dos topes
+            —35rem la res, 26rem el ave— suman 61rem, que a 1280 entra en los
+            68rem del contenido pero no a 1024. Con la base en esas mismas
+            medidas, los dos se achican en proporción y la res sigue midiendo lo
+            que el ave por 35 a 26; con un `w-full` para los dos, el reparto
+            pasaría a ser mitad y mitad y el ave quedaría más ancha que la res.
 
-      <Section fondo="crema-elevado" ancla={ANCLA_DE_UNIDAD.pollo}>
-        <h2 className="sr-only">{tUnidades('pollo.nombre')}</h2>
-        <div className="mx-auto min-w-0 max-w-[26rem]">
-          <DiagramaDePollo />
+            **`min-w-0` se queda aunque los dibujos ya entren.** Un ítem de flex
+            arranca en `min-width: auto`, o sea que no se deja achicar por debajo
+            de su contenido; sin esto, el piso de ancho de la res estira su celda
+            y desborda la página en vez de desplazarse dentro de su caja. */}
+        <div className="flex flex-col items-center gap-16 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
+          <div
+            id={ANCLA_DE_UNIDAD.carnes}
+            className="w-full min-w-0 max-w-[35rem] scroll-mt-ancla lg:basis-[35rem]"
+          >
+            <h2 className="sr-only">{tUnidades('carnes.nombre')}</h2>
+            <DiagramaDeCortes />
+          </div>
+
+          <div
+            id={ANCLA_DE_UNIDAD.pollo}
+            className="w-full min-w-0 max-w-[26rem] scroll-mt-ancla lg:basis-[26rem]"
+          >
+            <h2 className="sr-only">{tUnidades('pollo.nombre')}</h2>
+            <DiagramaDePollo />
+          </div>
         </div>
 
         {/* **Acá iba la línea de corazón, hígado, molleja y filete**, que son lo
