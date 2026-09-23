@@ -284,6 +284,9 @@
       },
       "carnes": {
         "nombre": "Carnes"
+      },
+      "pollo": {
+        "nombre": "Pollo"
       }
     },
     "pescados": {

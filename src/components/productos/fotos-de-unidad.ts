@@ -2,6 +2,7 @@ import type { StaticImageData } from 'next/image';
 import type { Unidad } from '@/content/unidades';
 import carnes from '@/imagenes/carnes.jpg';
 import pescados from '@/imagenes/pescados-y-mariscos.jpg';
+import pollo from '@/imagenes/pollo.jpg';
 
 /**
  * La foto de cada unidad, por import estático: `next/image` saca de ahí el
@@ -14,5 +15,6 @@ import pescados from '@/imagenes/pescados-y-mariscos.jpg';
  */
 export const FOTO_DE_UNIDAD: Record<Unidad, StaticImageData> = {
   pescados,
-  carnes
+  carnes,
+  pollo
 };

@@ -1561,9 +1561,30 @@ confirmación. Así se prueba el flujo entero sin cuenta.
 La palabra visible es **"productos"** (en inglés, *products*): "rubro" no se
 usa. "Unidad de negocio" sí vuelve a usarse, pero **sólo en el código y en la
 copia de la página**, no como nombre de ruta: el dominio se nombra `productos` en
-i18n y `RUTA_DE_PRODUCTOS` en `src/content/secciones.ts`, y las dos unidades son
-`UNIDADES` en `src/content/unidades.ts`. Las rutas públicas son `/productos`,
-`/productos/pescados` y `/productos/carnes`.
+i18n y `RUTA_DE_PRODUCTOS` en `src/content/secciones.ts`, y las **tres** unidades
+son `UNIDADES` en `src/content/unidades.ts`. Hoy no hay rutas por unidad: cada
+una es un ancla dentro de `/productos`.
+
+**Pollo es unidad desde el 23/09, y antes era parte de carnes.** El despiece del
+ave ya existía pero colgado del bloque de carnes, al lado de la media res:
+apuntaba a que el pollo fuera un subproducto de la vacuna, y no lo es —otro
+frigorífico, otra habilitación, otro comprador—. Ahora son tres tarjetas en el
+índice, tres anclas y tres bloques, y **eso cierra la tensión que el hero tenía
+anotada**: ahí se muestran tres rubros desde que salió la copa de vino, y el
+sitio tenía dos unidades.
+
+> **El ave creció al quedarse sola.** Medía la mitad que la res —26 % contra
+> 52 % del contenido— para no pesar lo mismo estando al lado; sin esa vecindad
+> la restricción se cae y más ancho sólo mejora la puntería. Medido a 1280: la
+> res sigue en 560 px y el ave pasó de 283 a **416**, con su región más chica en
+> 199 × 63 px. La res sigue con el osobuco en 15 px de ancho, que es de antes.
+
+> **En inglés la unidad se llama "Chicken" y no "Poultry"**, que es el término de
+> comercio. Es el pedido de Franco de que "poultry" y "beef" no aparezcan; por lo
+> mismo los tres iconos del hero pasaron a decir Seafood, Meat y Chicken, que
+> ahora es exactamente lo que dicen las tres tarjetas. Siguen diciendo "beef" la
+> etiqueta del diagrama de la res —*beef side* es el término para media res— y el
+> nombre del corte *roast beef*.
 
 **Los catálogos de i18n siguieron a la estructura**: todo lo que estaba bajo
 `productos.*` pasó a `productos.pescados.*`, y `productos.*` quedó para el

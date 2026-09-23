@@ -38,8 +38,6 @@ import foto from '@/imagenes/ciudad/costa.jpg';
 export default function Productos() {
   const t = useTranslations('productos');
   const tUnidades = useTranslations('productos.unidades');
-  const tCarnes = useTranslations('productos.carnes');
-  const tPollo = useTranslations('productos.pollo');
 
   return (
     <>
@@ -103,47 +101,42 @@ export default function Productos() {
           **Abajo de `lg` se apilan**, porque dos dibujos de este ancho en media
           pantalla angosta no se leen. Apiladas mantienen la misma proporción de
           2 a 1: la res a ancho completo y el ave a la mitad. */}
+      {/* **Los dos despieces estuvieron en este mismo bloque y ahora son dos.**
+          Iban uno al lado del otro bajo el titular de carnes, la res al 52 % del
+          contenido y el ave al 26 %, con el sobrante repartido en el medio. Eso
+          decía que el pollo es una parte de la carne vacuna, y no lo es: otro
+          frigorífico, otra habilitación y otro comprador. Ahora cada unidad abre
+          su propia ancla.
+
+          **El ave creció al quedarse sola.** Medía la mitad que la res para no
+          pesar lo mismo estando al lado; sin esa vecindad la restricción se cae,
+          y más ancho sólo mejora la puntería sobre sus nueve regiones. Queda
+          igual por debajo de la res, que tiene dieciocho cortes y varios finos.
+
+          **Los dos entran en el contenedor y no salen a ancho de pantalla**, que
+          es como estuvieron un rato: a ancho completo se comían el tope de 72rem
+          que respeta el resto de la página y el bloque quedaba pegado a los
+          bordes mientras el texto no. */}
       <Section fondo="crema" ancla={ANCLA_DE_UNIDAD.carnes}>
+        {/* **Un solo encabezado por bloque y no dos.** Con los dos dibujos
+            juntos hacía falta un `h2` de la unidad y un `h3` por animal, o el
+            lector de pantalla encontraba dos grupos de regiones seguidos sin
+            nada que dijera cuál era cuál. Separados, el `h3` repetía el `h2`. */}
         <h2 className="sr-only">{tUnidades('carnes.nombre')}</h2>
+        {/* **`min-w-0` se queda aunque el dibujo ya entre.** Un ítem de flex
+            arranca en `min-width: auto`, o sea que no se deja achicar por debajo
+            de su contenido; sin esto, cualquier mínimo que vuelva a aparecer
+            adentro estira la celda y desborda la página en vez de desplazarse
+            dentro de su caja. Es el seguro, no el mecanismo. */}
+        <div className="mx-auto min-w-0 max-w-[35rem]">
+          <DiagramaDeCortes />
+        </div>
+      </Section>
 
-        {/* **Cada dibujo mide lo suyo y el sobrante va entre los dos.** La res
-            se lleva el 52 % del contenido y el ave el 26 %; `justify-between`
-            reparte el 22 % que queda como aire en el medio, así que la res se
-            apoya en el borde izquierdo y el ave en el derecho. Antes el par iba
-            centrado y topado en `max-w-4xl`, y ese sobrante caía a los costados
-            en vez de separarlas.
-
-            **Por qué la res mide el doble.** Tiene dieciocho cortes contra nueve
-            y varios son finos: a mitad y mitad dejaba tres regiones por debajo
-            del área de toque y al ave ninguna, con las suyas en 82 px. Dándole
-            al ave lo que le sobra, la res gana puntería y el ave sigue muy por
-            encima del mínimo.
-
-            Además empareja el dibujo: el lienzo del ave es más alto que el de la
-            res —1,30 contra 1,43 de proporción— así que a igual ancho el pollo
-            se veía más grande que la vaca. */}
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-          {/* Cada dibujo lleva su encabezado invisible: sin ellos, un lector de
-              pantalla encuentra dos grupos de regiones seguidos y nada que diga
-              cuál es cuál.
-
-              **`min-w-0` se queda aunque los dibujos ya entren.** Un ítem de
-              flex arranca en `min-width: auto`, o sea que no se deja achicar por
-              debajo de su contenido; sin esto, cualquier mínimo que vuelva a
-              aparecer adentro estira la celda y desborda la página en vez de
-              desplazarse dentro de su caja. Es el seguro, no el mecanismo. */}
-          <div className="min-w-0 lg:w-[52%]">
-            <h3 className="sr-only">{tCarnes('vacuna')}</h3>
-            <DiagramaDeCortes />
-          </div>
-          {/* **El ave mide la mitad que la res también apilada**, no el ancho
-              entero. Es la misma proporción de 2 a 1 que arriba: en columna, con
-              las dos a ancho completo, el pollo quedaba del tamaño de la vaca y
-              la página decía que pesan lo mismo. */}
-          <div className="min-w-0 w-1/2 lg:w-[26%]">
-            <h3 className="sr-only">{tPollo('titulo')}</h3>
-            <DiagramaDePollo />
-          </div>
+      <Section fondo="crema-elevado" ancla={ANCLA_DE_UNIDAD.pollo}>
+        <h2 className="sr-only">{tUnidades('pollo.nombre')}</h2>
+        <div className="mx-auto min-w-0 max-w-[26rem]">
+          <DiagramaDePollo />
         </div>
 
         {/* **Acá iba la línea de corazón, hígado, molleja y filete**, que son lo

@@ -52,8 +52,8 @@
       "titulo": "Export-grade food from Argentina",
       "rubros": {
         "pescado": "Seafood",
-        "pollo": "Poultry",
-        "carne": "Beef"
+        "pollo": "Chicken",
+        "carne": "Meat"
       },
       "cta": "Tell us what you need"
     },
@@ -284,6 +284,9 @@
       },
       "carnes": {
         "nombre": "Meat"
+      },
+      "pollo": {
+        "nombre": "Chicken"
       }
     },
     "pescados": {
@@ -438,9 +441,9 @@
       "cta": "Request a quote"
     },
     "pollo": {
-      "titulo": "Poultry",
+      "titulo": "Chicken",
       "cortes": {
-        "etiqueta": "Poultry cuts. Point at or focus a cut to see its name.",
+        "etiqueta": "Chicken cuts. Point at or focus a cut to see its name.",
         "cabeza": "Head",
         "cuello": "Neck",
         "espinazo": "Back",

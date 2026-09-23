@@ -8,8 +8,9 @@ identificables ni marcas visibles.
 | --- | --- | --- | --- |
 | `hero-mar.jpg` | https://www.pexels.com/photo/32843666/ | Pexels License | 2026-09-15 |
 | `contacto-mar.jpg` | https://www.pexels.com/photo/36638038/ | Pexels License | 2026-09-15 |
-| `pescados-y-mariscos.jpg` | https://www.pexels.com/photo/2042564/ | Pexels License | 2026-09-21 |
+| `pescados-y-mariscos.jpg` | https://www.pexels.com/photo/38725339/ | Pexels License | 2026-09-23 |
 | `carnes.jpg` | https://www.pexels.com/photo/18518279/ | Pexels License | 2026-09-21 |
+| `pollo.jpg` | https://www.pexels.com/photo/18474429/ | Pexels License | 2026-09-23 |
 | `nosotros.jpg` | https://www.pexels.com/photo/15716526/ | Pexels License | 2026-09-21 |
 | `mercados.jpg` | https://www.pexels.com/photo/7519262/ | Pexels License | 2026-09-19 |
 | `nosotros-hero.jpg` | https://www.pexels.com/photo/37168765/ | Pexels License | 2026-09-21 |
@@ -38,10 +39,27 @@ Aires**, a 60 km de Mar del Plata. La anterior era un primer plano de tres Angus
 entre eucaliptos y pastura seca, con caravanas rojas: leía australiana, no
 pampeana.
 
-> **Ninguna de las dos primeras es Mar del Plata ni son especies del catálogo.** El
-> pescado de la foto es lubina, no merluza ni corvina. A tamaño de tarjeta, bajo
-> el velo al 50 %, funciona como imagen de categoría y no como ficha de producto
-> —las especies tienen sus propios recortes, que sí son las correctas—.
+**`pescados-y-mariscos.jpg` se volvió a reemplazar el 23/09**, y esta vez por lo
+que muestra: la anterior era **un pescado solo**, y la tarjeta dice "pescados y
+mariscos". La nueva es pescado entero y vieiras sobre hielo con alga, así que
+cumple las dos mitades del nombre.
+
+**`pollo.jpg` entró con la unidad nueva**: dos gallinas coloradas sobre pasto. Es
+a propósito **el mismo registro que `carnes.jpg`** —animal vivo en el campo y no
+producto sobre hielo—, que es lo que hace que las tres tarjetas se lean como un
+juego. Se descartó una de pollos parrilleros en galpón, que leía producción
+intensiva, y otra de un gallo de frente, que además no es lo que dibuja el
+despiece.
+
+> **Ninguna de las dos primeras es Mar del Plata ni son especies del catálogo.** A
+> tamaño de tarjeta, bajo el velo al 50 %, funcionan como imagen de categoría y no
+> como ficha de producto —las especies tienen sus propios recortes, que sí son las
+> correctas—.
+
+> **Se descartó una candidata de pescadería por carteles de precio legibles**, que
+> es la misma regla de siempre. Las doce que se miraron pasaron todas la cuenta
+> del velo —el piso es 3,38:1, que es el que pone un píxel blanco puro—, así que
+> ahí la elección fue editorial y no de contraste.
 
 **Se descartaron tres candidatas por marcas visibles**, que es lo que esta
 página viene diciendo que ninguna foto del sitio lleva: dos tenían nombres de
