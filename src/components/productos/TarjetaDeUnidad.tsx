@@ -3,10 +3,12 @@ import TarjetaConFoto from '@/components/ui/TarjetaConFoto';
 import { ANCLA_DE_UNIDAD, type Unidad } from '@/content/unidades';
 
 /**
- * Ancho que llega a medir la foto: dos columnas dentro del `Container` a su
- * tope, con el gap, dejan tarjetas de 686 px.
+ * Ancho que llega a medir la foto: tres columnas dentro del `Container` a su
+ * tope (1088 px) con dos gaps de 12 dejan tarjetas de 355 px. Es el mismo
+ * número que el índice de accesos de la home, porque desde ahora las dos
+ * grillas miden igual.
  */
-const MEDIDAS = ['(min-width: 64rem) 690px', '100vw'].join(', ');
+const MEDIDAS = ['(min-width: 48rem) 355px', '100vw'].join(', ');
 
 /**
  * Una de las dos unidades de negocio en el índice de `/productos`. La tarjeta
@@ -39,6 +41,11 @@ export default function TarjetaDeUnidad({
       foto={FOTO_DE_UNIDAD[unidad]}
       nombre={nombre}
       medidas={MEDIDAS}
+      // Misma forma que las tarjetas de la home. Eran `ancha` —3:2 en todos los
+      // anchos— mientras eran dos y ocupaban media pantalla cada una; con tres
+      // y la grilla igualada, las dos piezas del sitio que son "elegí por dónde
+      // entrar" se ven iguales.
+      forma="alta"
     />
   );
 }

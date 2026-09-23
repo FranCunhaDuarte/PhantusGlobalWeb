@@ -15,12 +15,13 @@ export default function IndiceDeUnidades({
 }) {
   const t = useTranslations('productos.unidades');
 
-  // Fue `lg:grid-cols-2` mientras las unidades eran dos. Con tres, un corte
-  // intermedio de a dos dejaría una tarjeta sola en la segunda fila; va de una a
-  // tres directo, que es lo que hace el índice de accesos de la home con las
-  // suyas.
+  // **La misma grilla que el índice de accesos de la home**, hasta el número:
+  // tres columnas desde `md` y 12 px de aire. Fue `lg:grid-cols-2` con 20 px
+  // mientras las unidades eran dos y ocupaban media pantalla cada una; con tres
+  // entradas esa medida ya no decía nada, y las dos piezas del sitio que hacen
+  // lo mismo —dejar elegir por dónde entrar— ahora se ven iguales.
   return (
-    <ul className={clases('grid gap-5 lg:grid-cols-3', className)}>
+    <ul className={clases('grid gap-3 md:grid-cols-3', className)}>
       {UNIDADES.map((unidad) => (
         <TarjetaDeUnidad
           key={unidad}

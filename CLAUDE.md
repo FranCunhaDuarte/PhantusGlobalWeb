@@ -1202,8 +1202,7 @@ desapareció es el ancla `#nosotros`, que no la usaba nadie. Lo que sí deja de
 ser cierto al pie de la letra es que `SECCIONES` sea "el orden de la home":
 `nosotros` está en la lista y ya no es un bloque. Es orden de navegación.
 
-**Son más altas y van más juntas que las de `/productos`**: 4:5 contra 3:2, y
-12 px de aire contra 20. La proporción es un prop de `TarjetaConFoto`
+**Las dos grillas miden lo mismo desde el 23/09**: tres columnas desde `md`, 12 px de aire y tarjetas de 355 x 443 —4:5—, medidas a 1280 en las dos páginas. Fueron distintas mientras el índice de productos eran dos tarjetas de media pantalla, 3:2 y 20 px de aire; con tres entradas esa diferencia ya no decía nada y las dos piezas que hacen lo mismo se ven iguales. La proporción es un prop de `TarjetaConFoto`
 (`forma`), con las dos clases literales adentro del componente porque Tailwind
 lee el código fuente y no resuelve una clase armada por quien la consume. **En el
 teléfono vuelven a 3:2**: las tres se apilan, y una atrás de otra en vertical

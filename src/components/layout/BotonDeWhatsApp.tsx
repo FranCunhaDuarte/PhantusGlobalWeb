@@ -11,14 +11,19 @@ import { clases } from '@/lib/clases';
  * El único elemento fijo del sitio: el acceso a WhatsApp, abajo a la derecha y
  * en todas las páginas.
  *
- * ## El verde es el de WhatsApp y el glifo no es blanco
+ * ## Va como lo usa WhatsApp: círculo verde y glifo blanco
  *
- * **Blanco sobre el verde de WhatsApp da 1,98:1**, por debajo del 3:1 que pide
- * un elemento no textual, y es la combinación que usa la propia marca. Con el
- * glifo en **tinta** el mismo verde da **9,32:1**. Así que el fondo se queda en
- * el verde —que es lo que hace que el botón se reconozca de lejos, y la única
- * razón para traer un color de afuera de la paleta— y el dibujo va en el color
- * del sitio.
+ * **Es el único elemento redondo del sitio**, donde las tarjetas, los botones y
+ * hasta el pulgar de la barra de desplazamiento son cuadrados. Es a propósito:
+ * lo que tiene que reconocerse al instante es que es WhatsApp, y la forma es
+ * parte de eso tanto como el color.
+ *
+ * > **El glifo en blanco sobre el verde da 1,98:1**, por debajo del 3:1 que pide
+ * > un elemento no textual. Es la combinación de la propia marca y es la que
+ * > pidió Franco sabiendo el número, así que queda anotada y no es un olvido.
+ * > Estuvo en tinta, que sobre el mismo verde da 9,32:1. Si alguna vez hay que
+ * > cumplir el 3:1 sin perder el blanco, el camino es el verde oscuro de la
+ * > marca (`#128C7E`), que con blanco da 4,14:1.
  *
  * **El verde contra el crema de la página da 1,69:1**, así que el borde del
  * botón por sí solo no se distingue del fondo. Lo resuelve la sombra, que es lo
@@ -82,8 +87,11 @@ export default function BotonDeWhatsApp() {
       aria-hidden={sobreContacto}
       tabIndex={sobreContacto ? -1 : undefined}
       className={clases(
-        'fixed right-5 bottom-5 z-20 flex size-14 items-center justify-center bg-[#25D366] text-ink shadow-lg',
-        'transition-[opacity,transform] duration-200 hover:scale-105 focus-visible:outline-[3px] focus-visible:outline-offset-0 focus-visible:outline-ink',
+        'fixed right-5 bottom-5 z-20 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg',
+        // El anillo de foco va por fuera y no pegado al borde: sobre el verde,
+        // con el glifo ya en blanco, un contorno al ras se confunde con el
+        // propio botón.
+        'transition-[opacity,transform] duration-200 hover:scale-105 focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-ink',
         'motion-reduce:transition-none motion-reduce:hover:scale-100',
         sobreContacto ? 'pointer-events-none opacity-0' : 'opacity-100'
       )}
