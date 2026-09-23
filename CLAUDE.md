@@ -1580,29 +1580,40 @@ ahí se muestran tres rubros desde que salió la copa de vino, y el sitio tenía
 unidades.
 
 **Los dos despieces volvieron a compartir bloque**, por pedido: la res y el ave
-van lado a lado desde `lg` y apiladas abajo. Eso **no vuelve a subordinar el
-pollo**, que es lo que había motivado separarlos: cada dibujo conserva su propia
-ancla y su propio `h2`, así que para la navegación y para el lector de pantalla
-siguen siendo dos unidades, y lo único que comparten es la franja y el fondo.
-Antes había un solo `h2` —el de carnes— y el ave colgaba de él.
+van lado a lado desde `lg` y apiladas abajo, bajo un titular común, **CARNES Y
+POLLO** (`productos.despieces.titulo`), con una bajada debajo
+(`.entrada`). Eso **no vuelve a subordinar el pollo**, que es lo que había
+motivado separarlos: el titular nombra las dos unidades y de él cuelgan los dos
+nombres, cada uno en un `h3` invisible junto a su dibujo. Antes el único
+encabezado era el `h2` de carnes y el ave colgaba de ahí. Cada uno conserva
+además su propia ancla, así que para la navegación siguen siendo dos destinos.
+
+> **Este bloque lleva titular a la vista y el de pescados no**, y la asimetría es
+> a propósito. Allá el titular sería el nombre de la unidad y debajo hay un
+> catálogo que se explica solo; acá hay dos dibujos, y un dibujo sin una línea
+> que diga qué es se lee como ilustración. La bajada además dice **lo que el
+> dibujo no puede decir**: que la especificación se define por operación, que es
+> la razón de que no haya ficha por corte.
 
 > **El ancla dejó de ponerla `Section`.** El prop `ancla` admite una y la sección
 > tiene dos destinos de salto, así que los ids viven en las dos celdas, cada una
 > con `scroll-mt-ancla`, que es exactamente lo que la sección les daba.
 
-> **Las medidas mandan por `basis` y no por `width`.** Con la base en los mismos
-> topes —35rem la res, 17,5rem el ave— los dos se achican en proporción y la
-> razón se mantiene a cualquier ancho: medido, **560 / 280 a 1280**, o sea 2,00
-> exacto. Con `w-full` para los dos el reparto pasaría a ser mitad y mitad y el
-> ave quedaría más ancha que la res. Desde 900 para abajo se apilan y cada uno
-> vuelve a su tope. Sin desborde horizontal en ninguno de los anchos probados.
-
-> **La fila arranca a la izquierda y no centrada.** Los dos dibujos suman
-> 52,5rem contra los 68 del contenido, así que centrados quedaban sangrados
-> respecto del resto de la página: la res arrancaba 104 px adentro del borde del
-> contenedor. Pegada al borde arranca en **91 px a 1280**, que es exactamente
-> donde arranca la primera ficha del catálogo de especies. El aire que sobra
-> —240 px— queda del lado del ave, que es la unidad secundaria.
+> **Las dos celdas no se reparten igual, y es a propósito.** La res lleva su
+> medida en `basis` —35rem— y el ave **se queda con todo lo que sobra**,
+> centrando el dibujo adentro con su tope de 17,5rem. Así la res queda pegada al
+> borde izquierdo del contenido y el ave, centrada en el lado derecho, sin que
+> nadie tenga que calcular cuánto vale ese lado. El reparto no se rompe a ningún
+> ancho donde la fila sea fila: desde `lg` el contenido mide 960 px o más y las
+> dos medidas más el aire suman 880, así que la res nunca llega a achicarse.
+>
+> Medido a 1280: la res va de **91 a 651**, que es exactamente donde arranca la
+> primera ficha del catálogo de especies y donde arranca el titular del bloque;
+> la celda del ave va de 691 a 1179 y el dibujo, de **795 a 1075, con 104 px de
+> aire a cada lado**. Estuvo centrada la fila entera y así la res arrancaba
+> 104 px adentro del borde, sangrada respecto del resto de la página. Desde 900
+> para abajo se apilan y cada uno vuelve a su tope; a 375 la res mide 335 y el
+> ave 280, centrada. Sin desborde horizontal en ninguno de los anchos probados.
 
 > **El ave volvió a la mitad de la res.** Ésa fue su proporción mientras
 > compartieron bloque la primera vez —26 % contra 52 % del contenido—; creció a

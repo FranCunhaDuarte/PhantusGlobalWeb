@@ -295,6 +295,10 @@
         "nombre": "Chicken"
       }
     },
+    "despieces": {
+      "titulo": "Meat and chicken",
+      "entrada": "The cuts we handle, on the beef side and on the whole bird. Point at one to see its name; format, plant certification and destination are set deal by deal."
+    },
     "pescados": {
       "metaTitle": "Seafood: Argentine red shrimp, hake, Illex squid and croaker",
       "metaDescription": "Eleven South Atlantic species, from hake and red shrimp to red porgy, seabass and angel shark. IQF, block, HOSO, HLSO and fillet formats, on FOB, CFR or CIF terms, with FDA, HACCP and SIMP compliance.",

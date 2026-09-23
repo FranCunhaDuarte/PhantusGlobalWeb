@@ -108,45 +108,75 @@ export default function Productos() {
           que respeta el resto de la página y el bloque quedaba pegado a los
           bordes mientras el texto no. */}
       <Section fondo="crema">
-        {/* **Las medidas mandan por `basis` y no por `width`.** Con la base en
-            los mismos topes, los dos se achican en proporción y la res sigue
-            midiendo el doble que el ave a cualquier ancho; con un `w-full` para
-            los dos, el reparto pasaría a ser mitad y mitad y el ave quedaría más
-            ancha que la res.
+        {/* **Las dos celdas no se reparten igual, y es a propósito.** La res
+            lleva su medida en `basis` y el ave se queda con **todo lo que
+            sobra**, centrando el dibujo adentro. Así la res queda pegada al
+            borde izquierdo del contenido y el ave, centrada en el lado derecho,
+            sin tener que calcular a mano cuánto vale ese lado.
+
+            El reparto no se rompe a ningún ancho donde la fila sea fila: desde
+            `lg` el contenido mide 960 px o más y las dos medidas más el aire
+            suman 880, así que la res nunca llega a achicarse y lo que cambia es
+            cuánto aire rodea al ave.
 
             **El ave va a la mitad de la res**, 17,5rem contra 35, que es la
             proporción que tenían cuando compartieron bloque la primera vez.
             Estuvo en 26rem mientras tuvo sección propia —sin la res al lado la
             restricción se caía y más ancho sólo mejoraba la puntería— y volvió a
             la mitad al volver a ser vecinas. A 1280 eso la deja en 280 px y a su
-            región más chica, el muslo, en 50 x 44: por encima de los 24 de área
+            región más chica, el muslo, en 48 x 43: por encima de los 24 de área
             de toque, que es el piso que hay que mirar antes de bajarla más.
 
             **`min-w-0` se queda aunque los dibujos ya entren.** Un ítem de flex
             arranca en `min-width: auto`, o sea que no se deja achicar por debajo
             de su contenido; sin esto, el piso de ancho de la res estira su celda
             y desborda la página en vez de desplazarse dentro de su caja. */}
+        {/* **Este bloque sí lleva titular a la vista y el de pescados no**, que
+            es una asimetría a propósito y conviene saberla. Allá el titular sería
+            el nombre de la unidad y debajo hay un catálogo que se explica solo;
+            acá lo que hay son dos dibujos, y un dibujo sin una línea que diga qué
+            es se lee como ilustración. La línea además dice **lo que el dibujo no
+            puede decir**: que la especificación se define por operación, que es
+            la razón de que no haya ficha por corte.
+
+            **El titular nombra las dos unidades**, así que es el único encabezado
+            del bloque y los nombres de cada una bajan a `h3`. Eso no vuelve a
+            subordinar el pollo a carnes —que fue el motivo de separarlos—: los
+            dos cuelgan del mismo titular, y antes el ave colgaba del `h2` de
+            carnes. */}
+        <div className="max-w-2xl">
+          <SectionHeading className="uppercase">
+            {t('despieces.titulo')}
+          </SectionHeading>
+          <p className="mt-4 text-entrada">{t('despieces.entrada')}</p>
+        </div>
+
         {/* **La fila arranca a la izquierda y no centrada.** Los dos dibujos
             suman 52,5rem contra los 68 del contenido, así que centrados
             quedaban sangrados respecto del texto de toda la página: la res
             arrancaba 104 px adentro del borde del contenedor a 1280. Pegada al
-            borde, el dibujo empieza donde empieza cualquier otro bloque. El aire
-            que sobra queda del lado del ave, que es la unidad secundaria. */}
-        <div className="flex flex-col items-center gap-16 lg:flex-row lg:items-center lg:gap-10">
+            borde, el dibujo empieza donde empieza cualquier otro bloque —y donde
+            empieza el titular de acá arriba—. */}
+        <div className="mt-12 flex flex-col items-center gap-16 lg:flex-row lg:items-center lg:gap-10">
           <div
             id={ANCLA_DE_UNIDAD.carnes}
             className="w-full min-w-0 max-w-[35rem] scroll-mt-ancla lg:basis-[35rem]"
           >
-            <h2 className="sr-only">{tUnidades('carnes.nombre')}</h2>
+            <h3 className="sr-only">{tUnidades('carnes.nombre')}</h3>
             <DiagramaDeCortes />
           </div>
 
+          {/* La celda se queda con todo el ancho que sobra y el dibujo va
+              centrado adentro: así el ave queda centrada en el lado derecho sin
+              que nadie tenga que calcular cuánto mide ese lado. */}
           <div
             id={ANCLA_DE_UNIDAD.pollo}
-            className="w-full min-w-0 max-w-[17.5rem] scroll-mt-ancla lg:basis-[17.5rem]"
+            className="w-full min-w-0 max-w-[17.5rem] scroll-mt-ancla lg:max-w-none lg:flex-1"
           >
-            <h2 className="sr-only">{tUnidades('pollo.nombre')}</h2>
-            <DiagramaDePollo />
+            <h3 className="sr-only">{tUnidades('pollo.nombre')}</h3>
+            <div className="mx-auto w-full max-w-[17.5rem]">
+              <DiagramaDePollo />
+            </div>
           </div>
         </div>
 

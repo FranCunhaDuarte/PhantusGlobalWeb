@@ -295,6 +295,10 @@
         "nombre": "Pollo"
       }
     },
+    "despieces": {
+      "titulo": "Carnes y pollo",
+      "entrada": "Los cortes que trabajamos, sobre la media res y sobre el pollo entero. Apuntá uno para ver su nombre; el formato, la certificación del frigorífico y el destino se definen en cada operación."
+    },
     "pescados": {
       "metaTitle": "Pescados y mariscos: langostino, merluza, calamar illex y corvina",
       "metaDescription": "Once especies del Atlántico Sur, de merluza y langostino a besugo, mero y pollo de mar. Formatos IQF, bloque, HOSO, HLSO y filet, con FOB, CFR o CIF y cumplimiento FDA, HACCP y SIMP.",
