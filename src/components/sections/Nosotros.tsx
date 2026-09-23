@@ -3,6 +3,7 @@ import CarruselDeLaCiudad from '@/components/nosotros/CarruselDeLaCiudad';
 import foto from '@/imagenes/nosotros-hero.jpg';
 import FondoDeApertura from '@/components/hero/FondoDeApertura';
 import ListaDeCredenciales from '@/components/nosotros/ListaDeCredenciales';
+import Responsable from '@/components/nosotros/Responsable';
 import Logo from '@/components/ui/Logo';
 import Section from '@/components/ui/Section';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -82,6 +83,16 @@ export default function Nosotros() {
           su propia foto de borde a borde, que es la que marca dónde empieza. */}
       <Section fondo="crema-elevado">
         <ListaDeCredenciales />
+      </Section>
+
+      {/* **El responsable entra acá y de paso arregla el límite sin corte.** El
+          comentario de arriba decía que la banda de credenciales y la tarjeta de
+          la ciudad eran las dos crema elevado y quedaban pegadas sin separación;
+          con este bloque en crema en el medio, la página vuelve a alternar
+          —tinta, crema elevado, crema, crema elevado, crema— y ningún límite
+          queda sin corte. */}
+      <Section fondo="crema" relleno="chico">
+        <Responsable />
       </Section>
 
       {/* La tarjeta es el bloque entero: se trae adentro su propio titular y su

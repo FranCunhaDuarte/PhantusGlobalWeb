@@ -6,9 +6,14 @@ Sitio institucional de **Phantus Global**, bróker de comercio internacional de
 **pescado y mariscos del Atlántico Sur**, con origen en **Mar del Plata,
 Argentina** y estructura legal en **Estados Unidos**. Dominio:
 `phantusglobal.com`. Contacto público: `sales@phantusglobal.com` y
-`+54 9 223 683-8585`. **El sitio no nombra a ninguna persona**: hubo un
-responsable con nombre y apellido en el pie y se sacó por pedido, junto con la
-dirección personal que lo llevaba.
+`+54 9 223 683-8585`. **El sitio nombra a una persona y eso fue y volvió**: hubo
+un responsable con nombre y apellido en el pie y se sacó por pedido, junto con la
+dirección personal que lo llevaba. Volvió el 23/09, pero distinto: nombre, cargo
+y perfil de LinkedIn en `/nosotros` y en contacto —un argumento de credibilidad—
+mientras el correo sigue siendo uno solo y genérico. Las dos URLs viven en
+`src/content/redes.ts`; la de la empresa entra al JSON-LD como `sameAs` y la de
+la persona, no: el perfil de alguien que trabaja acá no es un perfil de la
+organización.
 
 ## Qué hace la empresa
 

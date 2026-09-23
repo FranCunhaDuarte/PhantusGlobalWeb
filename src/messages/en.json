@@ -198,6 +198,12 @@
       "titulo": "What do you want to bring in?",
       "texto": "Tell us the species, the format and the volume. We answer within 24 to 48 business hours.",
       "cta": "Request a quote"
+    },
+    "responsable": {
+      "rotulo": "Who answers",
+      "nombre": "Leandro Fenoy",
+      "cargo": "Broker",
+      "enlace": "LinkedIn"
     }
   },
   "mercados": {
