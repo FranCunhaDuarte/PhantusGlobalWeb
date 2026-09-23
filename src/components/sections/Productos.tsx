@@ -110,7 +110,7 @@ export default function Productos() {
 
           **El ave creció al quedarse sola.** Medía la mitad que la res para no
           pesar lo mismo estando al lado; sin esa vecindad la restricción se cae,
-          y más ancho sólo mejora la puntería sobre sus nueve regiones. Queda
+          y más ancho sólo mejora la puntería sobre sus ocho regiones. Queda
           igual por debajo de la res, que tiene dieciocho cortes y varios finos.
 
           **Los dos entran en el contenedor y no salen a ancho de pantalla**, que

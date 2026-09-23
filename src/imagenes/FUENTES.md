@@ -236,7 +236,7 @@ no tanto.
 | Archivo | Fuente | Licencia | Verificado |
 | --- | --- | --- | --- |
 | `src/components/productos/res-vacuna.ts` | `diagram-of-argentine-beef-cuts-on-cattle-silhouette-vector.jpg`, aportado por el cliente | **Sin verificar: la tiene el cliente** | — |
-| `src/components/productos/ave.ts` | lámina de despiece de pollo, aportada por el cliente | **Sin verificar: la tiene el cliente** | — |
+| `src/components/productos/ave.ts` | silueta de pollo faenado visto desde arriba, aportada por el cliente | **Sin verificar: la tiene el cliente** | — |
 
 Es la lámina de cortes de la página de carnes. **El nombre del archivo es el de
 un banco de vectores**, así que el original casi seguro tiene licencia de stock;
@@ -246,23 +246,21 @@ sin depender de eso**, en Commons está `US Beef cuts.svg` (de Ysangkok,
 liberada al dominio público), que es la que usó el sitio antes: misma técnica de
 extracción, cortes estadounidenses en vez de argentinos.
 
-**La lámina del pollo llegó igual que la de la vaca**: la aportó el cliente y la
-licencia la tiene él. Es una silueta de gallina de perfil, gris plano sobre fondo
-transparente, con nueve regiones separadas por huecos del fondo y el nombre de
-cada corte quemado encima en blanco. Los rótulos se descartaron; los nombres
-visibles salen de `productos.pollo.cortes.<id>`.
+**El pollo va por la segunda imagen.** La primera fue una lámina de despiece que
+aportó el cliente —una gallina de perfil, gris plano sobre fondo transparente,
+con nueve regiones separadas por huecos del fondo y el nombre de cada corte
+quemado encima— y **se descartó por pedido**: al tamaño que mide el ave en la
+página no se leía como un ave. En su lugar entró una **silueta maciza de pollo
+faenado visto desde arriba**, JPEG de 1920 x 1920, gris plano sobre blanco, que
+también aportó él. La licencia la tiene él, igual que las dos anteriores.
 
-**Vino más limpia que la de la res** y por eso la extracción fue más corta: ahí
-las divisiones son líneas blancas sobre fondo blanco y hubo que erosionar para
-despegar islas que el JPEG había pegado; acá las regiones ya salen como nueve
-componentes conexos. Lo que sí hizo falta, y la vaca no necesitó, fue un **cierre
-morfológico** para reconstruir la silueta: el hueco entre dos cortes y el fondo de
-la página son el mismo píxel transparente, así que sin cerrar no hay contra qué
-recrecer. El detalle está en `ave.ts`.
+**Es una silueta y no una lámina**, y eso cambia el reparto del trabajo: de la
+imagen sale el borde de afuera y nada más, porque adentro no hay divisiones que
+extraer. Las seis que parten el ave en cinco cortes **están escritas a mano**
+contra el dibujo, en `cortes.mjs`; el procedimiento entero está en `ave.ts`.
 
-De la lámina se conservaron el dibujo y las regiones; **los rótulos se
-descartaron** porque estaban quemados en el JPG y en un solo idioma. Los nombres
-visibles son propios y salen de i18n.
+Como la imagen no trae rótulos, no hubo nada que descartar: los nombres visibles
+salen de `productos.pollo.cortes.<id>`, igual que antes.
 
 ## Fotos de corte
 

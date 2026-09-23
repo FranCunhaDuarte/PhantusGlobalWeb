@@ -175,8 +175,9 @@ del borde de su región. Ahora el dibujo es sólo el dibujo y el nombre vive en 
 **tarjeta que se abre al apuntar** un corte (`TarjetaDeCorte`).
 
 **La tarjeta es sólo el nombre, y llevó la foto del corte.** Se sacó por pedido,
-y el motivo de fondo es que de los veintisiete cortes entre la res y el ave
-**trece no tienen PNG**: la mayoría de las veces lo que se abría era el hueco con
+y el motivo de fondo es que de los veintitrés cortes entre la res y el ave
+**diecinueve no tienen PNG** —hay foto de cuatro, y las cuatro son de la res—:
+la mayoría de las veces lo que se abría era el hueco con
 la marca de agua, una caja de 150 px de alto que no mostraba nada y empujaba el
 nombre lejos del puntero. Medida en el navegador, la tarjeta pasó de **203 px de
 alto a 46** y quedó pegada al cursor. `ImagenDeCorte` sigue vivo: lo usa el
@@ -1580,8 +1581,62 @@ sitio tenía dos unidades.
 > **El ave creció al quedarse sola.** Medía la mitad que la res —26 % contra
 > 52 % del contenido— para no pesar lo mismo estando al lado; sin esa vecindad
 > la restricción se cae y más ancho sólo mejora la puntería. Medido a 1280: la
-> res sigue en 560 px y el ave pasó de 283 a **416**, con su región más chica en
-> 199 × 63 px. La res sigue con el osobuco en 15 px de ancho, que es de antes.
+> res sigue en 560 px y el ave pasó de 283 a **416**. Su región más chica es el
+> muslo, **78 × 66 px**. La res sigue con el osobuco en 15 px de ancho, que es
+> de antes.
+
+### El dibujo del ave, que es el segundo
+
+**La lámina de despiece de pollo que había se descartó por pedido**: al tamaño
+que mide el ave en la página no se leía como un ave. Antes de llegar acá se
+probaron dos caminos más y los dos enseñan lo mismo que enseñó la vaca: **buscar
+un vector mejor** —no hay ninguno con cortes argentinos— y **dibujarla a mano**
+con las proporciones medidas de una lámina de referencia, que se abandonó
+después de cuatro pasadas por el mismo motivo que la vaca dibujada a mano, que
+es la anatomía.
+
+Lo que está hoy es **una silueta maciza de pollo faenado visto desde arriba**,
+que aportó Franco, vectorizada. Origen y licencia, en `src/imagenes/FUENTES.md`.
+
+**Que sea una silueta y no una lámina parte el trabajo en dos, y sólo la primera
+mitad sale de la imagen.** De la imagen sale el borde de afuera: umbral a 128
+—el histograma parte limpio—, **cierre morfológico de radio 16** para tapar las
+ranuras blancas del dibujo, el componente más grande, relleno de agujeros,
+contorno por vecindad de Moore y Douglas-Peucker. Salen 134 puntos y un lienzo
+de **1000 × 916**, que es más ancho que alto; la lámina vieja era 1792 × 1381.
+Adentro no hay divisiones que extraer, así que **las seis se escriben a mano**
+como polilíneas, se queman sobre un ráster a triple resolución, y de ahí es lo
+mismo que en la res: etiquetar, descartar semillas por debajo de 2000 px,
+recrecer contra la máscara sin partir y trazar. Cero píxeles sin dueño.
+
+**Acá se curva todo y en la res casi nada.** La res emite polilínea salvo en
+cinco óvalos, porque sus divisiones son rectas y curvarlas las deja onduladas;
+el ave no tiene una sola recta y su contorno sale de una grilla, así que las
+ocho regiones pasan por Chaikin de dos vueltas sobre el anillo entero. Eso se
+puede hacer porque las regiones se recrecen contra una máscara común: las dos
+caras de una división son la misma arista y Chaikin las mueve igual.
+
+**Cuatro de las seis divisiones apoyan sus dos extremos en una muesca de la
+silueta**, o sea en un vértice cóncavo, que es donde el dibujo ya pide un
+límite. Las otras dos son decisión y una costó una pasada: **la rodilla va
+baja**, a la altura donde la cadera termina de angostarse, porque más arriba el
+contramuslo salía como una medialuna fina y el muslo se llevaba media pata.
+
+> **La vista se lleva cuatro cortes.** Un ave entera desde arriba no muestra
+> **cabeza, cuello, espinazo ni pecho**: viene sin cabeza ni cuello, el espinazo
+> queda del otro lado y el pecho, debajo de la pechuga. De los nueve quedan
+> cinco en ocho regiones —pechuga, ala, contramuslo, muslo y rabadilla, con las
+> tres del medio de los dos lados—. Los cuatro que salen **no dejan de
+> comercializarse**: pasaron a `OTROS_DE_POLLO` y sus nombres siguen en los dos
+> catálogos. `OTROS_DE_POLLO` ya estaba sin consumidor —lo que lo mostraba era
+> la línea de menudencias, que se sacó por pedido—, así que hoy esos ocho
+> productos no aparecen en ninguna parte del sitio.
+
+> **El tinte de profundidad no llegó.** Se había pedido para el dibujo a mano,
+> donde las alas iban plegadas bajo el cuerpo y la cola por debajo de las patas.
+> En una vista cenital nada queda detrás de nada, así que no tiene a qué
+> referirse; además el componente pinta la silueta maciza debajo de todo, de
+> modo que un `fill-opacity` no clarearía sobre el crema sino sobre la tinta.
 
 > **En inglés la unidad se llama "Chicken" y no "Poultry"**, que es el término de
 > comercio. Es el pedido de Franco de que "poultry" y "beef" no aparezcan; por lo

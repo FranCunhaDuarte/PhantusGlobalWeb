@@ -12,7 +12,7 @@ import lomo from '@/imagenes/cortes/lomo.png';
  * sin declararlos a mano, que es lo que evita el salto de layout.
  *
  * **El mapa vale para los dos animales.** Es un `Partial`, así que un corte
- * que no esté —hoy, los nueve del pollo— cae en el hueco con la marca de agua
+ * que no esté —hoy, los cinco del pollo— cae en el hueco con la marca de agua
  * sin que nada se rompa.
  *
  * **Van cuatro de dieciocho.** Mientras falte uno, su tarjeta muestra el hueco
