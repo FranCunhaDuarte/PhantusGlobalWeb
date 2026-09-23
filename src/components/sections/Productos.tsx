@@ -108,12 +108,19 @@ export default function Productos() {
           que respeta el resto de la página y el bloque quedaba pegado a los
           bordes mientras el texto no. */}
       <Section fondo="crema">
-        {/* **Las medidas mandan por `basis` y no por `width`.** Los dos topes
-            —35rem la res, 26rem el ave— suman 61rem, que a 1280 entra en los
-            68rem del contenido pero no a 1024. Con la base en esas mismas
-            medidas, los dos se achican en proporción y la res sigue midiendo lo
-            que el ave por 35 a 26; con un `w-full` para los dos, el reparto
-            pasaría a ser mitad y mitad y el ave quedaría más ancha que la res.
+        {/* **Las medidas mandan por `basis` y no por `width`.** Con la base en
+            los mismos topes, los dos se achican en proporción y la res sigue
+            midiendo el doble que el ave a cualquier ancho; con un `w-full` para
+            los dos, el reparto pasaría a ser mitad y mitad y el ave quedaría más
+            ancha que la res.
+
+            **El ave va a la mitad de la res**, 17,5rem contra 35, que es la
+            proporción que tenían cuando compartieron bloque la primera vez.
+            Estuvo en 26rem mientras tuvo sección propia —sin la res al lado la
+            restricción se caía y más ancho sólo mejoraba la puntería— y volvió a
+            la mitad al volver a ser vecinas. A 1280 eso la deja en 280 px y a su
+            región más chica, el muslo, en 50 x 44: por encima de los 24 de área
+            de toque, que es el piso que hay que mirar antes de bajarla más.
 
             **`min-w-0` se queda aunque los dibujos ya entren.** Un ítem de flex
             arranca en `min-width: auto`, o sea que no se deja achicar por debajo
@@ -130,7 +137,7 @@ export default function Productos() {
 
           <div
             id={ANCLA_DE_UNIDAD.pollo}
-            className="w-full min-w-0 max-w-[26rem] scroll-mt-ancla lg:basis-[26rem]"
+            className="w-full min-w-0 max-w-[17.5rem] scroll-mt-ancla lg:basis-[17.5rem]"
           >
             <h2 className="sr-only">{tUnidades('pollo.nombre')}</h2>
             <DiagramaDePollo />

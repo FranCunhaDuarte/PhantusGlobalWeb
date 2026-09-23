@@ -19,14 +19,17 @@ import { useTranslations } from 'next-intl';
  * **El ave aguanta el achique bastante mejor que la res**, y no es de gusto: son
  * cinco cortes grandes en ocho regiones contra dieciocho, varios de ellos finos.
  * La más chica es el muslo, 180 x 157 de las 1000 x 916 del lienzo, así que a
- * los 416 px que mide el bloque sale de 72 x 64 px; la res a 528 px ya tiene
+ * los 280 px que mide el bloque sale de **50 x 44 px**; la res a 528 px ya tiene
  * tres regiones por debajo del área de toque.
  *
  * **Por eso el ave va sin piso de ancho y la res conserva el suyo.** Un mínimo
  * de 17rem acá no protegería de nada: obligaría a desplazarse de costado dentro
- * de la caja para mostrar un dibujo que a ese tamaño se entiende igual. Medido a
- * 375 de viewport el dibujo queda en 335 px y el muslo en **58 x 52**, todavía
- * bien por encima de los 24.
+ * de la caja para mostrar un dibujo que a ese tamaño se entiende igual.
+ *
+ * **Los 50 x 44 del muslo son el número a mirar antes de achicarla más.** El
+ * ave pasó de 416 px a 280 —la mitad de la res— al volver a compartir bloque con
+ * ella, y eso ya se comió la mitad del margen que tenía sobre el área de toque
+ * de 24 px. En el teléfono no baja de ahí, porque apilada vuelve a su tope.
  */
 export default function DiagramaDePollo({
   className

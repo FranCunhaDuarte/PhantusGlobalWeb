@@ -59,10 +59,11 @@ existe como dato es la especificación (congelado o enfriado, certificación del
 frigorífico, calibre, destino), que es lo que cambia entre un pedido y otro, así
 que no hay ficha por corte.
 
-La home sí lleva un **adelanto de cortes** (`ResumenDeCarnes`), y no contradice
-lo anterior: muestra **foto y nombre, y nada más**, que es exactamente lo que
-muestra el adelanto de especies. Un catálogo de carnes sería una ficha por corte
-con su especificación, y eso sigue sin existir.
+La home **ya no adelanta cortes**. Llevó un carrusel de cuatro cortes con foto y
+se sacó por pedido: con la misma forma que el de pescados, prometía un catálogo
+de carnes que no existe ni va a existir mientras la especificación se arme contra
+el pedido. En su lugar `ResumenDeCarnes` es un CTA —titular, una línea y un botón
+a los despieces—, que manda a lo único que de carnes sí es dato publicado.
 
 ### El diagrama de cortes
 
@@ -1589,20 +1590,22 @@ Antes había un solo `h2` —el de carnes— y el ave colgaba de él.
 > tiene dos destinos de salto, así que los ids viven en las dos celdas, cada una
 > con `scroll-mt-ancla`, que es exactamente lo que la sección les daba.
 
-> **Las medidas mandan por `basis` y no por `width`.** Los dos topes —35rem la
-> res, 26rem el ave— suman 61rem, que a 1280 entra en los 68rem del contenido
-> pero a 1024 no. Con la base en esas mismas medidas los dos se achican en
-> proporción y la razón se mantiene: medido, **560 / 416 a 1280 y 522 / 388 a
-> 1024, las dos veces 1,346**, que es 35 sobre 26. Con `w-full` para los dos el
-> reparto pasaría a ser mitad y mitad y el ave quedaría más ancha que la res.
-> Desde 900 para abajo se apilan y cada uno vuelve a su tope; a 375 los dos miden
-> 335. Sin desborde horizontal en ninguno de los cuatro anchos.
+> **Las medidas mandan por `basis` y no por `width`.** Con la base en los mismos
+> topes —35rem la res, 17,5rem el ave— los dos se achican en proporción y la
+> razón se mantiene a cualquier ancho: medido, **560 / 280 a 1280**, o sea 2,00
+> exacto. Con `w-full` para los dos el reparto pasaría a ser mitad y mitad y el
+> ave quedaría más ancha que la res. Desde 900 para abajo se apilan y cada uno
+> vuelve a su tope. Sin desborde horizontal en ninguno de los anchos probados.
 
-> **El ave no volvió a achicarse al reencontrarse con la res.** Medía la mitad
-> —26 % contra 52 % del contenido— cuando estaban juntas, para no pesar lo mismo;
-> hoy va a 416 px contra los 560 de la res, que es la proporción que le dejó
-> haberse quedado sola. Su región más chica es el muslo, **72 × 64 px**. La res
-> sigue con el osobuco en 15 px de ancho, que es de antes.
+> **El ave volvió a la mitad de la res.** Ésa fue su proporción mientras
+> compartieron bloque la primera vez —26 % contra 52 % del contenido—; creció a
+> 26rem cuando tuvo sección propia, porque sin la res al lado la restricción se
+> caía y más ancho sólo mejoraba la puntería, y volvió a 17,5rem al volver a ser
+> vecinas. A 1280 son **280 px**, y su región más chica, el muslo, queda en
+> **48 × 43 px**. La res sigue con el osobuco en 15 px de ancho, que es de antes.
+>
+> **Ese 48 × 43 es el número a mirar antes de achicarla más**: el área de toque
+> mínima es 24 px, así que el ave ya se comió la mitad del margen que tenía.
 
 ### El dibujo del ave, que es el segundo
 
@@ -1809,35 +1812,43 @@ una sola salida al catálogo, y abre el ancla `#productos`.
 **Dejó de ir pegado al hero** cuando las tres tarjetas se pusieron en el medio:
 es el segundo bloque y va en crema base, porque el elevado se lo lleva el índice.
 
-### El adelanto de carnes en la home
+### El CTA de carnes en la home
 
-`ResumenDeCarnes` es el mismo bloque con la otra unidad: titular en mayúsculas,
-carrusel de los cortes con foto y una salida a `/productos/carnes`. Es el otro
-bloque sin rótulo ni bajada, y por el mismo motivo.
+`ResumenDeCarnes` es **titular, una línea y una salida a los despieces**, y nada
+más. No es un adelanto de catálogo, y ahí está el cambio.
 
-**Va después de `nosotros` y no pegado a `productos`.** Carnes es la unidad
-secundaria; dos carruseles al hilo arriba de todo harían que la home prometiera
-dos catálogos del mismo peso, que es justo lo que la página de carnes se ocupa de
-desmentir.
+**Llevaba un carrusel de cortes con foto y se sacó por pedido.** Tenía la misma
+forma que el de pescados —titular, carrusel, salida— y ése era el problema: dos
+pistas de fotos al hilo prometían dos catálogos del mismo peso, que es justo lo
+que la unidad de carnes se ocupa de desmentir. Carnes no tiene catálogo
+publicado y no lo va a tener mientras la especificación se arme contra el pedido;
+lo que sí tiene es el despiece, que es dato real y está dibujado. El bloque dejó
+de mostrar producto y pasó a invitar a ir a verlo.
+
+**La línea no es copy nuevo.** Es `productos.carnes.entrada`, del archivo del
+cliente, que quedó sin consumidor cuando `/productos/carnes` se plegó adentro de
+`/productos` y su hoja perdió el titular y la entrada. Dice lo que hace falta
+decir acá —que carnes no es el foco y que el catálogo es el de pescados—, así que
+explica sola por qué debajo ya no hay una pista de fotos.
+
+**El botón apunta a `#carnes`**, que desde que la res y el ave comparten bloque
+muestra los dos despieces. Sigue siendo el de borde y no el sólido: el sólido es
+del CTA de contacto, que es la única acción real de la home.
 
 **No abre ancla y no entra en `SECCIONES`.** La navegación lleva a `Productos`,
-que es el índice de las dos unidades: sumar una entrada al header por un bloque
+que es el índice de las tres unidades: sumar una entrada al header por un bloque
 de la home sería contar dos veces la misma estructura. Por eso su `Section` va
-sin `id`, como la de `/productos/carnes`.
+sin `id`.
 
-**Muestra los cuatro cortes que tienen foto**, con el mismo criterio que
-`ESPECIES_CON_RECORTE`: `CORTES_CON_RECORTE`, en `imagenes-de-corte.ts`. Los
-dieciocho viven igual en la media res de `/productos/carnes`, que es donde está
-la lista completa; una pista donde la mayoría de las celdas es marca de agua se
-lee como imágenes rotas. Enchufar los catorce que faltan es dejar el PNG,
-importarlo y sumarlo al mapa: entran solos.
-
-Va pegado a `productos` en crema elevado. La idea original era que **no**
-estuviera pegado —carnes es la unidad secundaria y dos carruseles al hilo la
-ponen a la par de pescados— pero el bloque que los separaba era el de nosotros, y
-salió de la home. Hoy lo único que los distingue es el orden y el tono del fondo.
-**Vale la pena mirarlo**: si molesta, lo que hay que mover es este bloque, no el
-de pescados.
+> **Lo que quedó huérfano al sacar el carrusel**, y hay que decidir si se borra:
+> el componente `AdelantoDeCortes`, y con él **toda la cadena de fotos de corte**
+> —`ImagenDeCorte`, `IMAGEN_DE_CORTE` y `CORTES_CON_RECORTE` en
+> `imagenes-de-corte.ts`, y los cuatro PNG de `src/imagenes/cortes`—, más las
+> claves `home.carnes.carrusel.*` de los dos catálogos. **Los cuatro PNG dejaron
+> de servirse en todo el sitio**: la tarjeta del despiece ya no muestra foto
+> —quedó sólo con el nombre— y ése era el otro consumidor. No se borró nada: son
+> material del cliente y el repo no tiene historial. Volver atrás es devolverle
+> el `<AdelantoDeCortes>` al bloque.
 
 #### La pista, y el hueco, son de los dos
 

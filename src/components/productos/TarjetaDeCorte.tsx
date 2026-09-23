@@ -20,13 +20,17 @@ type TarjetaDeCorteProps = {
  * y otros achicados para entrar— y pasaron acá, donde hay lugar para el nombre
  * entero.
  *
- * **Llevó también la foto del corte y se sacó por pedido.** De los veintisiete
- * cortes que hay entre la res y el ave, trece no tienen PNG, así que la mayoría
- * de las veces lo que se abría era el hueco con la marca de agua: una caja de
- * 150 px de alto que no mostraba nada y empujaba el nombre lejos del puntero.
- * Sin ella la tarjeta bajó de 203 px de alto a 46 y quedó pegada al cursor, que
- * es donde se la está mirando. `ImagenDeCorte` sigue vivo: lo usa el adelanto de
- * la home, que ahí sí muestra sólo los cortes que tienen foto.
+ * **Llevó también la foto del corte y se sacó por pedido.** De los veintitrés
+ * cortes que hay entre la res y el ave, diecinueve no tienen PNG, así que la
+ * mayoría de las veces lo que se abría era el hueco con la marca de agua: una
+ * caja de 150 px de alto que no mostraba nada y empujaba el nombre lejos del
+ * puntero. Sin ella la tarjeta bajó de 203 px de alto a 46 y quedó pegada al
+ * cursor, que es donde se la está mirando.
+ *
+ * **Con esto `ImagenDeCorte` se quedó sin el único consumidor que le quedaba.**
+ * El otro era el adelanto de cortes de la home, que también se sacó por pedido,
+ * así que hoy **los cuatro PNG de corte no se sirven en ninguna parte del
+ * sitio**. No se borraron: son material del cliente.
  *
  * **El ancho es fijo y no `fit-content`.** Con ancho automático la tarjeta
  * cambiaría de medida entre "Lomo" y "Colita de cuadril", y como se centra sobre

@@ -39,15 +39,20 @@ export const IMAGEN_DE_CORTE: Partial<Record<string, StaticImageData>> = {
 };
 
 /**
- * Qué cortes muestra el adelanto de la home: los que tienen foto. Los dieciocho
+ * Qué cortes mostraba el adelanto de la home: los que tienen foto. Los dieciocho
  * están nombrados y dibujados en la media res —ahí el que no tiene foto igual se
  * apunta y se lee—, pero una pista donde la mayoría de las celdas es la marca de
  * agua se lee como imágenes rotas.
  *
- * El adelanto de especies **ya no usa este criterio**: su lista es editorial
- * (`ESPECIES_DEL_ADELANTO`) y lleva dos sin foto, por pedido. Acá se mantiene
- * porque de dieciocho cortes hay foto de cuatro: una lista editorial sería la
- * misma lista, escrita a mano.
+ * **Quedó sin consumidor** cuando el adelanto de cortes salió de la home por
+ * pedido y el bloque de carnes pasó a ser un CTA a los despieces. Con él se
+ * quedaron sin uso `IMAGEN_DE_CORTE`, `ImagenDeCorte` y los cuatro PNG. No se
+ * borró nada: son material del cliente y el repo no tiene historial.
+ *
+ * El adelanto de especies **no usaba este criterio**: su lista es editorial
+ * (`ESPECIES_DEL_ADELANTO`) y lleva dos sin foto, por pedido. Acá se mantenía
+ * porque de dieciocho cortes hay foto de cuatro: una lista editorial habría sido
+ * la misma lista, escrita a mano.
  */
 export const CORTES_CON_RECORTE = CORTES.filter(
   (corte) => corte in IMAGEN_DE_CORTE
