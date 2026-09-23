@@ -43,12 +43,24 @@ export const REGIMEN_DE_ESPECIE: Partial<Record<Especie, Regimen>> = {
 };
 
 /**
- * Cuál se destaca en el catálogo. Es un dato de la operación y no del recurso
- * —cambia con el negocio, no con la pesquería—, por eso vive acá y no en el
- * régimen. El nombre dice el rol y no el motivo: qué texto lleva la etiqueta lo
- * decide i18n, y ya cambió una vez.
+ * Qué especies llevan etiqueta en el catálogo, y cuál. Es un dato de la
+ * operación y no del recurso —cambia con el negocio, no con la pesquería—, por
+ * eso vive acá y no en el régimen.
+ *
+ * **Fue una sola especie y ahora es un mapa.** Hasta acá era `ESPECIE_DESTACADA`,
+ * un único id con un único texto; con dos especies etiquetadas por motivos
+ * distintos —la merluza por volumen, el langostino por decisión comercial— un
+ * solo campo ya no alcanzaba. El valor es la clave de i18n bajo
+ * `productos.pescados.etiquetas` y no el texto: el nombre dice el rol y el
+ * catálogo dice las palabras, que ya cambiaron una vez.
+ *
+ * Es `Partial` a propósito: la mayoría de las once no lleva ninguna, y una ficha
+ * sin etiqueta no es un caso especial sino el normal.
  */
-export const ESPECIE_DESTACADA: Especie = 'merluza';
+export const ETIQUETA_DE_ESPECIE: Partial<Record<Especie, string>> = {
+  merluza: 'volumen',
+  langostino: 'destacado'
+};
 
 /**
  * Qué especies muestra el adelanto de la home. Es una selección editorial y no

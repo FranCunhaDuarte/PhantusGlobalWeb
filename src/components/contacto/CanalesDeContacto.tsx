@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
-import { TELEFONO_MARCABLE } from '@/content/contacto-directo';
+import IconoDeWhatsApp from '@/components/contacto/IconoDeWhatsApp';
+import { TELEFONO_MARCABLE, WHATSAPP } from '@/content/contacto-directo';
 import { clases } from '@/lib/clases';
 
 /** El mismo subrayado fino del pie: es el gesto que el sitio ya usa para un
@@ -26,6 +27,7 @@ export default function CanalesDeContacto({
   className?: string;
 }) {
   const t = useTranslations('home.contacto');
+  const tWhatsapp = useTranslations('whatsapp');
 
   return (
     <ul className={clases('flex flex-col gap-2', className)}>
@@ -37,6 +39,24 @@ export default function CanalesDeContacto({
       <li>
         <a href={`mailto:${t('correo')}`} className={ENLACE}>
           {t('correo')}
+        </a>
+      </li>
+      {/* **Es el único de los tres que lleva glifo**, y no es un descuido: el
+          teléfono y el correo se leen solos, y "WhatsApp" a secas no dice si es
+          un número o un enlace que abre la conversación. El dibujo va en el
+          color del texto y no en el verde de la marca: acá no hay fondo propio
+          que lo sostenga, y el verde sobre el crema del panel queda a 1,69:1. */}
+      <li>
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noreferrer"
+          className={clases(ENLACE, 'inline-flex items-center gap-2 no-underline')}
+        >
+          <IconoDeWhatsApp className="size-4 flex-none" />
+          <span className="underline decoration-1 underline-offset-4">
+            {tWhatsapp('etiqueta')}
+          </span>
         </a>
       </li>
     </ul>

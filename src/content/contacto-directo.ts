@@ -16,3 +16,13 @@
  * juntos —`+54 0 9`— no existen; va el nueve y no va el cero.
  */
 export const TELEFONO_MARCABLE = '+5492236838585';
+
+/**
+ * El mismo número, en el formato que pide WhatsApp: **sin el `+` y sin nada que
+ * no sea dígito**. `wa.me` no acepta espacios ni guiones y con el `+` adelante
+ * arma un enlace que no abre conversación.
+ *
+ * El `9` sí va, igual que en el `tel:`: para WhatsApp el número de un celular
+ * argentino es el internacional completo.
+ */
+export const WHATSAPP = `https://wa.me/${TELEFONO_MARCABLE.replace(/\D/g, '')}`;

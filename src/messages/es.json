@@ -367,7 +367,6 @@
           "formatos": "Medallones y bastones"
         }
       },
-      "destacada": "Mayor volumen",
       "stock": "Trabajamos con stock de frigorífico y producto congelado, IQF y en bloque, así que hay disponibilidad buena parte del año. Las temporadas marcan los mejores momentos de precio y volumen, no la única ventana para comprar.",
       "condiciones": {
         "titulo": "Cómo se especifica una operación",
@@ -393,6 +392,10 @@
         "texto": "La disponibilidad cambia con la temporada y con las resoluciones de cada año. Contanos qué buscás, en qué formato y en qué volumen, y te decimos qué hay hoy y qué conviene esperar.",
         "ctaCompra": "Soy importador",
         "ctaVenta": "Soy exportador"
+      },
+      "etiquetas": {
+        "volumen": "Mayor volumen",
+        "destacado": "Destacado"
       }
     },
     "carnes": {
@@ -533,5 +536,9 @@
         }
       }
     }
+  },
+  "whatsapp": {
+    "etiqueta": "WhatsApp",
+    "aria": "Escribinos por WhatsApp"
   }
 }

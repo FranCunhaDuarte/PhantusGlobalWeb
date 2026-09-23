@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import BotonDeWhatsApp from '@/components/layout/BotonDeWhatsApp';
 import Footer from '@/components/layout/Footer';
 import ScrollAlInicio from '@/components/layout/ScrollAlInicio';
 import RealceDeBotones from '@/components/ui/RealceDeBotones';
@@ -59,6 +60,7 @@ export default async function LocaleLayout({
           <Header />
           {children}
           <Footer />
+          <BotonDeWhatsApp />
           <RealceDeBotones />
         </NextIntlClientProvider>
       </body>

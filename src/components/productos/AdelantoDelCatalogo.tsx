@@ -5,8 +5,8 @@ import Carrusel from '@/components/productos/Carrusel';
 import EtiquetaDestacada from '@/components/productos/EtiquetaDestacada';
 import ImagenDeEspecie from '@/components/productos/ImagenDeEspecie';
 import {
-  ESPECIE_DESTACADA,
-  ESPECIES_DEL_ADELANTO
+  ESPECIES_DEL_ADELANTO,
+  ETIQUETA_DE_ESPECIE
 } from '@/content/especies';
 
 /**
@@ -61,9 +61,9 @@ export default function AdelantoDelCatalogo({
                 anchoDeMarca={ANCHO_DE_MARCA}
                 anchoDeMarcaGrande={ANCHO_DE_MARCA_GRANDE}
               />
-              {especie === ESPECIE_DESTACADA && (
+              {ETIQUETA_DE_ESPECIE[especie] && (
                 <EtiquetaDestacada className="absolute start-0 top-0">
-                  {tp('destacada')}
+                  {tp(`etiquetas.${ETIQUETA_DE_ESPECIE[especie]}`)}
                 </EtiquetaDestacada>
               )}
             </div>

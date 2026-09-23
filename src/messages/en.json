@@ -367,7 +367,6 @@
           "formatos": "Medallions and sticks"
         }
       },
-      "destacada": "Highest volume",
       "stock": "We work with cold-storage stock and frozen product, both IQF and block, so there is availability for much of the year. The seasons mark the best moments for price and volume, not the only window to buy.",
       "condiciones": {
         "titulo": "How a transaction is specified",
@@ -393,6 +392,10 @@
         "texto": "Availability shifts with the season and with each year's resolutions. Tell us what you are after, in what format and in what volume, and we will tell you what there is today and what is worth waiting for.",
         "ctaCompra": "I'm an importer",
         "ctaVenta": "I'm an exporter"
+      },
+      "etiquetas": {
+        "volumen": "Highest volume",
+        "destacado": "Featured"
       }
     },
     "carnes": {
@@ -533,5 +536,9 @@
         }
       }
     }
+  },
+  "whatsapp": {
+    "etiqueta": "WhatsApp",
+    "aria": "Message us on WhatsApp"
   }
 }

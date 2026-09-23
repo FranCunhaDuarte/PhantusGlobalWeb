@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import FichaDeEspecie from '@/components/productos/FichaDeEspecie';
-import { ESPECIES, ESPECIE_DESTACADA } from '@/content/especies';
+import { ESPECIES, ETIQUETA_DE_ESPECIE } from '@/content/especies';
 import { clases } from '@/lib/clases';
 
 /**
@@ -51,7 +51,8 @@ export default function CatalogoDeEspecies({
             key={especie}
             especie={especie}
             etiquetaDestacada={
-              especie === ESPECIE_DESTACADA ? t('destacada') : undefined
+              ETIQUETA_DE_ESPECIE[especie] &&
+              t(`etiquetas.${ETIQUETA_DE_ESPECIE[especie]}`)
             }
             nombre={t(`especies.${especie}.nombre`)}
             cientifico={t(`especies.${especie}.cientifico`)}

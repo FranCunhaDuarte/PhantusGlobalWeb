@@ -174,6 +174,23 @@ Los cuatro de `/nosotros` —pin, chapitel, organigrama y reloj— también son 
 mismo motivo. **Dibujan el rótulo y no el valor**: un pin para el origen y no una
 bandera argentina, porque el icono no puede atarse a un valor que puede cambiar.
 
+### El glifo de WhatsApp
+
+Sale de **Simple Icons** (https://simpleicons.org), que publica los trazados bajo
+**CC0** —dominio público, sin atribución obligatoria—, y está copiado adentro de
+`IconoDeWhatsApp` por el mismo motivo que los de Lucide.
+
+> **CC0 cubre el dibujo, no la marca.** El logotipo es de WhatsApp: usarlo para
+> enlazar a un WhatsApp propio es uso nominativo y es lo que corresponde; lo que
+> no se puede es deformarlo ni usarlo para otra cosa. **Sí se cambió el color del
+> glifo**, y esa es la única licencia que se tomó: en blanco sobre el verde de la
+> marca queda a 1,98:1, por debajo del 3:1 que pide un elemento no textual, así
+> que va en tinta, que da 9,32:1.
+
+**El de LinkedIn no existe en Simple Icons**: lo sacaron a pedido de LinkedIn,
+que reclamó por marca registrada. Por eso los perfiles van como enlace de texto,
+que además es el gesto que el pie ya usa para un enlace que no es botón.
+
 ## Marcas legibles: lo que hay que revisar
 
 La regla del repo es que ninguna foto del sitio lleve marcas de terceros

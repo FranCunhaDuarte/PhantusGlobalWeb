@@ -22,9 +22,9 @@ import type { Ruta } from '@/i18n/routing';
  * entrara— y se puede revertir agregando el id acá y su ruta abajo.
  */
 export const SECCIONES_NAVEGABLES = [
-  'nosotros',
+  'productos',
   'mercados',
-  'productos'
+  'nosotros'
 ] as const;
 
 /** La sección de contacto se navega desde el CTA, no desde la lista de anclas. */
