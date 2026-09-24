@@ -91,10 +91,11 @@ export default function Nosotros() {
           ella: el argumento de credibilidad de la página pasa a ser la red y el
           puerto, y no el nombre de quien atiende.
 
-          **El componente `Responsable` y las claves `nosotros.responsable.*`
-          siguen vivos**, y no por política de huérfanos: los usa
-          `CanalesDeContacto`, al lado del formulario. Si ahí también tiene que
-          salir, es otro pedido.
+          **Y también salió del formulario**, que era el otro lugar donde el
+          sitio lo nombraba: el cliente pidió imagen de empresa y que ninguna
+          página pública lleve un nombre propio. Con eso quedaron sin consumidor
+          el componente `Responsable`, `LINKEDIN_DEL_RESPONSABLE` y las claves
+          `nosotros.responsable.*`. No se borró nada.
 
           **El bloque de proceso ocupa su lugar, y hacía falta que algo lo
           ocupara**: era el crema que separaba la banda de credenciales de la

@@ -222,12 +222,6 @@
       "titulo": "¿Qué querés traer?",
       "texto": "Contanos qué especie es, en qué formato y en qué volumen. Contestamos en 24 a 48 horas hábiles.",
       "cta": "Pedir cotización"
-    },
-    "responsable": {
-      "rotulo": "Quién responde",
-      "nombre": "Leandro Fenoy",
-      "cargo": "Bróker",
-      "enlace": "LinkedIn"
     }
   },
   "mercados": {

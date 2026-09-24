@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 import IconoDeWhatsApp from '@/components/contacto/IconoDeWhatsApp';
 import { clasesDeBoton } from '@/components/ui/Button';
 import { TELEFONO_MARCABLE, WHATSAPP } from '@/content/contacto-directo';
-import { LINKEDIN_DEL_RESPONSABLE } from '@/content/redes';
 import { clases } from '@/lib/clases';
 
 /** El mismo subrayado fino del pie: es el gesto que el sitio ya usa para un
@@ -15,6 +14,12 @@ const ENLACE =
  * formulario sigue siendo la conversión, y es el único camino que llega con el
  * tipo de consulta ya elegido—, pero hay quien no completa un formulario y
  * llama, y hasta la Fase 11 no tenía a dónde.
+ *
+ * **Acá cerraba con el nombre y el cargo de quien contesta, y se sacó.** El
+ * cliente pasó a una imagen de empresa y pidió que el sitio no nombre a ninguna
+ * persona, así que el argumento de credibilidad son los canales y no quién está
+ * del otro lado. Con eso quedaron sin consumidor `Responsable`,
+ * `LINKEDIN_DEL_RESPONSABLE` y las claves `nosotros.responsable.*`.
  *
  * ## Los dos datos van con rótulo, y el tercero es un botón
  *
@@ -50,7 +55,6 @@ export default function CanalesDeContacto({
 }) {
   const t = useTranslations('home.contacto');
   const tWhatsapp = useTranslations('whatsapp');
-  const tResponsable = useTranslations('nosotros.responsable');
 
   return (
     <div className={clases('flex flex-col gap-6', className)}>
@@ -91,23 +95,6 @@ export default function CanalesDeContacto({
         <IconoDeWhatsApp className="size-4 flex-none" />
         {tWhatsapp('etiqueta')}
       </a>
-
-      {/* **Quién contesta, al pie de los canales.** No es un cuarto canal —no se
-          le escribe por LinkedIn— así que va separado por su propia línea y con
-          el nombre en el color del texto contra el cargo en gris. Es el mismo
-          dato que abre `/nosotros`, y acá está porque el que va a escribir
-          quiere saber a quién le escribe. */}
-      <div className="flex flex-col gap-1 border-t border-(--fondo-linea) pt-4">
-        <p className="font-medium">{tResponsable('nombre')}</p>
-        <a
-          href={LINKEDIN_DEL_RESPONSABLE}
-          target="_blank"
-          rel="noreferrer"
-          className={clases(ENLACE, 'texto-suave')}
-        >
-          {tResponsable('cargo')} · {tResponsable('enlace')}
-        </a>
-      </div>
     </div>
   );
 }

@@ -11,12 +11,12 @@ borrar las dos y la misma idea de donde apareciera. Dominio:
 `+54 9 223 683-8585`. **El sitio nombra a una persona y eso fue y volvió**: hubo
 un responsable con nombre y apellido en el pie y se sacó por pedido, junto con la
 dirección personal que lo llevaba. Volvió el 23/09 —nombre, cargo y perfil de
-LinkedIn en `/nosotros` y en contacto— y **el 24/09 salió de `/nosotros` otra
-vez**, por pedido: ahí el argumento de credibilidad pasa a ser la red y el
-puerto. **Sigue al lado del formulario**, en `CanalesDeContacto`, que es lo que
-mantiene vivos el componente `Responsable` y las claves
-`nosotros.responsable.*`; si también tiene que salir de ahí, es otro pedido. El
-correo sigue siendo uno solo y genérico. Las dos URLs viven en
+LinkedIn en `/nosotros` y en contacto— y **el 24/09 salió del sitio entero**: la
+especificación del cliente pide **imagen de empresa y ninguna página pública con
+un nombre propio**. Primero salió de `/nosotros`, donde el argumento de
+credibilidad pasó a ser la red y el puerto, y después del formulario. Quedaron
+sin consumidor el componente `Responsable`, `LINKEDIN_DEL_RESPONSABLE` y las
+claves `nosotros.responsable.*`. El correo sigue siendo uno solo y genérico. Las dos URLs viven en
 `src/content/redes.ts`; la de la empresa entra al JSON-LD como `sameAs` y la de
 la persona, no: el perfil de alguien que trabaja acá no es un perfil de la
 organización.
