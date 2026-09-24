@@ -99,14 +99,18 @@
       "tipo": {
         "etiqueta": "Enquiry type",
         "compra": "I want to import",
+        "venta": "I export from Argentina",
         "otro": "Something else",
         "vacio": "Choose an option"
       },
       "campos": {
         "nombre": "Full name",
+        "empresa": "Company",
+        "pais": "Country",
         "email": "Email address",
         "mensaje": "Your message"
       },
+      "opcional": "Optional",
       "enviar": "Send enquiry",
       "enviando": "Sending…",
       "errores": {
@@ -127,6 +131,12 @@
         },
         "tipo": {
           "requerido": "Choose an enquiry type."
+        },
+        "empresa": {
+          "largo": "Company cannot be longer than 80 characters."
+        },
+        "pais": {
+          "largo": "Country cannot be longer than 56 characters."
         }
       },
       "exito": {
@@ -143,11 +153,14 @@
         "asunto": "{tipo}: enquiry from {nombre}",
         "tipos": {
           "compra": "Importer",
+          "venta": "Exporter",
           "otro": "Something else"
         },
         "campos": {
           "tipo": "Enquiry type",
           "nombre": "Name",
+          "empresa": "Company",
+          "pais": "Country",
           "email": "Email",
           "idioma": "Site language",
           "mensaje": "Message"

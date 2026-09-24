@@ -99,14 +99,18 @@
       "tipo": {
         "etiqueta": "Tipo de consulta",
         "compra": "Quiero importar",
+        "venta": "Exporto desde Argentina",
         "otro": "Otra consulta",
         "vacio": "Elegí una opción"
       },
       "campos": {
         "nombre": "Nombre y apellido",
+        "empresa": "Empresa",
+        "pais": "País",
         "email": "Correo electrónico",
         "mensaje": "Tu mensaje"
       },
+      "opcional": "Opcional",
       "enviar": "Enviar consulta",
       "enviando": "Enviando…",
       "errores": {
@@ -127,6 +131,12 @@
         },
         "tipo": {
           "requerido": "Elegí un tipo de consulta."
+        },
+        "empresa": {
+          "largo": "La empresa no puede pasar de 80 caracteres."
+        },
+        "pais": {
+          "largo": "El país no puede pasar de 56 caracteres."
         }
       },
       "exito": {
@@ -143,11 +153,14 @@
         "asunto": "{tipo}: consulta de {nombre}",
         "tipos": {
           "compra": "Importador",
+          "venta": "Exportador",
           "otro": "Otra consulta"
         },
         "campos": {
           "tipo": "Tipo de consulta",
           "nombre": "Nombre",
+          "empresa": "Empresa",
+          "pais": "País",
           "email": "Correo",
           "idioma": "Idioma del sitio",
           "mensaje": "Mensaje"

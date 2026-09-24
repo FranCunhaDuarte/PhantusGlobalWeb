@@ -40,6 +40,8 @@ type Valores = {
   tipo: TipoDeConsulta | '';
   mensaje: string;
   nombre: string;
+  empresa: string;
+  pais: string;
   email: string;
 };
 
@@ -47,6 +49,8 @@ const VACIO: Valores = {
   tipo: '',
   mensaje: '',
   nombre: '',
+  empresa: '',
+  pais: '',
   email: ''
 };
 
@@ -211,6 +215,7 @@ export default function FormularioDeContacto() {
               vacio={t('tipo.vacio')}
               opciones={{
                 compra: t('tipo.compra'),
+                venta: t('tipo.venta'),
                 otro: t('tipo.otro')
               }}
               valor={valores.tipo}
@@ -255,6 +260,55 @@ export default function FormularioDeContacto() {
                     value={valores.email}
                     onChange={(evento) =>
                       setValores({ ...valores, email: evento.target.value })
+                    }
+                  />
+                )}
+              </Campo>
+
+              {/* **Empresa y país son opcionales**, y por eso llevan la marca:
+                  `Campo` decide con ella lo que muestra el rótulo y lo que
+                  anuncia el lector de pantalla, y de paso saca el `required` del
+                  DOM. Los pidió el cliente sin decir si eran obligatorios, y
+                  exigirlos le agrega dos trabas a la única conversión del sitio.
+
+                  Los cuatro cortos van en la misma grilla de dos columnas, así
+                  que el orden en pantalla es nombre y correo arriba, empresa y
+                  país abajo. */}
+              <Campo
+                campo="empresa"
+                etiqueta={t('campos.empresa')}
+                opcional={t('opcional')}
+                error={error('empresa')}
+              >
+                {(control) => (
+                  <input
+                    {...control}
+                    type="text"
+                    autoComplete="organization"
+                    maxLength={LARGO_MAXIMO.empresa}
+                    value={valores.empresa}
+                    onChange={(evento) =>
+                      setValores({ ...valores, empresa: evento.target.value })
+                    }
+                  />
+                )}
+              </Campo>
+
+              <Campo
+                campo="pais"
+                etiqueta={t('campos.pais')}
+                opcional={t('opcional')}
+                error={error('pais')}
+              >
+                {(control) => (
+                  <input
+                    {...control}
+                    type="text"
+                    autoComplete="country-name"
+                    maxLength={LARGO_MAXIMO.pais}
+                    value={valores.pais}
+                    onChange={(evento) =>
+                      setValores({ ...valores, pais: evento.target.value })
                     }
                   />
                 )}

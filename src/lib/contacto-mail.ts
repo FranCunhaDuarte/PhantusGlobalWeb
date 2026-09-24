@@ -48,6 +48,8 @@ export function armarMail({
   const todas: [string, string][] = [
     [t('campos.tipo'), t(`tipos.${datos.tipo}`)],
     [t('campos.nombre'), datos.nombre],
+    [t('campos.empresa'), datos.empresa],
+    [t('campos.pais'), datos.pais],
     [t('campos.email'), datos.email],
     [t('campos.idioma'), nombreDeIdioma(idiomaDelVisitante)]
   ];

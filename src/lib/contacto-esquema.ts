@@ -5,6 +5,8 @@ export const CAMPOS_DE_CONTACTO = [
   'tipo',
   'mensaje',
   'nombre',
+  'empresa',
+  'pais',
   'email'
 ] as const;
 
@@ -25,6 +27,8 @@ export const CAMPO_IDIOMA = 'idioma';
  */
 export const LARGO_MAXIMO = {
   nombre: 80,
+  empresa: 80,
+  pais: 56,
   email: 254,
   mensaje: 2000
 } as const;
@@ -46,7 +50,9 @@ const CLAVE = {
   mensajeRequerido: 'mensaje.requerido',
   mensajeCorto: 'mensaje.corto',
   mensajeLargo: 'mensaje.largo',
-  tipoRequerido: 'tipo.requerido'
+  tipoRequerido: 'tipo.requerido',
+  empresaLarga: 'empresa.largo',
+  paisLargo: 'pais.largo'
 } as const;
 
 /**
@@ -81,6 +87,26 @@ export const esquemaDeContacto = z.object({
     .trim()
     .min(2, CLAVE.nombreRequerido)
     .max(LARGO_MAXIMO.nombre, CLAVE.nombreLargo)
+    .transform(unaSolaLinea),
+  /**
+   * **Empresa y país son opcionales, y es una decisión.** El cliente los pidió
+   * sin decir si son obligatorios; exigirlos le agrega dos trabas a la única
+   * conversión del sitio y deja afuera a quien consulta a título personal. Sin
+   * `min`, una cadena vacía pasa y llega al mail como ausente, que es lo que
+   * hace que la fila no se dibuje.
+   *
+   * Llevan tope igual: el que decide cuánto entra es el esquema y no el
+   * `maxlength` del input, que sólo frena a quien escribe en el navegador.
+   */
+  empresa: z
+    .string()
+    .trim()
+    .max(LARGO_MAXIMO.empresa, CLAVE.empresaLarga)
+    .transform(unaSolaLinea),
+  pais: z
+    .string()
+    .trim()
+    .max(LARGO_MAXIMO.pais, CLAVE.paisLargo)
     .transform(unaSolaLinea),
   email: z
     .string(CLAVE.emailRequerido)

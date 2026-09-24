@@ -7,17 +7,20 @@ import { SECCION_CONTACTO } from '@/content/secciones';
  * falta o trae cualquier otra cosa, arranca sin preselección y la página sigue
  * siendo estática.
  *
- * **Fueron tres y son dos: se sacó `venta`, que era el exportador argentino.**
- * El sitio le habla a un solo público —el importador que trae desde la
- * Argentina— y una opción para el otro lado era el único resto de cuando eran
- * dos. La red de exportadores sigue existiendo y el sitio la sigue nombrando,
- * pero como algo que Phantus tiene, no como alguien a quien le habla.
+ * **Fueron tres, bajaron a dos y volvieron a ser tres.** `venta` —el exportador
+ * argentino— se había sacado porque el sitio le hablaba a un solo público, el
+ * importador; el cliente lo pidió de vuelta, así que el formulario vuelve a
+ * tener las dos puntas. **Lo que no cambió es a quién le habla el resto del
+ * sitio**: los titulares y las bajadas siguen escritos para el importador, y
+ * ahora hay una opción del formulario que no tiene arriba ningún texto que la
+ * invite. Es una asimetría a mirar, no un error.
  *
- * **Las dos opciones viajan por la URL**, y eso importa: `compra` la ponen el
- * hero y los cuatro cierres, y `otro` la pone el pie de las condiciones de
- * operación, para quien busca una mercadería que no está en el catálogo.
+ * **Las tres viajan por la URL**, y eso importa: `compra` la ponen el hero y los
+ * cuatro cierres, `otro` la pone el pie de las condiciones de operación, y
+ * `venta` **no la enlaza nadie todavía** —el contrato la acepta y está lista
+ * para cuando algún texto le hable al exportador—.
  */
-export const TIPOS_DE_CONSULTA = ['compra', 'otro'] as const;
+export const TIPOS_DE_CONSULTA = ['compra', 'venta', 'otro'] as const;
 
 export type TipoDeConsulta = (typeof TIPOS_DE_CONSULTA)[number];
 
