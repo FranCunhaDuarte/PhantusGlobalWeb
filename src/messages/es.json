@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "title": "Phantus Global | Bróker de pescado, mariscos y carnes",
+    "title": "Phantus Global | Bróker de pescado, mariscos, carne y pollo",
     "description": "Abastecemos a importadores de Estados Unidos, México, Europa y Asia desde frigoríficos argentinos habilitados por SENASA. Langostino, merluza y calamar.",
     "template": "%s | Phantus Global",
     "ogAlt": "Phantus Global, bróker de pescado, mariscos y carnes con base en Mar del Plata, Argentina"
   },
   "marca": {
     "nombre": "Phantus Global",
-    "slogan": "The elephant never forgets",
+    "slogan": "El elefante nunca olvida",
     "logotipoAlt": "Logotipo de Phantus Global",
     "isotipoAlt": "Isotipo de Phantus Global: una P que forma la cabeza y la trompa de un elefante",
     "valores": {
@@ -49,7 +49,8 @@
   "home": {
     "hero": {
       "eyebrow": "Bróker de comercio internacional — Argentina",
-      "titulo": "Alimentos argentinos de exportación",
+      "titulo": "Pescados, mariscos, carne y pollo argentinos, directo de origen",
+      "bajada": "Empresa broker de Mar del Plata, trabajando con frigoríficos habilitados por SENASA.",
       "rubros": {
         "pescado": "Pescado y mariscos",
         "pollo": "Pollo",

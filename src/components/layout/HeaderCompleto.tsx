@@ -12,12 +12,27 @@ import { Link } from '@/i18n/navigation';
 
 export default function HeaderCompleto() {
   const t = useTranslations('navegacion');
+  const tMarca = useTranslations('marca');
 
   return (
     <HeaderElevado>
       <Container>
         <div className="flex h-header items-center justify-between gap-4">
-          <Link href="/" aria-label={t('inicio')} className="inline-flex shrink-0">
+          {/* **El lema va bajo el logo, por pedido del cliente.** No entra
+              dentro del área de seguridad: `Logo` la aplica como margen propio,
+              así que un hermano de abajo queda por fuera por construcción. Lo
+              que sí hay que mirar es el alto: la barra mide 96 px y el logotipo
+              con su aire se lleva unos 73, de modo que el lema vive en los 23
+              que sobran. Por eso va en el cuerpo del rótulo y sin aire propio.
+
+              Desde `xs`, que es donde manda el logotipo completo: por debajo la
+              barra lleva el isotipo suelto, que se come 95 px de los 96 y no
+              deja lugar para nada más. */}
+          <Link
+            href="/"
+            aria-label={t('inicio')}
+            className="inline-flex shrink-0 flex-col items-start"
+          >
             {/* Por debajo de `xs` el logotipo completo entra a los codazos con
                 el selector de idioma y el botón de menú: ahí va el isotipo
                 suelto, que el manual habilita para espacios mínimos. Desde `xs`
@@ -33,6 +48,9 @@ export default function HeaderCompleto() {
               fondoCambiante
               className="hidden xs:block"
             />
+            <span className="hidden text-eyebrow uppercase texto-suave xs:block">
+              {tMarca('slogan')}
+            </span>
           </Link>
 
           {/* Tres grupos: logotipo, navegación y controles. El aire crece hacia

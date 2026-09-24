@@ -66,6 +66,19 @@ export default function Hero() {
             >
               {t('titulo')}
             </SectionHeading>
+
+            {/* **La bajada volvió.** Estuvo, se fue cuando entraron los iconos
+                de rubro y la pidió de nuevo el cliente, ahora diciendo otra
+                cosa: antes enumeraba la red, los mercados y el recorrido; hoy
+                dice quién es la empresa y con quién trabaja.
+
+                Va en `text-base` y no en `text-entrada`, y desde `md` no pasa
+                de `max-w-xl` contra los `3xl` de la columna: compite con un
+                titular en mayúsculas a cuerpo mayor, y con el mismo ancho y la
+                mitad del cuerpo se leería como un segundo bloque de texto en
+                vez de como su bajada. Bajar de cuerpo no toca el contraste,
+                porque el velo está calculado para texto chico. */}
+            <p className="mx-auto text-base md:max-w-xl">{t('bajada')}</p>
           </div>
 
           {/* Los cuatro rubros, en lugar de la bajada. La que había enumeraba
