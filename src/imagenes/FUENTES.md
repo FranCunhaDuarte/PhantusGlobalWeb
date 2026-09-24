@@ -181,19 +181,45 @@ carne siguen la regla opuesta, en castellano, porque los manda el frigorífico.
 
 ### Los iconos del hero
 
-Son tres y **los tres son de Lucide** (https://lucide.dev), licencia **ISC**: uso
-comercial permitido, sin atribución obligatoria. Son `fish-symbol`, `drumstick` y
-`beef`. Están **copiados dentro del componente** y no vienen del paquete: son
-tres iconos de los más de mil que trae `lucide-react`, y una dependencia de
-tiempo de ejecución para eso no se paga sola. Copiados, además, el grosor y el
-tamaño los decide el sitio.
+Son tres y **vienen de dos bancos distintos**:
 
-**Hubo una gallina dibujada a mano acá y se fue.** Tenía cresta, pico y ojo, y al
-lado de un titular en mayúsculas sobre video se leía como ilustración infantil.
-El pedido fue bajar el registro a algo más sobrio, y ahí la gallina era el
-problema: `drumstick` es la pata, o sea el producto y no el animal, que es el
-registro del resto del sitio. Con eso los tres pasaron a ser producto y el juego
-quedó parejo.
+| Icono | Banco | Nombre | Licencia |
+| --- | --- | --- | --- |
+| pescado | Lucide — https://lucide.dev | `fish-symbol` | ISC |
+| pollo | Healthicons — https://healthicons.org | `animal-chicken` | MIT |
+| carne | Lucide | `beef` | ISC |
+
+Las dos licencias permiten uso comercial y **ninguna de las dos exige atribución
+visible**; la de Healthicons sí pide conservar el aviso de copyright, y este
+párrafo es dónde vive. Los tres están **copiados dentro del componente** y no
+vienen de un paquete: son tres iconos de los más de mil que trae `lucide-react`,
+y una dependencia de tiempo de ejecución para eso no se paga sola. Copiados,
+además, el grosor y el tamaño los decide el sitio.
+
+**El pollo se dibuja vaciado, y viene maciza.** `animal-chicken` es una silueta
+de relleno pleno, y al lado de dos iconos de trazo se lee como una mancha. Va
+dibujada por su contorno —el mismo 1,5 de los otros dos— y **escalada de su
+lienzo de 48 al de 24**, para que herede el grosor del `<svg>` en vez de traerse
+el suyo con un `transform`. Healthicons publica también `animal-chicken-outline`
+y **no sirve para esto**: ya es un anillo, así que dibujarlo por contorno saca
+cada línea dos veces.
+
+**Acá hubo una pata de pollo y antes una gallina dibujada a mano.** La gallina a
+mano se fue por el dibujo —cresta, pico y ojo, que al lado de un titular en
+mayúsculas sobre video se leía como ilustración infantil—; la pata (`drumstick`
+de Lucide) se fue por decisión del cliente, que prefirió cambiar la regla antes
+que el dibujo. Ver abajo.
+
+> **La regla que decía que ninguno de los tres es un animal ya no rige**, y
+> conviene saber que era falsa igual: el pescado es un pez entero desde siempre.
+> Hoy el impar es el corte de carne, que es el único que no es un animal.
+
+> **Dos candidatos quedaron afuera por licencia y se anotan para no volver a
+> proponerlos.** `cbi:chicken` (Custom Brand Icons) es **CC BY-NC-SA 4.0**: el
+> NonCommercial no sirve para un sitio comercial, y vaciarlo no lo esquiva
+> —quitar el relleno es obra derivada, que es justo lo que la licencia regula—.
+> `streamline` y `game-icons` piden atribución visible, que en un icono de 32 px
+> no tiene dónde ir.
 
 > **El pescado es `fish-symbol` y esa es la forma del ichthys.** Dos arcos que se
 > cruzan en la cola es el símbolo cristiano, no un icono de pescado. Se planteó y
@@ -203,7 +229,9 @@ quedó parejo.
 
 **No hay vaca en Lucide**, así que el rubro de carne va con un corte. Dibujarla a
 mano sí se intentó en este proyecto, para el diagrama de cortes, y no salió: lo
-que no se resuelve es la anatomía, no el trazo.
+que no se resuelve es la anatomía, no el trazo. Con el pollo hecho animal, **la
+vaca es lo único que falta para emparejar el juego**; si aparece una silueta
+maciza en un banco de licencia libre, se vacía igual que la gallina.
 
 **Hubo una copa de vino y se sacó**: era el único rubro sin nada detrás en el
 sitio —ni página, ni catálogo, ni copy—, así que prometía una unidad de negocio

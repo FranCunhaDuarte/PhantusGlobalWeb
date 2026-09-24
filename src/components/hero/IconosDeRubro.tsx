@@ -11,18 +11,32 @@ import { clases } from '@/lib/clases';
  * frigorífico que carne vacuna, y el titular dice "alimentos". El vino no es de
  * ese circuito.
  *
- * **Los tres son de Lucide** (licencia ISC, uso comercial permitido y sin
- * atribución obligatoria) y están copiados adentro en vez de venir del paquete:
- * son tres iconos de los más de mil que trae `lucide-react`, y una dependencia
- * de tiempo de ejecución para eso no se paga sola. Copiados, además, el grosor y
- * el tamaño los decide el sitio y no la librería. Queda anotado en
- * `src/imagenes/FUENTES.md`.
+ * **Dos son de Lucide** (licencia ISC, uso comercial permitido y sin atribución
+ * obligatoria) y el pollo es de Healthicons (**MIT**). Los tres están copiados
+ * adentro en vez de venir del paquete: son tres iconos de los más de mil que
+ * trae `lucide-react`, y una dependencia de tiempo de ejecución para eso no se
+ * paga sola. Copiados, además, el grosor y el tamaño los decide el sitio y no la
+ * librería. Queda anotado en `src/imagenes/FUENTES.md`.
  *
- * **El registro bajó de literal a sobrio, y eso descartó la gallina dibujada a
- * mano.** Estuvo un tiempo acá, con cresta, pico y ojo, y al lado de un titular
- * en mayúsculas sobre video se leía como ilustración infantil. Ahora el pollo va
- * con `drumstick`, que es la pata: no es el animal sino el producto, que es
- * justamente el registro del resto del sitio.
+ * **El pollo es el animal y no la pieza, por decisión del cliente.** Fue
+ * `drumstick` de Lucide —la pata, o sea el producto— bajo una regla que pedía
+ * que ninguno de los tres fuera un animal entero. Franco pidió cambiar la regla
+ * antes que el dibujo: la gallina se queda. Antes de eso hubo también una
+ * gallina dibujada a mano, que se fue por otra cosa —con cresta, pico y ojo, al
+ * lado de un titular en mayúsculas sobre video se leía como ilustración
+ * infantil—; ésta es una silueta y no tiene ese problema.
+ *
+ * > **La regla que se cae dejaba al pescado del lado equivocado.** Decía que los
+ * > tres son producto y ninguno es animal entero, y el pescado es un pez entero
+ * > desde siempre. Hoy el impar es el corte de carne, que es el único que no es
+ * > un animal. Volver a emparejarlos es cambiar ése, no éste.
+ *
+ * **Vaciar la silueta fue parte de la elección, no un retoque.** El original es
+ * maciza, y maciza no convive con dos iconos de trazo: se lee como una mancha al
+ * lado de dos dibujos. Dibujada por su contorno, con el mismo 1,5 que los otros,
+ * el juego queda parejo aunque el motivo no lo esté. El trazado del banco viene
+ * en un lienzo de 48 y acá está escalado a 24, así que hereda el grosor del
+ * `<svg>` en vez de traerse el suyo.
  *
  * > **El pescado es `fish-symbol`, que es la forma del ichthys.** Se planteó
  * > —dos arcos que se cruzan en la cola es el símbolo cristiano, no un icono de
@@ -31,13 +45,11 @@ import { clases } from '@/lib/clases';
  * > como símbolo. La alternativa entera es volver a `fish`, que es el que
  * > estaba.
  *
- * **La vaca sigue siendo un corte de carne y no una vaca**, porque en Lucide no
- * hay vaca y dibujarla es otro problema: ya se intentó en este proyecto para el
- * diagrama de cortes y el resultado está anotado —lo que no sale no es el trazo
- * sino la anatomía—.
- *
- * Los tres son producto y ninguno es animal entero, que es lo que hace que el
- * juego se lea parejo.
+ * **La vaca sigue siendo un corte de carne y no una vaca**, y ahora eso es lo
+ * único que rompe el juego: en Lucide no hay vaca, y dibujarla es otro problema
+ * —ya se intentó en este proyecto para el diagrama de cortes y lo que no sale no
+ * es el trazo sino la anatomía—. Si alguna vez aparece una en un banco de
+ * licencia libre, es la que falta.
  */
 const RUBROS = [
   {
@@ -46,11 +58,12 @@ const RUBROS = [
   },
   {
     id: 'pollo',
+    // La única que no es de Lucide: `animal-chicken` de Healthicons, MIT. Viene
+    // como silueta maciza en un lienzo de 48; acá va **vaciada y escalada a 24**
+    // para que herede el trazo de 1,5 del `<svg>` como los otros dos, en vez de
+    // arrastrar un `transform` y un grosor propios.
     trazado: (
-      <>
-        <path d="M15.4 15.63a7.875 6 135 1 1 6.23-6.23 4.5 3.43 135 0 0-6.23 6.23" />
-        <path d="m8.29 12.71-2.6 2.6a2.5 2.5 0 1 0-1.65 4.65A2.5 2.5 0 1 0 8.7 18.3l2.59-2.59" />
-      </>
+      <path d="M9.25 3.707c0 -0.891 -1.077 -1.337 -1.707 -0.707L3.25 7.293C2.62 7.923 3.066 9 3.957 9h1.735a4.15 4.15 0 0 1 -0.138 1.2l-0.38 1.421c-0.441 1.647 -0.567 3.456 0.375 4.877A7.85 7.85 0 0 0 12 20v1h-2.5v1h4.75v-1H13v-1.05a7.85 7.85 0 0 0 4.367 -1.962A6.95 6.95 0 0 1 14.739 18.5C11.036 18.5 8 15.608 8 12a0.5 0.5 0 0 1 1 0c0 3.02 2.551 5.5 5.739 5.5c1.763 0 3.335 -0.76 4.386 -1.952q0.05 -0.056 0.11 -0.093c0.25 -0.545 0.439 -1.124 0.557 -1.727c0.185 -0.946 0.457 -1.892 1.039 -2.66c0.242 -0.318 -0.03 -0.768 -0.424 -0.703L13.849 11.445a2.5 2.5 0 0 1 -2.6 -1.266l-1.66 -3.033l1.01 -0.897C11.287 5.637 10.855 4.5 9.935 4.5H9.25zm-0.153 2.538L9.935 5.5H9.25a1 1 0 0 1 -1 -1V3.707l-1.322 1.322q0.165 -0.029 0.338 -0.029a1.94 1.94 0 0 1 1.702 1.009zm-3.742 0.358L3.957 8h1.58l-0.149 -0.574a1.95 1.95 0 0 1 -0.033 -0.823M7 7a0.5 0.5 0 1 0 0 -1a0.5 0.5 0 0 0 0 1" />
     )
   },
   {

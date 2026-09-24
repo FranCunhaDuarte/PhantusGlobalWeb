@@ -687,9 +687,17 @@ pata de pollo y un corte de carne, que dicen **qué se comercia y no cómo**.
 > renglón encima de cuatro iconos.
 
 Los trazados son de Lucide, copiados adentro del componente en vez de traídos por
-dependencia; el porqué y la licencia, en `IconosDeRubro` y en `FUENTES.md`. **No
-hay vaca**: el rubro de carne va con un corte, que además conversa mejor con los
-otros tres, que también son producto y no animal.
+dependencia; el porqué y la licencia, en `IconosDeRubro` y en `FUENTES.md`. El
+pollo es la excepción: es `animal-chicken` de **Healthicons** (MIT), una silueta
+maciza que acá va **vaciada** —dibujada por su contorno, con el mismo trazo de
+1,5— y escalada de su lienzo de 48 al de 24.
+
+**Y con él se cayó la regla de que ninguno de los tres fuera un animal.** El
+pollo fue la pata de Lucide justamente por eso; Franco prefirió cambiar la regla
+antes que el dibujo, así que hoy la gallina es el animal entero. La regla era
+falsa igual: el pescado es un pez entero desde siempre. **No hay vaca** en Lucide
+—el rubro de carne va con un corte— y ahora ése es el único de los tres que no es
+un animal, o sea lo que falta para emparejar el juego.
 
 **El subtexto iba en `text-base` y no en `text-entrada`**, que es la entrada del
 resto del sitio: compite con un titular en mayúsculas a cuerpo mayor, y sobre el
