@@ -55,6 +55,7 @@ export default function CatalogoDeEspecies({
               t(`etiquetas.${ETIQUETA_DE_ESPECIE[especie]}`)
             }
             nombre={t(`especies.${especie}.nombre`)}
+            nombreAlterno={t(`especies.${especie}.nombreAlterno`)}
             cientifico={t(`especies.${especie}.cientifico`)}
             disponibilidad={
               t.has(disponibilidad) ? t(disponibilidad) : undefined

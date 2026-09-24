@@ -336,6 +336,7 @@
       "especies": {
         "merluza": {
           "nombre": "Hake",
+          "nombreAlterno": "Merluza hubbsi",
           "cientifico": "Merluccius hubbsi",
           "descripcion": "Argentina's largest whitefish fishery by volume, and the usual pick for anyone who needs to restock all year without a gap.",
           "disponibilidad": "Year-round, with the best volume and price from May to September",
@@ -343,6 +344,7 @@
         },
         "corvina": {
           "nombre": "Whitemouth croaker",
+          "nombreAlterno": "Corvina",
           "cientifico": "Micropogonias furnieri",
           "descripcion": "Firm-fleshed whitefish with good yield, a regular in volume orders for distribution. It is fished in the Río de la Plata and in the shared zone that Argentina and Uruguay manage together.",
           "disponibilidad": "Season from April to September",
@@ -350,6 +352,7 @@
         },
         "calamar": {
           "nombre": "Illex squid",
+          "nombreAlterno": "Calamar illex",
           "cientifico": "Illex argentinus",
           "descripcion": "A cold-water squid with a one-year life cycle: the stock renews entirely every season, so how much there is to place is settled year by year.",
           "disponibilidad": "Caught from January to August",
@@ -357,6 +360,7 @@
         },
         "langostino": {
           "nombre": "Argentine red shrimp",
+          "nombreAlterno": "Langostino",
           "cientifico": "Pleoticus muelleri",
           "descripcion": "The highest-value export in Argentine fishing, and it moves in volume. It pays to have the deal talked through before the season opens.",
           "disponibilidad": "Main season May to September, plus a summer run from January to March",
@@ -364,40 +368,47 @@
         },
         "pescadilla": {
           "nombre": "Striped weakfish",
+          "nombreAlterno": "Pescadilla de red",
           "cientifico": "Cynoscion guatucupa",
           "descripcion": "A coastal whitefish from the same family as croaker, and it often comes up in the same haul. Soft-fleshed, it mostly places as fillet.",
           "formatos": "Whole round, skin-on fillet and skinless fillet"
         },
         "besugo": {
           "nombre": "Red porgy",
+          "nombreAlterno": "Besugo",
           "cientifico": "Pagrus pagrus",
           "descripcion": "A rocky-bottom species, caught in small and seasonal quantities. It is a niche product: it sells on the quality of the piece, not on volume.",
           "formatos": "Whole round, and gutted and scaled"
         },
         "pezPalo": {
           "nombre": "Brazilian flathead",
+          "nombreAlterno": "Pez palo",
           "cientifico": "Percophis brasiliensis",
           "descripcion": "A long, lean whitefish with no intermuscular bones, which leaves a clean fillet. It comes up alongside the coastal fishery.",
           "formatos": "PBI fillet, PBO fillet and whole round"
         },
         "mero": {
           "nombre": "Argentine seabass",
+          "nombreAlterno": "Mero",
           "cientifico": "Acanthistius patachonicus",
           "descripcion": "A South Atlantic reef fish with firm white flesh. It lands in far smaller volumes than the offshore fisheries, so it is worked by the piece rather than by the tonne."
         },
         "polloDeMar": {
           "nombre": "Angel shark",
+          "nombreAlterno": "Pollo de mar",
           "cientifico": "Squatina guggenheim and Squatina argentina",
           "descripcion": "A bottom-dwelling cartilaginous fish that sells on what it lacks: lean white flesh, no bones and no scales. Argentina trades it under a market name that means sea chicken.",
           "formatos": "Fillet"
         },
         "raya": {
           "nombre": "Skate",
+          "nombreAlterno": "Raya",
           "cientifico": "Raja spp., Dipturus chilensis and Atlantoraja castelnaui",
           "descripcion": "Three species trade under the same commercial name and are worked together: common, longnose and spotback."
         },
         "rebozado": {
           "nombre": "Breaded hake",
+          "nombreAlterno": "Rebozado de merluza",
           "cientifico": "Merluccius hubbsi",
           "descripcion": "Not a species but a product made from hake fillet, ready to cook. It is the highest value-added line in the catalogue.",
           "formatos": "Medallions and sticks"

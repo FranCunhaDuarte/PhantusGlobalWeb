@@ -15,6 +15,8 @@ const ANCHO_DE_MARCA = 50;
 type FichaDeEspecieProps = {
   especie: Especie;
   nombre: string;
+  /** El mismo nombre comercial en el otro idioma del sitio. */
+  nombreAlterno: string;
   cientifico: string;
   etiquetaDestacada?: string;
   disponibilidad?: string;
@@ -37,6 +39,7 @@ type FichaDeEspecieProps = {
 export default function FichaDeEspecie({
   especie,
   nombre,
+  nombreAlterno,
   cientifico,
   etiquetaDestacada,
   disponibilidad,
@@ -72,9 +75,22 @@ export default function FichaDeEspecie({
         <h3 className="mt-3 leading-tight font-semibold text-balance">
           {nombre}
         </h3>
-        {/* Sin cursiva: Montserrat se carga en un solo estilo y el navegador la
-            inclinaría a la fuerza. El científico se distingue por cuerpo. */}
-        <p className="mt-1 text-xs texto-suave">{cientifico}</p>
+        {/* **El nombre en el otro idioma va antes del científico.** Los dos son
+            el mismo tipo de dato —cómo se llama esto en otro lado— y los dos van
+            en el cuerpo chico y gris, pero el comercial es el que usa quien
+            cotiza y el científico el que desempata, así que ése queda último.
+            En castellano el alterno es el inglés de exportación, que es el
+            término con el que pide el importador; en inglés es el castellano,
+            que es con el que responde el frigorífico.
+
+            **No es copy nuevo**: el alterno de cada catálogo es literalmente el
+            nombre de la otra ficha, así que si alguna vez cambia un nombre hay
+            que tocarlo de los dos lados.
+
+            Sin cursiva: Montserrat se carga en un solo estilo y el navegador la
+            inclinaría a la fuerza. Los dos se distinguen por cuerpo. */}
+        <p className="mt-1 text-xs texto-suave">{nombreAlterno}</p>
+        <p className="text-xs texto-suave">{cientifico}</p>
 
         {/* Al pie, para que las fichas de una fila alineen abajo aunque a una le
             falte la ventana —de siete de las once no hay dato— o los formatos. */}

@@ -336,6 +336,7 @@
       "especies": {
         "merluza": {
           "nombre": "Merluza hubbsi",
+          "nombreAlterno": "Hake",
           "cientifico": "Merluccius hubbsi",
           "descripcion": "Es la pesquería de pescado blanco de mayor volumen de la Argentina, y la opción habitual de quien necesita reponer todo el año sin cortes.",
           "disponibilidad": "Todo el año, con mejor volumen y precio de mayo a septiembre",
@@ -343,6 +344,7 @@
         },
         "corvina": {
           "nombre": "Corvina",
+          "nombreAlterno": "Whitemouth croaker",
           "cientifico": "Micropogonias furnieri",
           "descripcion": "Pescado blanco de carne firme y buen rendimiento, habitual en pedidos de volumen para distribución. Se pesca en el Río de la Plata y en la zona común que Argentina y Uruguay administran en conjunto.",
           "disponibilidad": "Zafra de abril a septiembre",
@@ -350,6 +352,7 @@
         },
         "calamar": {
           "nombre": "Calamar illex",
+          "nombreAlterno": "Illex squid",
           "cientifico": "Illex argentinus",
           "descripcion": "Calamar de aguas frías y ciclo de vida anual: la biomasa se renueva entera cada temporada, así que cuánto hay para colocar se define año a año.",
           "disponibilidad": "Captura de enero a agosto",
@@ -357,6 +360,7 @@
         },
         "langostino": {
           "nombre": "Langostino",
+          "nombreAlterno": "Argentine red shrimp",
           "cientifico": "Pleoticus muelleri",
           "descripcion": "Es el producto de mayor valor de exportación de la pesca argentina y se mueve por volumen. Conviene tener la operación conversada antes de que abra la temporada.",
           "disponibilidad": "Temporada principal de mayo a septiembre, más una de verano de enero a marzo",
@@ -364,40 +368,47 @@
         },
         "pescadilla": {
           "nombre": "Pescadilla de red",
+          "nombreAlterno": "Striped weakfish",
           "cientifico": "Cynoscion guatucupa",
           "descripcion": "Pescado blanco costero de la misma familia que la corvina, con la que suele salir en la misma marea. De carne blanda, se coloca sobre todo en filet.",
           "formatos": "Entero, filet con piel y filet sin piel"
         },
         "besugo": {
           "nombre": "Besugo",
+          "nombreAlterno": "Red porgy",
           "cientifico": "Pagrus pagrus",
           "descripcion": "Especie de fondo rocoso, de captura chica y estacional. Es producto de nicho: se vende por la calidad de la pieza y no por volumen.",
           "formatos": "Entero, y eviscerado y descamado"
         },
         "pezPalo": {
           "nombre": "Pez palo",
+          "nombreAlterno": "Brazilian flathead",
           "cientifico": "Percophis brasiliensis",
           "descripcion": "Pescado blanco alargado, de carne magra y sin espinas intermusculares, lo que deja un filet limpio. Aparece como acompañante de la pesca costera.",
           "formatos": "Filet PBI, filet PBO y entero"
         },
         "mero": {
           "nombre": "Mero",
+          "nombreAlterno": "Argentine seabass",
           "cientifico": "Acanthistius patachonicus",
           "descripcion": "Pescado de arrecife del Atlántico Sur, de carne blanca y firme. Desembarca en volúmenes bastante menores que las pesquerías de altura, así que se trabaja por pieza antes que por tonelaje."
         },
         "polloDeMar": {
           "nombre": "Pollo de mar",
+          "nombreAlterno": "Angel shark",
           "cientifico": "Squatina guggenheim y Squatina argentina",
           "descripcion": "Pez cartilaginoso de fondo que se vende por lo que no tiene: carne blanca y magra, sin espinas ni escamas. De ahí el nombre comercial; en la pesquería figura como pez ángel.",
           "formatos": "Filet"
         },
         "raya": {
           "nombre": "Raya",
+          "nombreAlterno": "Skate",
           "cientifico": "Raja spp., Dipturus chilensis y Atlantoraja castelnaui",
           "descripcion": "Bajo el mismo nombre comercial entran tres especies que se trabajan juntas: común, picuda y manchada."
         },
         "rebozado": {
           "nombre": "Rebozado de merluza",
+          "nombreAlterno": "Breaded hake",
           "cientifico": "Merluccius hubbsi",
           "descripcion": "No es una especie sino producto elaborado a partir del filet de merluza, listo para cocinar. Es la salida de mayor valor agregado del catálogo.",
           "formatos": "Medallones y bastones"
