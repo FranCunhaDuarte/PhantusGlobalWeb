@@ -69,7 +69,7 @@
     },
     "nosotros": {
       "titulo": "Quién <destacado>responde</destacado> por la operación.",
-      "texto": "Un bróker con origen en Argentina y estructura legal en Estados Unidos. Cada operación tiene un responsable directo, del primer contacto a la llegada del contenedor.",
+      "texto": "Un bróker con origen en Argentina. Cada operación tiene un responsable directo, del primer contacto a la llegada del contenedor.",
       "cta": "Quiénes somos"
     },
     "carnes": {
@@ -184,7 +184,7 @@
       },
       "respuesta": {
         "rotulo": "Respuesta",
-        "valor": "24 a 48 horas hábiles"
+        "valor": "1 a 2 días hábiles"
       },
       "mercados": {
         "rotulo": "Mercados",
@@ -252,12 +252,11 @@
     "destino": {
       "titulo": "Hasta dónde llega",
       "texto": "Cuatro mercados, cada uno con su estándar. La operación se arma contra el que corresponde al destino.",
-      "detalle": "En Estados Unidos, al origen argentino se le suma estructura legal propia.",
       "alt": "Buque de carga saliendo, visto desde la costa."
     },
     "contacto": {
       "titulo": "¿A qué mercado va tu operación?",
-      "texto": "Decinos a qué país va y qué producto es. Armamos la operación contra el estándar de ese mercado y te contestamos en 24 a 48 horas hábiles.",
+      "texto": "Decinos a qué país va y qué producto es. Armamos la operación contra el estándar de ese mercado y te contestamos en 1 a 2 días hábiles.",
       "cta": "Pedir cotización"
     },
     "origenDeLasRutas": "Mar del Plata",

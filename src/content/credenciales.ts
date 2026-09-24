@@ -9,10 +9,10 @@
  * código**, así que la clave `nosotros.datos.estructura` ya no existe en ningún
  * catálogo.
  *
- * > **La afirmación sobrevive en otro lado y conviene saberlo**: `/mercados`
- * > sigue diciendo "En Estados Unidos, al origen argentino se le suma estructura
- * > legal propia". Si lo que hay que sacar es el reclamo y no sólo este dato,
- * > ése es el que queda.
+ * > **Y después salió el reclamo entero.** El cliente pidió borrar también la
+ * > frase de `/mercados` —"al origen argentino se le suma estructura legal
+ * > propia"— y la misma idea de donde apareciera. Hoy no queda en ningún texto
+ * > publicado: lo que sobrevive son estos comentarios, que cuentan la historia.
  *
  * **Y la red dejó de ser de exportadores.** Por pedido del cliente el valor pasa
  * a `Frigoríficos habilitados por SENASA`, y lo mismo en las otras tres partes

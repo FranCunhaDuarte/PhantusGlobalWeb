@@ -3,8 +3,10 @@
 # Phantus Global
 
 Sitio institucional de **Phantus Global**, bróker de comercio internacional de
-**pescado y mariscos del Atlántico Sur**, con origen en **Mar del Plata,
-Argentina** y estructura legal en **Estados Unidos**. Dominio:
+**pescado, mariscos, carne y pollo argentinos**, con origen en **Mar del Plata,
+Argentina**. **La estructura legal en Estados Unidos ya no se afirma**: estuvo
+como dato en `/nosotros` y como frase en `/mercados`, y el cliente pidió
+borrar las dos y la misma idea de donde apareciera. Dominio:
 `phantusglobal.com`. Contacto público: `sales@phantusglobal.com` y
 `+54 9 223 683-8585`. **El sitio nombra a una persona y eso fue y volvió**: hubo
 un responsable con nombre y apellido en el pie y se sacó por pedido, junto con la

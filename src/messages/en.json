@@ -41,7 +41,7 @@
     "ubicacion": "Mar del Plata, Argentina",
     "navegar": "Navigation",
     "contacto": "Contact",
-    "canal": "Write through the form, or straight to the inbox.",
+    "canal": "Use the form or email us directly.",
     "correo": "sales@phantusglobal.com",
     "escribirnos": "Write to us",
     "derechos": "© {anio} Phantus Global"
@@ -69,7 +69,7 @@
     },
     "nosotros": {
       "titulo": "Who <destacado>answers</destacado> for the deal.",
-      "texto": "A broker based in Argentina with a US legal entity. Every transaction has one person answering for it, from first contact to the container's arrival.",
+      "texto": "A broker based in Argentina. Every transaction has one person answering for it, from first contact to the container's arrival.",
       "cta": "About us"
     },
     "carnes": {
@@ -88,7 +88,7 @@
       "cta": "How we work"
     },
     "contacto": {
-      "titulo": "Let us discuss your requirement.",
+      "titulo": "Tell us what you're looking to buy.",
       "entrada": "We work with importers sourcing Argentine suppliers.",
       "canales": {
         "telefono": "Phone",
@@ -184,7 +184,7 @@
       },
       "respuesta": {
         "rotulo": "Reply time",
-        "valor": "24 to 48 business hours"
+        "valor": "Within 1-2 business days"
       },
       "mercados": {
         "rotulo": "Markets",
@@ -252,16 +252,15 @@
     "destino": {
       "titulo": "How far it goes",
       "texto": "Four markets, each with its own standard. The transaction is built to whichever one applies.",
-      "detalle": "In the United States, the Argentine origin is backed by a legal entity of our own.",
       "alt": "A cargo ship heading out, seen from the shore."
     },
     "contacto": {
       "titulo": "Which market is your shipment headed to?",
-      "texto": "Tell us which country it is going to and what the product is. We build the transaction to that market’s standard and get back to you within 24 to 48 business hours.",
+      "texto": "Tell us which country it is going to and what the product is. We build the transaction to that market’s standard and get back to you within 1-2 business days.",
       "cta": "Request a quote"
     },
     "origenDeLasRutas": "Mar del Plata",
-    "cumplimiento": "The United States runs against FDA, HACCP and SIMP, with the corresponding sanitary and origin documentation."
+    "cumplimiento": "Shipments to the United States follow FDA, HACCP and SIMP rules, with the matching sanitary and origin documents."
   },
   "comoTrabajamos": {
     "metaTitle": "How we work: the five steps",

@@ -95,10 +95,14 @@ export default function Mercados() {
           foto={buque}
           alt={t('destino.alt')}
         >
+          {/* **Acá iba un segundo párrafo y lo borró el cliente**: decía que
+              en Estados Unidos, al origen argentino se le suma estructura legal
+              propia. Salió por pedido y sin reemplazo, junto con la clave
+              `mercados.destino.detalle` y con la misma afirmación donde
+              apareciera. */}
           <p className="max-w-md text-entrada">
             {t('destino.texto')}
           </p>
-          <p className="max-w-md">{t('destino.detalle')}</p>
         </BloqueConFoto>
       </Section>
 
