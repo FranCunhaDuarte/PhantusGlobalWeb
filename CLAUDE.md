@@ -297,11 +297,16 @@ es un recorte de *elephantus*. El elefante está elegido por ser el animal de la
 memoria y de los vínculos de largo plazo. Es el eje conceptual de la marca, no un
 adorno.
 
-**El slogan es "The elephant never forgets"**, y va en inglés en los dos idiomas.
-Lo dijo Franco así y se trata como se trata un logotipo: es una pieza fija de
-marca, no una frase que se traduzca. Por eso vive en `marca.slogan` con el mismo
-valor en los dos catálogos, igual que `pie.correo` y `pie.responsable` —nombres
-propios—.
+**El slogan está traducido desde el 24/09**: "El elefante nunca olvida" y "The
+elephant never forgets". Hasta ahí iba en inglés en los dos idiomas y se trataba
+como se trata un logotipo —pieza fija de marca, no frase que se traduzca—; la
+especificación del cliente lo pidió en cada idioma, así que `marca.slogan` dejó
+de tener el mismo valor en los dos catálogos.
+
+**Y estuvo bajo el logo del header un rato.** La misma especificación lo pedía
+ahí además del pie; entraba —el bloque del logo llegaba a 87 px dentro de una
+barra de 96— pero vivía de los 9 px que sobraban, y se sacó por pedido al día
+siguiente. Hoy está sólo en el pie, que es donde el manual lo pone.
 
 Aparece **pegado al logotipo en el pie**, en el color pleno del fondo y no en el
 gris de lo secundario: es marca, no una nota. La ciudad, que sí es dato de

@@ -49,7 +49,7 @@
   "home": {
     "hero": {
       "eyebrow": "International trade broker — Argentina",
-      "titulo": "Argentine seafood, meat and poultry, sourced at origin",
+      "titulo": "Argentine seafood, meat and poultry",
       "bajada": "Independent brokerage in Mar del Plata working with SENASA-approved plants.",
       "rubros": {
         "pescado": "Seafood",
@@ -309,7 +309,7 @@
         "nombre": "Meat"
       },
       "pollo": {
-        "nombre": "Chicken"
+        "nombre": "Poultry"
       }
     },
     "despieces": {
