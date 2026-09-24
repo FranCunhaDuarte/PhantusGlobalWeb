@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import RutasDeMercado from '@/components/alcance/RutasDeMercado';
+import MercadosDeDestino from '@/components/alcance/MercadosDeDestino';
 import FondoDeApertura from '@/components/hero/FondoDeApertura';
 import BloqueConFoto from '@/components/ui/BloqueConFoto';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -26,8 +26,9 @@ import buque from '@/imagenes/ciudad/buque.jpg';
  * 2. **Hasta dónde llega**, con el buque saliendo a la izquierda. La foto
  *    cambia de lado a propósito: dos bloques iguales seguidos se leen como una
  *    tabla, y alternarlos le da el ritmo que la página no tenía.
- * 3. **Los cuatro mercados**, dibujados como un origen y cuatro ramas sobre
- *    tinta, con el estándar colgando de la única rama que lo tiene.
+ * 3. **Los cuatro mercados**, en grilla sobre tinta, con el estándar del único
+ *    que lo tiene publicado debajo. Fueron un origen y cuatro ramas, y el
+ *    porqué del cambio está en `MercadosDeDestino`.
  *
  * El texto bajó de unos 884 caracteres a unos 560 sin perder ningún dato: lo que
  * se fue es la envoltura y una enumeración de los cuatro mercados en prosa que
@@ -110,15 +111,10 @@ export default function Mercados() {
           bordó: ningún límite sin corte, y las dos bandas oscuras del final se
           separan por color. */}
       <Section fondo="tinta">
-        <RutasDeMercado
+        <MercadosDeDestino
           etiqueta={t('mercadosTitulo')}
-          origen={t('origenDeLasRutas')}
+          cumplimiento={t('cumplimiento')}
         />
-        {/* El estándar va debajo del árbol y no colgando de su rama, y arranca
-            nombrando el mercado para que se sepa de cuál habla. Colgarlo dejaba
-            el ítem de Estados Unidos más alto que los otros tres y descolocaba
-            el trunco; el porqué está en `RutasDeMercado`. */}
-        <p className="mt-12 max-w-2xl">{t('cumplimiento')}</p>
       </Section>
     </>
   );

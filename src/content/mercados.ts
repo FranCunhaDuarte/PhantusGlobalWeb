@@ -15,10 +15,15 @@
  * es el id acá y su clave en los dos catálogos.
  *
  * **De cumplimiento hay dato de uno solo**, Estados Unidos, y esa asimetría no
- * se modela acá: la nota que lo dice va debajo del árbol de destinos y arranca
- * nombrando el mercado, así que no hace falta una lista de cuáles lo tienen. Se
- * intentó al revés —colgar el estándar de su rama— y el ítem quedaba más alto
- * que los otros tres, lo que descolocaba el trunco del dibujo.
+ * se modela acá: la nota que lo dice va debajo de la grilla de destinos y
+ * arranca nombrando el mercado, así que no hace falta una lista de cuáles lo
+ * tienen. Meterlo en su celda deja tres celdas visiblemente incompletas y
+ * sugiere que a los otros tres les falta el dato; abajo, la asimetría se lee
+ * como lo que es.
+ *
+ * **`origenDeLasRutas` quedó sin consumidor y no se borró.** Era el nodo "Mar
+ * del Plata" del que colgaban las cuatro ramas del dibujo anterior; hoy el
+ * origen lo dice el titular de la página, dos bloques más arriba.
  */
 export const MERCADOS = ['estados-unidos', 'mexico', 'europa', 'asia'] as const;
 
