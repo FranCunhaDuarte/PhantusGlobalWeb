@@ -193,10 +193,10 @@
     "proceso": {
       "titulo": "How we work",
       "pasos": {
-        "frigorifico": "We find the approved plant that matches your specification.",
-        "oferta": "We get the offer and coordinate samples.",
-        "documentacion": "We follow the export paperwork.",
-        "traslado": "If needed, we arrange transport to destination with forwarders."
+        "frigorifico": "We find the approved plant that matches your specification",
+        "oferta": "We get the offer and coordinate samples",
+        "documentacion": "We support the export paperwork",
+        "traslado": "If needed, we arrange transport to your destination through partner forwarders"
       }
     },
     "valoresTitulo": "What we stand on",

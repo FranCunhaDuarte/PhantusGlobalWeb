@@ -193,10 +193,10 @@
     "proceso": {
       "titulo": "Cómo trabajamos",
       "pasos": {
-        "frigorifico": "Buscamos el frigorífico habilitado según tu especificación.",
-        "oferta": "Conseguimos la oferta y coordinamos muestras.",
-        "documentacion": "Acompañamos la documentación de exportación.",
-        "traslado": "Si hace falta, ofrecemos el traslado hasta destino con forwarders."
+        "frigorifico": "Buscamos el frigorífico habilitado según tu especificación",
+        "oferta": "Conseguimos la oferta y coordinamos muestras",
+        "documentacion": "Acompañamos la documentación de exportación",
+        "traslado": "Si lo necesitás, gestionamos el transporte hasta tu destino con forwarders aliados"
       }
     },
     "valoresTitulo": "En qué nos apoyamos",

@@ -107,10 +107,6 @@ export default function Nosotros() {
           **Y no reusa `PasoDelProceso`**, que es la pila de renglones de esa
           página: allá cada paso tiene título y párrafo, y acá son una frase
           cada uno. El porqué del dos por dos está en `PasosDeNosotros`. */}
-      <Section fondo="crema">
-        <PasosDeNosotros />
-      </Section>
-
       {/* La tarjeta es el bloque entero: se trae adentro su propio titular y su
           bajada, porque el texto va a la izquierda de la foto y no encima. Y va
           `relleno="sin"`: **la tarjeta mide el alto de la sección**, así que no
@@ -123,22 +119,40 @@ export default function Nosotros() {
         <CarruselDeLaCiudad />
       </Section>
 
+      {/* **Va después de la ciudad, por pedido**: la especificación lo pide
+          detrás de "Presencia en origen". Estuvo antes, donde había dejado su
+          hueco la tarjeta del responsable, y ahí además tapaba un límite sin
+          corte —credenciales y ciudad son las dos crema elevado—. Ese límite
+          vuelve a quedar sin corte y se acepta por el mismo motivo que ya estaba
+          escrito: la tarjeta de la ciudad trae su foto de borde a borde, que es
+          la que marca dónde empieza.
+
+          Lo que sí hubo que mover es el fondo del elefante, que era crema como
+          éste y quedaba pegado sin corte. */}
+      <Section fondo="crema">
+        <PasosDeNosotros />
+      </Section>
+
+
       {/* El eje conceptual de la marca, centrado y con el isotipo encima: es el
           único bloque del sitio que se presenta como un escudo, y se lo puede
           permitir porque acá el isotipo ya está en una pieza que se presentó.
           Sin `gap` en la columna: el aire alrededor del isotipo lo pone `Logo`
           y un hueco propio se le sumaría al área de seguridad.
 
-          **Fue tinta y pasó a crema, y no por gusto.** Con el CTA sacado, este
+          **Fue tinta, pasó a crema y hoy es crema elevado.** Con el CTA sacado, este
           es el último bloque de la página y abajo viene el pie, que también es
           tinta: en oscuro los dos se fundían en una sola mancha y el pie parecía
           arrancar con el isotipo del elefante. El cierre de la página tiene que
-          ser un corte, y el más fuerte que queda es crema contra el pie.
+          ser un corte, y el más fuerte que queda es un crema contra el pie.
+          Entre crema y crema elevado da igual cuál: los dos cortan contra tinta.
+          Es elevado y no base porque arriba quedó el bloque de pasos, que es
+          crema.
 
           Lo que se pierde es que el bloque era el único del sitio sobre tinta.
           El isotipo va en tinta sobre crema, que es una de las dos
           combinaciones que el manual admite, así que `Logo` lo resuelve solo. */}
-      <Section fondo="crema" medida="angosta" relleno="chico">
+      <Section fondo="crema-elevado" medida="angosta" relleno="chico">
         <div className="flex flex-col items-center text-center">
           <Logo forma="isotipo" ancho={72} />
           <h2 className="text-titulo">{t('elefanteTitulo')}</h2>
