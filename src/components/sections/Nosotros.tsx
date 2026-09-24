@@ -3,8 +3,9 @@ import CarruselDeLaCiudad from '@/components/nosotros/CarruselDeLaCiudad';
 import foto from '@/imagenes/nosotros-hero.jpg';
 import FondoDeApertura from '@/components/hero/FondoDeApertura';
 import ListaDeCredenciales from '@/components/nosotros/ListaDeCredenciales';
-import Responsable from '@/components/nosotros/Responsable';
 import Logo from '@/components/ui/Logo';
+import PasoDelProceso from '@/components/proceso/PasoDelProceso';
+import { PASOS_DE_NOSOTROS } from '@/content/proceso';
 import Section from '@/components/ui/Section';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -85,14 +86,40 @@ export default function Nosotros() {
         <ListaDeCredenciales />
       </Section>
 
-      {/* **El responsable entra acá y de paso arregla el límite sin corte.** El
-          comentario de arriba decía que la banda de credenciales y la tarjeta de
-          la ciudad eran las dos crema elevado y quedaban pegadas sin separación;
-          con este bloque en crema en el medio, la página vuelve a alternar
-          —tinta, crema elevado, crema, crema elevado, crema— y ningún límite
-          queda sin corte. */}
-      <Section fondo="crema" relleno="chico">
-        <Responsable />
+      {/* **Acá iba la tarjeta del responsable —nombre, cargo y LinkedIn— y se
+          sacó por pedido.** Es la segunda vez que esta página nombra y deja de
+          nombrar a una persona, así que conviene dejar dicho qué se cae con
+          ella: el argumento de credibilidad de la página pasa a ser la red y el
+          puerto, y no el nombre de quien atiende.
+
+          **El componente `Responsable` y las claves `nosotros.responsable.*`
+          siguen vivos**, y no por política de huérfanos: los usa
+          `CanalesDeContacto`, al lado del formulario. Si ahí también tiene que
+          salir, es otro pedido.
+
+          **El bloque de proceso ocupa su lugar, y hacía falta que algo lo
+          ocupara**: era el crema que separaba la banda de credenciales de la
+          tarjeta de la ciudad, que son las dos crema elevado. Sin nada en el
+          medio, la página dejaba dos límites del mismo tono pegados. */}
+      <Section fondo="crema">
+        {/* Cuatro pasos, cada uno una frase y sin título propio: es lo que mandó
+            el cliente y no se le inventa un nombre a cada uno. Por eso
+            `PasoDelProceso` va sin `titulo`; con él, el paso emite un `h2` y
+            acá abajo de otro `h2` haría falta bajarlo de nivel.
+
+            **No reemplaza a `/como-trabajamos`, que sigue con sus cinco pasos**
+            y su detalle. Esto es el resumen; que convivan las dos listas es una
+            tensión anotada en `PASOS_DE_NOSOTROS`. */}
+        <SectionHeading>{t('proceso.titulo')}</SectionHeading>
+        <ol className="mt-8 border-b borde-seccion">
+          {PASOS_DE_NOSOTROS.map((paso, indice) => (
+            <PasoDelProceso
+              key={paso}
+              orden={indice + 1}
+              texto={t(`proceso.pasos.${paso}`)}
+            />
+          ))}
+        </ol>
       </Section>
 
       {/* La tarjeta es el bloque entero: se trae adentro su propio titular y su

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Phantus Global | Argentine seafood and meat broker",
-    "description": "We supply importers in the United States, Mexico, Europe and Asia from SENASA-approved Argentine exporters. Red shrimp, hake, squid and croaker.",
+    "description": "We supply importers in the United States, Mexico, Europe and Asia from SENASA-approved Argentine plants. Red shrimp, hake, squid and croaker.",
     "template": "%s | Phantus Global",
     "ogAlt": "Phantus Global, a seafood and meat trade broker based in Mar del Plata, Argentina"
   },
@@ -156,21 +156,17 @@
   },
   "nosotros": {
     "metaTitle": "About us: Argentine broker in Mar del Plata",
-    "metaDescription": "A seafood and meat broker based in Mar del Plata. A network of SENASA-approved exporters and one person answering for every transaction.",
-    "titulo": "We broker Argentine seafood and meat.",
-    "entrada": "One person answering for it, from first contact to the container’s arrival. We know what to ask for: size, format and yield.",
+    "metaDescription": "A seafood and meat broker based in Mar del Plata. A network of SENASA-approved plants and one person answering for every transaction.",
+    "titulo": "Who we are.",
+    "entrada": "An Argentine broker based at the port of Mar del Plata. We work with a network of SENASA-approved plants and forwarders on every deal.",
     "datos": {
       "origen": {
         "rotulo": "Based in",
         "valor": "Mar del Plata, Argentina"
       },
-      "estructura": {
-        "rotulo": "Legal entity",
-        "valor": "United States"
-      },
       "red": {
         "rotulo": "Network",
-        "valor": "SENASA-approved exporters"
+        "valor": "SENASA-approved plants"
       },
       "respuesta": {
         "rotulo": "Reply time",
@@ -191,8 +187,17 @@
       "etiqueta": "Mar del Plata, in pictures",
       "irA": "Show picture {numero} of {total}"
     },
-    "elefanteTitulo": "An elephant never forgets. Neither do we.",
+    "elefanteTitulo": "The elephant never forgets",
     "elefanteTexto": "Phantus comes from elephantus. The elephant is memory and teamwork, holding its bonds for life: a relationship does not end with one sale.",
+    "proceso": {
+      "titulo": "How we work",
+      "pasos": {
+        "frigorifico": "We find the approved plant that matches your specification.",
+        "oferta": "We get the offer and coordinate samples.",
+        "documentacion": "We follow the export paperwork.",
+        "traslado": "If needed, we arrange transport to destination with forwarders."
+      }
+    },
     "valoresTitulo": "What we stand on",
     "valores": {
       "confianza": "Every deal has a name and a face behind it, and you always know whose.",
@@ -227,7 +232,7 @@
     "origen": {
       "titulo": "Where it ships from",
       "texto": "Mar del Plata is Argentina's main fishing port: this is where it is landed, processed and loaded, all year round.",
-      "detalle": "We work with SENASA-approved exporters, picked one by one. We do not take title to the goods and we do not operate as a processing plant.",
+      "detalle": "We work with SENASA-approved plants, picked one by one. We do not take title to the goods and we do not operate as a processing plant.",
       "alt": "Fishing fleet moored in the port of Mar del Plata."
     },
     "destino": {

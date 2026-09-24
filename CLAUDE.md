@@ -8,9 +8,13 @@ Argentina** y estructura legal en **Estados Unidos**. Dominio:
 `phantusglobal.com`. Contacto público: `sales@phantusglobal.com` y
 `+54 9 223 683-8585`. **El sitio nombra a una persona y eso fue y volvió**: hubo
 un responsable con nombre y apellido en el pie y se sacó por pedido, junto con la
-dirección personal que lo llevaba. Volvió el 23/09, pero distinto: nombre, cargo
-y perfil de LinkedIn en `/nosotros` y en contacto —un argumento de credibilidad—
-mientras el correo sigue siendo uno solo y genérico. Las dos URLs viven en
+dirección personal que lo llevaba. Volvió el 23/09 —nombre, cargo y perfil de
+LinkedIn en `/nosotros` y en contacto— y **el 24/09 salió de `/nosotros` otra
+vez**, por pedido: ahí el argumento de credibilidad pasa a ser la red y el
+puerto. **Sigue al lado del formulario**, en `CanalesDeContacto`, que es lo que
+mantiene vivos el componente `Responsable` y las claves
+`nosotros.responsable.*`; si también tiene que salir de ahí, es otro pedido. El
+correo sigue siendo uno solo y genérico. Las dos URLs viven en
 `src/content/redes.ts`; la de la empresa entra al JSON-LD como `sameAs` y la de
 la persona, no: el perfil de alguien que trabaja acá no es un perfil de la
 organización.
@@ -23,8 +27,9 @@ no revende, no opera como planta. Y **tampoco toca el dinero**: el pago va
 directo entre exportador e importador. Eso cambia cómo se escribe todo el copy —
 no somos un exportador ni un trader, somos el nexo.
 
-Trabaja con una **red de exportadores argentinos habilitados por SENASA**,
-seleccionados por calidad y cumplimiento normativo. Cada operación se apoya en
+Trabaja con una **red de frigoríficos argentinos habilitados por SENASA**,
+seleccionados por calidad y cumplimiento normativo. **Decía "exportadores" hasta
+el 24/09** y lo cambió el cliente, en las cuatro partes del sitio donde estaba. Cada operación se apoya en
 el conocimiento técnico del producto —tallas, formatos, rendimientos y
 temporadas por especie— y tiene **un responsable directo**, del primer contacto
 a la llegada del contenedor.
@@ -1312,6 +1317,23 @@ perder un solo dato**; lo que se fue es la envoltura.
 
 Son cuatro tramos y ninguno se lee igual que el anterior, que es lo único que se
 conservó del planteo viejo.
+
+> **Lo que cambió el 24/09, por una especificación del cliente**: el titular pasa
+> a "Quiénes somos." con una bajada que nombra el puerto, la red de frigoríficos
+> y los forwarders; **sale la tarjeta del responsable** —la página vuelve a no
+> nombrar a nadie— y en su lugar entra un bloque de **cuatro pasos, "Cómo
+> trabajamos"**; el dato de estructura legal se borra del código; y el lema del
+> bloque del elefante pasa a ser exactamente **"El elefante nunca olvida"**.
+>
+> **Ese bloque de cuatro pasos convive con `/como-trabajamos`, que tiene cinco**
+> y más detalle. Es una duplicación real, no un descuido: si hay que unificar, lo
+> que se decide es cuál de las dos listas queda. Ver `PASOS_DE_NOSOTROS`.
+>
+> **Y el lema de acá no es el del pie.** El pie lleva `marca.slogan`, que va en
+> inglés en los dos idiomas porque se trata como un logotipo; éste es el titular
+> del bloque del elefante y sí está traducido. Decía "El elefante no olvida.
+> Nosotros tampoco.", que era relato; ahora es el lema, y la diferencia entre los
+> dos deja de existir salvo por el idioma.
 
 **1. La apertura es un hero con foto**, como el de la home: la misma foto que la
 tarjeta NOSOTROS —esa tarjeta es la puerta a esta página— con el mismo velo negro

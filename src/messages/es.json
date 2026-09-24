@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Phantus Global | Bróker de pescado, mariscos y carnes",
-    "description": "Abastecemos a importadores de Estados Unidos, México, Europa y Asia desde exportadores argentinos habilitados por SENASA. Langostino, merluza y calamar.",
+    "description": "Abastecemos a importadores de Estados Unidos, México, Europa y Asia desde frigoríficos argentinos habilitados por SENASA. Langostino, merluza y calamar.",
     "template": "%s | Phantus Global",
     "ogAlt": "Phantus Global, bróker de pescado, mariscos y carnes con base en Mar del Plata, Argentina"
   },
@@ -156,21 +156,17 @@
   },
   "nosotros": {
     "metaTitle": "Nosotros: bróker argentino en Mar del Plata",
-    "metaDescription": "Bróker de pescado, mariscos y carnes con base en Mar del Plata. Red de exportadores habilitados por SENASA y un responsable directo en cada operación.",
-    "titulo": "Somos bróker de pescado, mariscos y carnes.",
-    "entrada": "Un responsable directo, del primer contacto a la llegada del contenedor. Sabemos qué pedir: talla, formato y rendimiento.",
+    "metaDescription": "Bróker de pescado, mariscos y carnes con base en Mar del Plata. Red de frigoríficos habilitados por SENASA y un responsable directo en cada operación.",
+    "titulo": "Quiénes somos.",
+    "entrada": "Un broker argentino con base en el puerto de Mar del Plata. Trabajamos con una red de frigoríficos habilitados por SENASA y con forwarders para cada operación.",
     "datos": {
       "origen": {
         "rotulo": "Origen",
         "valor": "Mar del Plata, Argentina"
       },
-      "estructura": {
-        "rotulo": "Estructura legal",
-        "valor": "Estados Unidos"
-      },
       "red": {
         "rotulo": "Red",
-        "valor": "Exportadores habilitados por SENASA"
+        "valor": "Frigoríficos habilitados por SENASA"
       },
       "respuesta": {
         "rotulo": "Respuesta",
@@ -191,8 +187,17 @@
       "etiqueta": "Mar del Plata, en fotos",
       "irA": "Ver la foto {numero} de {total}"
     },
-    "elefanteTitulo": "El elefante no olvida. Nosotros tampoco.",
+    "elefanteTitulo": "El elefante nunca olvida",
     "elefanteTexto": "Phantus sale de elephantus. El elefante es memoria y trabajo en equipo que sostienen sus lazos toda la vida: un vínculo no se agota en una venta.",
+    "proceso": {
+      "titulo": "Cómo trabajamos",
+      "pasos": {
+        "frigorifico": "Buscamos el frigorífico habilitado según tu especificación.",
+        "oferta": "Conseguimos la oferta y coordinamos muestras.",
+        "documentacion": "Acompañamos la documentación de exportación.",
+        "traslado": "Si hace falta, ofrecemos el traslado hasta destino con forwarders."
+      }
+    },
     "valoresTitulo": "En qué nos apoyamos",
     "valores": {
       "confianza": "Cada operación tiene un nombre y una cara, y sabés siempre cuál.",
@@ -227,7 +232,7 @@
     "origen": {
       "titulo": "De dónde sale",
       "texto": "Mar del Plata es el principal puerto pesquero de la Argentina: acá se descarga, se procesa y se embarca todo el año.",
-      "detalle": "Trabajamos con exportadores habilitados por SENASA, elegidos uno por uno. No tomamos posesión de la mercadería ni operamos como planta.",
+      "detalle": "Trabajamos con frigoríficos habilitados por SENASA, elegidos uno por uno. No tomamos posesión de la mercadería ni operamos como planta.",
       "alt": "Flota pesquera amarrada en el puerto de Mar del Plata."
     },
     "destino": {
