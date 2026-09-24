@@ -1,9 +1,8 @@
 import { useTranslations } from 'next-intl';
-import EnlaceDeSeccion from '@/components/layout/EnlaceDeSeccion';
 import NavegacionDeSecciones from '@/components/layout/NavegacionDeSecciones';
 import Container from '@/components/ui/Container';
 import Logo from '@/components/ui/Logo';
-import { SECCIONES_DEL_PIE, SECCION_CONTACTO } from '@/content/secciones';
+import { SECCIONES_DEL_PIE } from '@/content/secciones';
 import { LEGALES, RUTA_DE_LEGAL } from '@/content/legales';
 import { Link } from '@/i18n/navigation';
 
@@ -57,18 +56,21 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h2 className="text-eyebrow uppercase texto-suave">{t('contacto')}</h2>
             <p className="texto-suave">{t('canal')}</p>
+            {/* **Acá iba un "Escribinos" al formulario y se sacó por pedido.**
+                Era el mismo destino que la entrada `Contacto` de la columna de
+                navegación, dos columnas a la izquierda: el mismo enlace dos
+                veces en la misma franja. La clave `pie.escribirnos` quedó sin
+                consumidor y no se borró.
+
+                La línea de arriba sigue siendo cierta —nombra el formulario y
+                el correo— porque al formulario se sigue llegando desde el pie,
+                por esa entrada de navegación. */}
             <a
               href={`mailto:${t('correo')}`}
               className="w-fit break-all font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
             >
               {t('correo')}
             </a>
-            <EnlaceDeSeccion
-              seccion={SECCION_CONTACTO}
-              className="w-fit font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
-            >
-              {t('escribirnos')}
-            </EnlaceDeSeccion>
           </div>
         </div>
 
