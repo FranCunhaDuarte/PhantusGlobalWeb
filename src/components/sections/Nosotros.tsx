@@ -4,8 +4,7 @@ import foto from '@/imagenes/nosotros-hero.jpg';
 import FondoDeApertura from '@/components/hero/FondoDeApertura';
 import ListaDeCredenciales from '@/components/nosotros/ListaDeCredenciales';
 import Logo from '@/components/ui/Logo';
-import PasoDelProceso from '@/components/proceso/PasoDelProceso';
-import { PASOS_DE_NOSOTROS } from '@/content/proceso';
+import PasosDeNosotros from '@/components/nosotros/PasosDeNosotros';
 import Section from '@/components/ui/Section';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -101,25 +100,15 @@ export default function Nosotros() {
           ocupara**: era el crema que separaba la banda de credenciales de la
           tarjeta de la ciudad, que son las dos crema elevado. Sin nada en el
           medio, la página dejaba dos límites del mismo tono pegados. */}
-      <Section fondo="crema">
-        {/* Cuatro pasos, cada uno una frase y sin título propio: es lo que mandó
-            el cliente y no se le inventa un nombre a cada uno. Por eso
-            `PasoDelProceso` va sin `titulo`; con él, el paso emite un `h2` y
-            acá abajo de otro `h2` haría falta bajarlo de nivel.
+      {/* **No reemplaza a `/como-trabajamos`, que sigue con sus cinco pasos** y
+          su detalle. Esto es el resumen; que convivan las dos listas es una
+          tensión anotada en `PASOS_DE_NOSOTROS`.
 
-            **No reemplaza a `/como-trabajamos`, que sigue con sus cinco pasos**
-            y su detalle. Esto es el resumen; que convivan las dos listas es una
-            tensión anotada en `PASOS_DE_NOSOTROS`. */}
-        <SectionHeading>{t('proceso.titulo')}</SectionHeading>
-        <ol className="mt-8 border-b borde-seccion">
-          {PASOS_DE_NOSOTROS.map((paso, indice) => (
-            <PasoDelProceso
-              key={paso}
-              orden={indice + 1}
-              texto={t(`proceso.pasos.${paso}`)}
-            />
-          ))}
-        </ol>
+          **Y no reusa `PasoDelProceso`**, que es la pila de renglones de esa
+          página: allá cada paso tiene título y párrafo, y acá son una frase
+          cada uno. El porqué del dos por dos está en `PasosDeNosotros`. */}
+      <Section fondo="crema">
+        <PasosDeNosotros />
       </Section>
 
       {/* La tarjeta es el bloque entero: se trae adentro su propio titular y su

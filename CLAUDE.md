@@ -1329,6 +1329,17 @@ conservó del planteo viejo.
 > y más detalle. Es una duplicación real, no un descuido: si hay que unificar, lo
 > que se decide es cuál de las dos listas queda. Ver `PASOS_DE_NOSOTROS`.
 >
+> **Va como tarjeta y en dos por dos** (`PasosDeNosotros`), y no reusa
+> `PasoDelProceso`. Empezó reusándolo y no servía: esa es una pila de renglones a
+> ancho completo, y funciona allá porque cada paso tiene título y párrafo. Acá
+> son una frase cada uno, y en un renglón de 1088 px una oración de diez palabras
+> queda flotando al lado de un número. Dos por dos arregla la medida —cada frase
+> en 398 px— y la forma, porque un cuadro de cuatro se lee como un proceso y una
+> pila de cuatro renglones, no. El `Panel` en crema elevado sobre la sección
+> crema es la misma inversión del formulario de contacto, y hace falta: las dos
+> vecinas son piezas con borde propio, así que suelto el bloque quedaba como el
+> único tramo de texto desnudo de la página.
+>
 > **Y el lema de acá no es el del pie.** El pie lleva `marca.slogan`, que va en
 > inglés en los dos idiomas porque se trata como un logotipo; éste es el titular
 > del bloque del elefante y sí está traducido. Decía "El elefante no olvida.
