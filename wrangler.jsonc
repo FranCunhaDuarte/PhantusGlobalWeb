@@ -51,12 +51,19 @@
 
     // Cuántos saltos hay delante para leer `x-forwarded-for`. Cloudflare
     // agrega la IP del visitante al final de la cabecera, así que uno.
-    "CONTACTO_PROXIES_DE_CONFIANZA": "1"
+    "CONTACTO_PROXIES_DE_CONFIANZA": "1",
+
+    // Las dos casillas del formulario van acá y no en el panel: cada deploy
+    // reemplaza las variables de texto del Worker por las de este archivo, así
+    // que una cargada sólo en el panel se borra en la próxima publicación.
+    // No son secretas —el destino está publicado en el sitio—. El remitente
+    // tiene que ser de un dominio verificado en Resend.
+    "CONTACTO_DESTINO": "sales@phantusglobal.com",
+    "CONTACTO_REMITENTE": "Phantus Global <web@phantusglobal.com>"
   }
 
-  // RESEND_API_KEY, CONTACTO_DESTINO y CONTACTO_REMITENTE **no van acá**: este
-  // archivo se commitea. Se cargan con `wrangler secret put <nombre>`, que las
-  // guarda cifradas del lado de Cloudflare. Mientras falten, la acción de
-  // contacto no falla: arma el mail, lo sanitiza y lo escribe al log como
-  // envío simulado.
+  // RESEND_API_KEY **no va acá**: este archivo se commitea. Se carga como
+  // secreto —en el panel o con `wrangler secret put RESEND_API_KEY`— y los
+  // secretos sí sobreviven al deploy. Mientras falte, la acción de contacto no
+  // falla: arma el mail, lo sanitiza y lo escribe al log como envío simulado.
 }
