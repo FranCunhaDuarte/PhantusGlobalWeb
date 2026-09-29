@@ -53,7 +53,12 @@ export default function Contacto() {
           <CanalesDeContacto className="mt-4" />
         </div>
 
-        <Panel fondo={FONDO} className="max-w-4xl p-6 sm:p-9 xl:max-w-none">
+        {/* Columna para que la confirmación de envío, que es más baja que el
+            formulario, se pueda centrar en el alto que le queda al panel. */}
+        <Panel
+          fondo={FONDO}
+          className="flex max-w-4xl flex-col p-6 sm:p-9 xl:max-w-none"
+        >
           <FormularioDeContacto />
         </Panel>
       </div>

@@ -98,8 +98,8 @@
       "correo": "sales@phantusglobal.com",
       "tipo": {
         "etiqueta": "Tipo de consulta",
-        "compra": "Quiero importar",
-        "venta": "Exporto desde Argentina",
+        "compra": "Soy importador",
+        "venta": "Soy exportador",
         "otro": "Otra consulta",
         "vacio": "Elegí una opción"
       },
@@ -140,9 +140,9 @@
         }
       },
       "exito": {
+        "rotulo": "Consulta enviada",
         "titulo": "Recibimos tu consulta.",
-        "texto": "Te contestamos por correo en 24 a 48 horas hábiles, a la dirección que dejaste. Si no llega nada, revisá el correo no deseado antes de volver a escribir.",
-        "otra": "Escribir otra consulta"
+        "texto": "Te respondemos a <b>{correo}</b> en 24 a 48 horas hábiles."
       },
       "rechazo": {
         "limite": "Nos llegaron varias consultas tuyas seguidas. Esperá unos minutos y volvé a intentar.",

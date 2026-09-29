@@ -98,8 +98,8 @@
       "correo": "sales@phantusglobal.com",
       "tipo": {
         "etiqueta": "Enquiry type",
-        "compra": "I want to import",
-        "venta": "I export from Argentina",
+        "compra": "I'm an importer",
+        "venta": "I'm an exporter",
         "otro": "Something else",
         "vacio": "Choose an option"
       },
@@ -140,9 +140,9 @@
         }
       },
       "exito": {
+        "rotulo": "Enquiry sent",
         "titulo": "We got your enquiry.",
-        "texto": "We will answer by email within 24 to 48 business hours, at the address you left. If nothing arrives, check your spam folder before writing again.",
-        "otra": "Send another enquiry"
+        "texto": "We will reply to <b>{correo}</b> within 24 to 48 business hours."
       },
       "rechazo": {
         "limite": "We received several enquiries from you in a row. Give it a few minutes and try again.",

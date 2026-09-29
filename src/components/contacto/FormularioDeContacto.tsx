@@ -54,6 +54,9 @@ const VACIO: Valores = {
   email: ''
 };
 
+/** Cuánto queda a la vista la confirmación antes de volver al formulario. */
+const DURACION_DE_LA_CONFIRMACION = 10_000;
+
 /**
  * Los campos son controlados por dos motivos: React reinicia un formulario no
  * controlado en cuanto termina la acción, y lo que escribió alguien no se puede
@@ -140,16 +143,15 @@ export default function FormularioDeContacto() {
     } else if (estado.estado === 'enviado') {
       // Tras un envío exitoso el botón pulsado se desmonta con el formulario.
       // El foco va al título de la confirmación: es el texto que dice qué
-      // pasó, y de ahí se sigue tabulando al botón de escribir otra. Si el
-      // envío ya fue descartado, la confirmación no está montada, la ref es
-      // nula y el foco lo mueve el efecto de abajo.
+      // pasó. Si el envío ya fue descartado, la confirmación no está montada,
+      // la ref es nula y el foco lo mueve el efecto de abajo.
       enfocarConAnillo(tituloDeExito.current);
     }
   }, [estado]);
 
-  // Al volver al formulario, el botón que se acaba de pulsar deja de existir:
-  // sin esto el foco se cae al documento y quien navega con teclado se pierde.
-  // El primer control es el tipo de consulta, que conserva la preselección.
+  // Al volver al formulario, el título de la confirmación deja de existir: sin
+  // esto el foco se cae al documento y quien navega con teclado se pierde. El
+  // primer control es el tipo de consulta, que conserva la preselección.
   useEffect(() => {
     if (!volviendoAlFormulario.current) return;
     volviendoAlFormulario.current = false;
@@ -164,11 +166,23 @@ export default function FormularioDeContacto() {
     setValores((previos) => ({ ...previos, tipo }));
   }, []);
 
-  function escribirOtra() {
-    if (estado.estado === 'enviado') setDescartado(estado.intento);
-    setValores({ ...VACIO, tipo: preseleccion });
-    volviendoAlFormulario.current = true;
-  }
+  /**
+   * La confirmación no tiene botón de volver: pasado un rato el formulario se
+   * rearma solo, vacío y con la preselección de la query. El foco se devuelve
+   * al primer campo **sólo si seguía en el título**; si el visitante ya se fue
+   * a otra parte de la página, moverlo lo haría saltar de vuelta hasta acá.
+   */
+  const intentoEnviado = enviado ? estado.intento : 0;
+  useEffect(() => {
+    if (!intentoEnviado) return;
+    const temporizador = setTimeout(() => {
+      volviendoAlFormulario.current =
+        document.activeElement === tituloDeExito.current;
+      setDescartado(intentoEnviado);
+      setValores({ ...VACIO, tipo: preseleccion });
+    }, DURACION_DE_LA_CONFIRMACION);
+    return () => clearTimeout(temporizador);
+  }, [intentoEnviado, preseleccion]);
 
   // El éxito no se anuncia por acá: el foco se mueve al título de la
   // confirmación y el lector ya lo lee al recibirlo. Repetirlo en la región
@@ -193,10 +207,12 @@ export default function FormularioDeContacto() {
       {enviado ? (
         <ConfirmacionDeEnvio
           refDelTitulo={tituloDeExito}
+          rotulo={t('exito.rotulo')}
           titulo={t('exito.titulo')}
-          texto={t('exito.texto')}
-          otra={t('exito.otra')}
-          alEscribirOtra={escribirOtra}
+          texto={t.rich('exito.texto', {
+            correo: valores.email.trim(),
+            b: (partes) => <strong className="font-semibold">{partes}</strong>
+          })}
         />
       ) : (
         <form
