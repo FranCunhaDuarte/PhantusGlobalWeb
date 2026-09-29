@@ -150,7 +150,11 @@
       },
       "mail": {
         "titulo": "Nueva consulta desde phantusglobal.com",
+        "eyebrow": "Nueva consulta desde el sitio",
         "asunto": "{tipo}: consulta de {nombre}",
+        "responder": "Responder a {nombre}",
+        "pie": "Llegó por el formulario de contacto de phantusglobal.com.",
+        "logoAlt": "Phantus Global",
         "tipos": {
           "compra": "Importador",
           "venta": "Exportador",
@@ -163,7 +167,8 @@
           "pais": "País",
           "email": "Correo",
           "idioma": "Idioma del sitio",
-          "mensaje": "Mensaje"
+          "mensaje": "Mensaje",
+          "recibida": "Recibida"
         }
       }
     }

@@ -72,6 +72,8 @@ export async function enviarConsulta(
     armarMail({
       datos: validado.data,
       idiomaDelVisitante,
+      idiomaDeLaCasilla: IDIOMA_DE_LA_CASILLA,
+      recibida: new Date(),
       t
     })
   );
