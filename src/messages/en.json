@@ -153,7 +153,6 @@
         "eyebrow": "New enquiry from the website",
         "asunto": "{tipo}: enquiry from {nombre}",
         "responder": "Reply to {nombre}",
-        "pie": "Sent through the contact form on phantusglobal.com.",
         "logoAlt": "Phantus Global",
         "tipos": {
           "compra": "Importer",

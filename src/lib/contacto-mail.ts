@@ -184,7 +184,6 @@ ${filas
 </tr></table></td></tr>
 
 </table>
-<p style="margin:20px 0 0;max-width:600px;font:400 12px/1.5 ${FUENTE};color:${COLOR.inkMuted}">${escapar(t('pie'))}</p>
 </td></tr>
 </table>
 </body>
