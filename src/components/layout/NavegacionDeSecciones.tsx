@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import EnlaceDeSeccion from '@/components/layout/EnlaceDeSeccion';
 import { SECCIONES_DEL_HEADER, type IdSeccion } from '@/content/secciones';
 import { clases } from '@/lib/clases';
+import Punta from '@/components/ui/Punta';
 
 type NavegacionDeSeccionesProps = {
   /** Nombre accesible del landmark: hay más de un `nav` por página. */
@@ -84,23 +85,5 @@ export default function NavegacionDeSecciones({
         ))}
       </ul>
     </nav>
-  );
-}
-
-/** Se corre al apuntar: el mismo gesto que el subrayado en la barra. */
-function Punta() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="size-5 flex-none transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 12h13M13 6l6 6-6 6" />
-    </svg>
   );
 }

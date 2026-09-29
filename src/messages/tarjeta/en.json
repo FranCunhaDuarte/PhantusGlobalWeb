@@ -1,0 +1,35 @@
+{
+  "metaTitle": "Leandro Fenoy · Phantus Global",
+  "metaDescription": "Argentine seafood, meat and chicken.",
+  "nombre": "Leandro Fenoy",
+  "cargo": "Broker",
+  "bajada": "Argentine seafood, meat and chicken.",
+  "contacto": "Contact",
+  "enlaces": {
+    "whatsapp": {
+      "rotulo": "WhatsApp",
+      "dato": "+54 9 223 683-8585"
+    },
+    "correo": {
+      "rotulo": "Email",
+      "dato": "leandro@phantusglobal.com"
+    },
+    "linkedin": {
+      "rotulo": "LinkedIn",
+      "dato": "Connect on LinkedIn"
+    },
+    "sitio": {
+      "rotulo": "Website",
+      "dato": "phantusglobal.com"
+    }
+  },
+  "wechat": {
+    "rotulo": "WeChat",
+    "mostrar": "Show QR code",
+    "ocultar": "Hide QR code",
+    "qrAlt": "WeChat QR code to add Leandro Fenoy",
+    "texto": "Scan with WeChat, or search my ID:",
+    "id": "wxid_3tjpdgdyoqdb12"
+  },
+  "ubicacion": "Mar del Plata, Argentina"
+}
