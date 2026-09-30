@@ -29,7 +29,9 @@
     "ocultar": "Hide QR code",
     "qrAlt": "WeChat QR code to add Leandro Fenoy",
     "texto": "Scan with WeChat, or search my ID:",
-    "id": "wxid_3tjpdgdyoqdb12"
+    "id": "wxid_3tjpdgdyoqdb12",
+    "copiar": "Copy ID",
+    "copiado": "ID copied"
   },
   "ubicacion": "Mar del Plata, Argentina"
 }

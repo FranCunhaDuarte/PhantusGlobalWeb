@@ -36,8 +36,12 @@ export const metadata: Metadata = {
 /**
  * La estructura es la de la tarjeta que se pasó —logo, nombre, cargo, bajada,
  * cinco canales y la ciudad al pie— y el dibujo es el del sitio: Montserrat
- * sola, sin esquinas redondeadas, filas con pelo en vez de cajas y los colores
- * resueltos por el fondo.
+ * sola, sin esquinas redondeadas y los colores resueltos por el fondo.
+ *
+ * **El fondo es blanco, que no es de la paleta**, y lo pidió Franco: es lo que
+ * deja que los canales se lean como cajas en el crema de la marca. El panel
+ * declara `crema-elevado` para que texto, línea y logo se resuelvan contra un
+ * fondo claro, y `bg-white` le pisa sólo el color de superficie.
  *
  * **Al pie no va el isotipo que traía el original**: estaba a 18 px y el manual
  * pone su mínimo en 50. A 50, con su área de seguridad, pesaba tanto como el
@@ -46,8 +50,8 @@ export const metadata: Metadata = {
 export default function TarjetaDeLeandro() {
   return (
     <Panel
-      fondo="crema"
-      className="flex flex-1 justify-center bg-surface px-4 pt-12 pb-10 md:pt-18"
+      fondo="crema-elevado"
+      className="flex flex-1 justify-center bg-white px-4 pt-12 pb-10 md:pt-18"
     >
       <main className="flex w-full max-w-md flex-col">
         <header className="flex flex-col items-center text-center">
@@ -62,7 +66,7 @@ export default function TarjetaDeLeandro() {
 
         <nav
           aria-label={t('contacto')}
-          className="mt-10 flex flex-col border-t border-(color:--fondo-separador)"
+          className="mt-10 flex flex-col gap-3"
         >
           {ORDEN_DE_ENLACES.map((enlace) => (
             <a
@@ -87,6 +91,8 @@ export default function TarjetaDeLeandro() {
             qrAlt={t('wechat.qrAlt')}
             texto={t('wechat.texto')}
             id={t('wechat.id')}
+            copiar={t('wechat.copiar')}
+            copiado={t('wechat.copiado')}
           />
         </nav>
 
