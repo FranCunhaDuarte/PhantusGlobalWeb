@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "assets:brand": "node scripts/generar-assets.mjs",
     "assets:og": "node scripts/generar-og.mjs",
+    "assets:firma": "node scripts/generar-firma.mjs",
     "cf:build": "opennextjs-cloudflare build",
     "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
