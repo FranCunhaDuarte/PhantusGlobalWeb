@@ -36,8 +36,9 @@ el conocimiento técnico del producto —tallas, formatos, rendimientos y
 temporadas por especie— y tiene **un responsable directo**, del primer contacto
 a la llegada del contenedor.
 
-Mercados de destino, y son estos cuatro: **Estados Unidos, México, Europa y
-China**. Cumplimiento por mercado: **FDA, HACCP y SIMP** para Estados Unidos,
+Mercados de destino, y son estos cinco: **Estados Unidos, México, Brasil,
+Europa y Asia** (Brasil entró el 31/10; Asia es China nombrada por la región,
+igual que Europa). Cumplimiento por mercado: **FDA, HACCP y SIMP** para Estados Unidos,
 con documentación sanitaria y de origen. Formatos: **IQF, bloque, HOSO, HLSO,
 filet**, con talla, calibre, rendimiento y packing por operación. Incoterms:
 **FOB, CFR, CIF**. Plazo de respuesta publicado: **24 a 48 horas hábiles**.

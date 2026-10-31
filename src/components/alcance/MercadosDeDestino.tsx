@@ -2,7 +2,11 @@ import { useTranslations } from 'next-intl';
 import { MERCADOS } from '@/content/mercados';
 
 /**
- * Los cuatro mercados de destino, en grilla sobre tinta.
+ * Los cinco mercados de destino, en grilla sobre tinta.
+ *
+ * **La grilla va de a tres en `sm` y de a cinco en `lg`**: con cinco mercados,
+ * las cuatro columnas de antes dejaban uno solo en la segunda fila. De a tres
+ * quedan tres y dos, que se lee como una lista y no como un olvido.
  *
  * ## Reemplazó a un árbol que dibujaba un rectángulo vacío
  *
@@ -34,9 +38,9 @@ import { MERCADOS } from '@/content/mercados';
  * "Estados" arriba y "Unidos" solo abajo; con él, las dos líneas se reparten.
  *
  * **El cumplimiento sigue debajo de la grilla y no adentro de su celda.** De los
- * cuatro mercados hay estándar publicado de uno solo, así que meterlo en la
- * celda de Estados Unidos deja tres celdas visiblemente incompletas y sugiere
- * que a los otros tres les falta el dato. Abajo, la nota arranca nombrando el
+ * cinco mercados hay estándar publicado de uno solo, así que meterlo en la
+ * celda de Estados Unidos deja cuatro celdas visiblemente incompletas y sugiere
+ * que a los otros cuatro les falta el dato. Abajo, la nota arranca nombrando el
  * mercado y la asimetría se lee como lo que es: hay dato de uno.
  *
  * Va como `<ul>` porque es una enumeración: el lector de pantalla anuncia
@@ -55,7 +59,7 @@ export default function MercadosDeDestino({
     <div>
       <h2 className="text-eyebrow uppercase texto-suave">{etiqueta}</h2>
 
-      <ul className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
         {MERCADOS.map((mercado) => (
           <li key={mercado} className="border-t borde-seccion pt-6">
             <p className="text-titulo leading-tight text-balance">

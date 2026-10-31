@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Phantus Global | Bróker de pescado, mariscos, carne y pollo",
-    "description": "Abastecemos a importadores de Estados Unidos, México, Europa y Asia desde frigoríficos argentinos habilitados por SENASA. Langostino, merluza y calamar.",
+    "description": "Abastecemos a importadores de Estados Unidos, México, Brasil, Europa y Asia desde frigoríficos argentinos habilitados por SENASA. Langostino, merluza y calamar.",
     "template": "%s | Phantus Global",
     "ogAlt": "Phantus Global, bróker de pescado, mariscos y carnes con base en Mar del Plata, Argentina"
   },
@@ -192,7 +192,7 @@
       },
       "mercados": {
         "rotulo": "Mercados",
-        "valor": "Estados Unidos, México, Europa y Asia"
+        "valor": "Estados Unidos, México, Brasil, Europa y Asia"
       }
     },
     "ciudad": {
@@ -229,8 +229,8 @@
     }
   },
   "mercados": {
-    "metaTitle": "Mercados: Estados Unidos, México, Europa y Asia",
-    "metaDescription": "Del puerto de Mar del Plata a Estados Unidos, México, Europa y Asia. Cada mercado contra su estándar: FDA, HACCP y SIMP para Estados Unidos.",
+    "metaTitle": "Mercados: Estados Unidos, México, Brasil, Europa y Asia",
+    "metaDescription": "Del puerto de Mar del Plata a Estados Unidos, México, Brasil, Europa y Asia. Cada mercado contra su estándar: FDA, HACCP y SIMP para Estados Unidos.",
     "eyebrow": "Alcance",
     "titulo": "Del puerto de Mar del Plata al mundo.",
     "entrada": "Sabés de dónde sale la mercadería y contra qué estándar llega a tu mercado.",
@@ -238,6 +238,7 @@
     "mercados": {
       "estados-unidos": "Estados Unidos",
       "mexico": "México",
+      "brasil": "Brasil",
       "europa": "Europa",
       "asia": "Asia"
     },
@@ -249,7 +250,7 @@
     },
     "destino": {
       "titulo": "Hasta dónde llega",
-      "texto": "Cuatro mercados, cada uno con su estándar. La operación se arma contra el que corresponde al destino.",
+      "texto": "Cinco mercados, cada uno con su estándar. La operación se arma contra el que corresponde al destino.",
       "alt": "Buque de carga saliendo, visto desde la costa."
     },
     "contacto": {

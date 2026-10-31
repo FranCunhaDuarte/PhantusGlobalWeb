@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Phantus Global | Argentine seafood, meat and poultry broker",
-    "description": "We supply importers in the United States, Mexico, Europe and Asia from SENASA-approved Argentine plants. Red shrimp, hake, squid and croaker.",
+    "description": "We supply importers in the United States, Mexico, Brazil, Europe and Asia from SENASA-approved Argentine plants. Red shrimp, hake, squid and croaker.",
     "template": "%s | Phantus Global",
     "ogAlt": "Phantus Global, a seafood and meat trade broker based in Mar del Plata, Argentina"
   },
@@ -192,7 +192,7 @@
       },
       "mercados": {
         "rotulo": "Markets",
-        "valor": "United States, Mexico, Europe and Asia"
+        "valor": "United States, Mexico, Brazil, Europe and Asia"
       }
     },
     "ciudad": {
@@ -229,8 +229,8 @@
     }
   },
   "mercados": {
-    "metaTitle": "Markets: United States, Mexico, Europe and Asia",
-    "metaDescription": "From the port of Mar del Plata to the United States, Mexico, Europe and Asia. Each market to its own standard: FDA, HACCP and SIMP for the US.",
+    "metaTitle": "Markets: United States, Mexico, Brazil, Europe and Asia",
+    "metaDescription": "From the port of Mar del Plata to the United States, Mexico, Brazil, Europe and Asia. Each market to its own standard: FDA, HACCP and SIMP for the US.",
     "eyebrow": "Where we reach",
     "titulo": "From the port of Mar del Plata to the world.",
     "entrada": "You know where the goods ship from, and to what standard they land in your market.",
@@ -238,6 +238,7 @@
     "mercados": {
       "estados-unidos": "United States",
       "mexico": "Mexico",
+      "brasil": "Brazil",
       "europa": "Europe",
       "asia": "Asia"
     },
@@ -249,7 +250,7 @@
     },
     "destino": {
       "titulo": "How far it goes",
-      "texto": "Four markets, each with its own standard. The transaction is built to whichever one applies.",
+      "texto": "Five markets, each with its own standard. The transaction is built to whichever one applies.",
       "alt": "A cargo ship heading out, seen from the shore."
     },
     "contacto": {
