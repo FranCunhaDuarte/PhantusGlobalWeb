@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Phantus Global | Bróker de pescado, mariscos, carne y pollo",
+    "title": "Phantus Global | Trader de pescado, mariscos, carne y pollo",
     "description": "Abastecemos a importadores de Estados Unidos, México, Brasil, Europa y Asia desde frigoríficos argentinos habilitados por SENASA. Langostino, merluza y calamar.",
     "template": "%s | Phantus Global",
-    "ogAlt": "Phantus Global, bróker de pescado, mariscos y carnes con base en Mar del Plata, Argentina"
+    "ogAlt": "Phantus Global, trader de pescado, mariscos y carnes con base en Mar del Plata, Argentina"
   },
   "marca": {
     "nombre": "Phantus Global",
@@ -48,9 +48,9 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Bróker de comercio internacional — Argentina",
+      "eyebrow": "Trader de comercio internacional — Argentina",
       "titulo": "Pescados, mariscos, carne y pollo argentinos",
-      "bajada": "Empresa broker de Mar del Plata, trabajando con frigoríficos habilitados por SENASA.",
+      "bajada": "Trader de Mar del Plata: le compramos a frigoríficos habilitados por SENASA y vendemos al exterior.",
       "rubros": {
         "pescado": "Pescado y mariscos",
         "pollo": "Pollo",
@@ -69,7 +69,7 @@
     },
     "nosotros": {
       "titulo": "Quién <destacado>responde</destacado> por la operación.",
-      "texto": "Un bróker con origen en Argentina. Cada operación tiene un responsable directo, del primer contacto a la llegada del contenedor.",
+      "texto": "Un trader con origen en Argentina. Cada operación tiene un responsable directo, del primer contacto a la llegada del contenedor.",
       "cta": "Quiénes somos"
     },
     "carnes": {
@@ -84,7 +84,7 @@
     },
     "comoTrabajamos": {
       "titulo": "Cinco pasos, del sourcing <destacado>al cierre</destacado>.",
-      "texto": "Elegimos exportador y producto, armamos la ficha técnica, negociamos precio e Incoterm y seguimos booking y documentación hasta el cierre. El pago va directo entre exportador e importador.",
+      "texto": "Elegimos exportador y producto, armamos la ficha técnica, negociamos precio e Incoterm y seguimos booking y documentación hasta el cierre. Compramos la mercadería y te facturamos nosotros.",
       "cta": "Cómo trabajamos"
     },
     "contacto": {
@@ -173,10 +173,10 @@
     }
   },
   "nosotros": {
-    "metaTitle": "Nosotros: bróker argentino en Mar del Plata",
-    "metaDescription": "Bróker de pescado, mariscos y carnes con base en Mar del Plata. Red de frigoríficos habilitados por SENASA y un responsable directo en cada operación.",
+    "metaTitle": "Nosotros: trader argentino en Mar del Plata",
+    "metaDescription": "Trader de pescado, mariscos y carnes con base en Mar del Plata. Compramos a frigoríficos habilitados por SENASA y cada operación tiene un responsable directo.",
     "titulo": "Quiénes somos.",
-    "entrada": "Un broker argentino con base en el puerto de Mar del Plata. Trabajamos con una red de frigoríficos habilitados por SENASA y con forwarders para cada operación.",
+    "entrada": "Un trader argentino con base en el puerto de Mar del Plata. Le compramos a una red de frigoríficos habilitados por SENASA y trabajamos con forwarders en cada operación.",
     "datos": {
       "origen": {
         "rotulo": "Origen",
@@ -211,7 +211,7 @@
       "titulo": "Cómo trabajamos",
       "pasos": {
         "frigorifico": "Buscamos el frigorífico habilitado según tu especificación",
-        "oferta": "Conseguimos la oferta y coordinamos muestras",
+        "oferta": "Te cotizamos y coordinamos muestras",
         "documentacion": "Acompañamos la documentación de exportación",
         "traslado": "Si lo necesitás, gestionamos el transporte hasta tu destino con forwarders aliados"
       }
@@ -219,7 +219,7 @@
     "valoresTitulo": "En qué nos apoyamos",
     "valores": {
       "confianza": "Cada operación tiene un nombre y una cara, y sabés siempre cuál.",
-      "transparencia": "Cobramos una comisión sobre la operación. El dinero no pasa por nuestras manos.",
+      "transparencia": "Compramos y vendemos nosotros: tenés una sola contraparte y un solo contrato.",
       "compromiso": "Nos quedamos hasta el cierre, también cuando se complica."
     },
     "contacto": {
@@ -245,7 +245,7 @@
     "origen": {
       "titulo": "De dónde sale",
       "texto": "Mar del Plata es el principal puerto pesquero de la Argentina: acá se descarga, se procesa y se embarca todo el año.",
-      "detalle": "Trabajamos con frigoríficos habilitados por SENASA, elegidos uno por uno. No tomamos posesión de la mercadería ni operamos como planta.",
+      "detalle": "Le compramos a frigoríficos habilitados por SENASA, elegidos uno por uno. No operamos como planta.",
       "alt": "Flota pesquera amarrada en el puerto de Mar del Plata."
     },
     "destino": {
@@ -263,7 +263,7 @@
   },
   "comoTrabajamos": {
     "metaTitle": "Cómo trabajamos: los cinco pasos",
-    "metaDescription": "Sourcing, especificación técnica, negociación, logística y cierre. Cobramos comisión sobre la operación concretada y el pago no pasa por nosotros.",
+    "metaDescription": "Sourcing, especificación técnica, negociación, logística y cierre. Compramos la mercadería y te la vendemos: una sola contraparte en toda la operación.",
     "titulo": "De la primera consulta al cierre.",
     "entrada": "Cinco pasos, sin vueltas y sin letra chica.",
     "pasos": {
@@ -285,11 +285,11 @@
       },
       "cierre": {
         "titulo": "Cierre",
-        "texto": "El pago va directo entre exportador e importador. Nosotros no tocamos el dinero de la operación."
+        "texto": "Te facturamos nosotros y el pago pasa por nosotros: le pagamos al frigorífico y vos tratás con una sola contraparte."
       }
     },
-    "comisionEyebrow": "Cómo ganamos",
-    "comision": "Cobramos una comisión sobre la operación concretada: nuestro ingreso depende de que cierre bien. En ningún momento tomamos posesión de la mercadería, y el pago va directo entre exportador e importador.",
+    "modeloEyebrow": "Cómo operamos",
+    "modelo": "Le compramos la mercadería al frigorífico y te la vendemos: la operación es nuestra de punta a punta. Un solo contrato, una sola factura y una sola contraparte.",
     "contacto": {
       "titulo": "Empecemos por el primer paso.",
       "texto": "Contanos qué especie es, en qué formato y en qué volumen. Contestamos en 24 a 48 horas hábiles.",
@@ -422,7 +422,7 @@
         },
         "comerciales": {
           "titulo": "Condiciones comerciales",
-          "texto": "Trabajamos FOB, CFR y CIF. El pago va directo entre exportador e importador: no pasa por nosotros."
+          "texto": "Trabajamos FOB, CFR y CIF. Te facturamos nosotros: una sola contraparte para la mercadería y el pago."
         },
         "cumplimiento": {
           "titulo": "Cumplimiento",
@@ -512,7 +512,7 @@
       "tramos": {
         "objeto": {
           "titulo": "Qué es este sitio",
-          "texto": "phantusglobal.com es el sitio institucional de Phantus Global. Sirve para presentar a qué nos dedicamos, qué productos intermediamos y cómo ponerse en contacto.\n\nNavegarlo no crea ninguna relación comercial ni obliga a nada, ni a vos ni a nosotros. Toda operación se acuerda aparte y por escrito."
+          "texto": "phantusglobal.com es el sitio institucional de Phantus Global. Sirve para presentar a qué nos dedicamos, qué productos comercializamos y cómo ponerse en contacto.\n\nNavegarlo no crea ninguna relación comercial ni obliga a nada, ni a vos ni a nosotros. Toda operación se acuerda aparte y por escrito."
         },
         "catalogo": {
           "titulo": "El catálogo no es una oferta",

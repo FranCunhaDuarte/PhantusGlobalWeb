@@ -5,10 +5,11 @@ import Section from '@/components/ui/Section';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { PASOS } from '@/content/proceso';
 
-// Cómo se gana la plata no va en letra chica ni al pie de la página anterior:
-// es una sección propia, sobre azul y a media medida, con el rótulo arriba y
-// una sola frase abajo.
-const FONDO_COMISION = 'azul';
+// Cómo opera Phantus —compra y revende, una sola contraparte— no va en letra
+// chica: es una sección propia, sobre azul y a media medida, con el rótulo
+// arriba y una sola frase abajo. Fue "Cómo ganamos" mientras la empresa era
+// bróker y cobraba comisión; como trader, cómo gana no se publica.
+const FONDO_DEL_MODELO = 'azul';
 
 export default function ComoTrabajamos() {
   const t = useTranslations('comoTrabajamos');
@@ -39,9 +40,9 @@ export default function ComoTrabajamos() {
         </ol>
       </Section>
 
-      <Section fondo={FONDO_COMISION} medida="angosta">
-        <Eyebrow>{t('comisionEyebrow')}</Eyebrow>
-        <p className="mt-6 text-2xl sm:text-3xl">{t('comision')}</p>
+      <Section fondo={FONDO_DEL_MODELO} medida="angosta">
+        <Eyebrow>{t('modeloEyebrow')}</Eyebrow>
+        <p className="mt-6 text-2xl sm:text-3xl">{t('modelo')}</p>
       </Section>
     </>
   );

@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Phantus Global | Argentine seafood, meat and poultry broker",
+    "title": "Phantus Global | Argentine seafood, meat and poultry trader",
     "description": "We supply importers in the United States, Mexico, Brazil, Europe and Asia from SENASA-approved Argentine plants. Red shrimp, hake, squid and croaker.",
     "template": "%s | Phantus Global",
-    "ogAlt": "Phantus Global, a seafood and meat trade broker based in Mar del Plata, Argentina"
+    "ogAlt": "Phantus Global, a seafood and meat trader based in Mar del Plata, Argentina"
   },
   "marca": {
     "nombre": "Phantus Global",
@@ -48,9 +48,9 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "International trade broker — Argentina",
+      "eyebrow": "International trader — Argentina",
       "titulo": "Argentine seafood, meat and poultry",
-      "bajada": "Independent brokerage in Mar del Plata working with SENASA-approved plants.",
+      "bajada": "Independent trading company in Mar del Plata, buying from SENASA-approved plants.",
       "rubros": {
         "pescado": "Seafood",
         "pollo": "Chicken",
@@ -69,7 +69,7 @@
     },
     "nosotros": {
       "titulo": "Who <destacado>answers</destacado> for the deal.",
-      "texto": "A broker based in Argentina. Every transaction has one person answering for it, from first contact to the container's arrival.",
+      "texto": "A trader based in Argentina. Every transaction has one person answering for it, from first contact to the container's arrival.",
       "cta": "About us"
     },
     "carnes": {
@@ -84,7 +84,7 @@
     },
     "comoTrabajamos": {
       "titulo": "Five steps, from sourcing <destacado>to closing</destacado>.",
-      "texto": "We pick the exporter and the product, build the spec sheet, negotiate price and Incoterm, and follow booking and documentation through to the close. Payment goes direct between exporter and importer.",
+      "texto": "We pick the exporter and the product, build the spec sheet, negotiate price and Incoterm, and follow booking and documentation through to the close. We buy the goods and invoice you directly.",
       "cta": "How we work"
     },
     "contacto": {
@@ -173,10 +173,10 @@
     }
   },
   "nosotros": {
-    "metaTitle": "About us: Argentine broker in Mar del Plata",
-    "metaDescription": "A seafood and meat broker based in Mar del Plata. A network of SENASA-approved plants and one person answering for every transaction.",
+    "metaTitle": "About us: Argentine trader in Mar del Plata",
+    "metaDescription": "A seafood and meat trader based in Mar del Plata. We buy from SENASA-approved plants and one person answers for every transaction.",
     "titulo": "Who we are.",
-    "entrada": "An Argentine broker based at the port of Mar del Plata. We work with a network of SENASA-approved plants and forwarders on every deal.",
+    "entrada": "An Argentine trader based at the port of Mar del Plata. We buy from a network of SENASA-approved plants and work with forwarders on every deal.",
     "datos": {
       "origen": {
         "rotulo": "Based in",
@@ -211,7 +211,7 @@
       "titulo": "How we work",
       "pasos": {
         "frigorifico": "We find the approved plant that matches your specification",
-        "oferta": "We get the offer and coordinate samples",
+        "oferta": "We quote you and coordinate samples",
         "documentacion": "We support the export paperwork",
         "traslado": "If needed, we arrange transport to your destination through partner forwarders"
       }
@@ -219,7 +219,7 @@
     "valoresTitulo": "What we stand on",
     "valores": {
       "confianza": "Every deal has a name and a face behind it, and you always know whose.",
-      "transparencia": "We earn a commission on the deal. The money never passes through us.",
+      "transparencia": "We buy and we sell: you deal with one counterparty and one contract.",
       "compromiso": "We stay until it closes, including when it gets complicated."
     },
     "contacto": {
@@ -245,7 +245,7 @@
     "origen": {
       "titulo": "Where it ships from",
       "texto": "Mar del Plata is Argentina's main fishing port: this is where it is landed, processed and loaded, all year round.",
-      "detalle": "We work with SENASA-approved plants, picked one by one. We do not take title to the goods and we do not operate as a processing plant.",
+      "detalle": "We buy from SENASA-approved plants, picked one by one. We do not operate as a processing plant.",
       "alt": "Fishing fleet moored in the port of Mar del Plata."
     },
     "destino": {
@@ -263,7 +263,7 @@
   },
   "comoTrabajamos": {
     "metaTitle": "How we work: the five steps",
-    "metaDescription": "Sourcing, technical specification, negotiation, logistics and closing. We charge a commission on the closed deal and the payment never passes through us.",
+    "metaDescription": "Sourcing, technical specification, negotiation, logistics and closing. We buy the goods and sell them to you: one counterparty for the whole deal.",
     "titulo": "From the first message to the close.",
     "entrada": "Five steps, no detours and no fine print.",
     "pasos": {
@@ -285,11 +285,11 @@
       },
       "cierre": {
         "titulo": "Closing",
-        "texto": "Payment goes direct between exporter and importer. We never touch the money on the deal."
+        "texto": "We invoice you and the payment comes to us: we pay the plant, and you deal with a single counterparty."
       }
     },
-    "comisionEyebrow": "How we get paid",
-    "comision": "We charge a commission on the deal once it closes: we only earn if it works out. At no point do we take title to the goods, and payment goes direct between exporter and importer.",
+    "modeloEyebrow": "How we operate",
+    "modelo": "We buy the goods from the plant and sell them to you: the deal is ours end to end. One contract, one invoice, one counterparty.",
     "contacto": {
       "titulo": "Let's start with step one.",
       "texto": "Tell us the species, the format and the volume. We answer within 24 to 48 business hours.",
@@ -422,7 +422,7 @@
         },
         "comerciales": {
           "titulo": "Commercial terms",
-          "texto": "We work FOB, CFR and CIF. Payment goes direct between exporter and importer: it never passes through us."
+          "texto": "We work FOB, CFR and CIF. We invoice you directly: one counterparty for the goods and the payment."
         },
         "cumplimiento": {
           "titulo": "Compliance",
@@ -512,7 +512,7 @@
       "tramos": {
         "objeto": {
           "titulo": "What this site is",
-          "texto": "phantusglobal.com is the corporate site of Phantus Global. It exists to explain what we do, which products we broker and how to reach us.\n\nBrowsing it creates no commercial relationship and commits neither you nor us to anything. Every transaction is agreed separately and in writing."
+          "texto": "phantusglobal.com is the corporate site of Phantus Global. It exists to explain what we do, which products we trade and how to reach us.\n\nBrowsing it creates no commercial relationship and commits neither you nor us to anything. Every transaction is agreed separately and in writing."
         },
         "catalogo": {
           "titulo": "The catalogue is not an offer",

@@ -2,7 +2,7 @@
 
 # Phantus Global
 
-Sitio institucional de **Phantus Global**, bróker de comercio internacional de
+Sitio institucional de **Phantus Global**, trader de comercio internacional de
 **pescado, mariscos, carne y pollo argentinos**, con origen en **Mar del Plata,
 Argentina**. **La estructura legal en Estados Unidos ya no se afirma**: estuvo
 como dato en `/nosotros` y como frase en `/mercados`, y el cliente pidió
@@ -23,11 +23,23 @@ organización.
 
 ## Qué hace la empresa
 
-Conecta exportadores argentinos con importadores del exterior y cobra comisión
-por la operación. **No toma posesión de la mercadería**: no compra, no almacena,
-no revende, no opera como planta. Y **tampoco toca el dinero**: el pago va
-directo entre exportador e importador. Eso cambia cómo se escribe todo el copy —
-no somos un exportador ni un trader, somos el nexo.
+**Es trader desde el 03/11, y antes era bróker.** Le compra la mercadería a los
+frigoríficos argentinos y se la vende al importador del exterior: **toma
+posesión**, y **el pago pasa por Phantus** —factura al importador y le paga al
+frigorífico—. Para el comprador eso es una sola contraparte, un solo contrato y
+una sola factura, y ése es el argumento que el copy usa donde antes decía
+"conectamos". **Cómo gana no se publica**, por pedido: el sitio no habla de
+margen ni de comisión. Sigue sin operar como planta.
+
+> **Hasta el 03/11 fue al revés y conviene saberlo al leer lo viejo.** Era
+> bróker: conectaba exportador e importador, cobraba comisión, no tomaba
+> posesión y el pago iba directo entre las partes, y el copy lo decía en una
+> docena de lugares —"el dinero no pasa por nuestras manos", "no tomamos
+> posesión de la mercadería"—. Se reescribieron todos; el bloque "Cómo ganamos"
+> de `/como-trabajamos` pasó a "Cómo operamos" (`comoTrabajamos.modelo*`). Las
+> notas de este archivo que razonan desde "no somos un exportador ni un
+> trader" —la restricción de que el hero no puede decir que exporta, por
+> ejemplo— **ya no valen**.
 
 Trabaja con una **red de frigoríficos argentinos habilitados por SENASA**,
 seleccionados por calidad y cumplimiento normativo. **Decía "exportadores" hasta
@@ -270,9 +282,11 @@ para entenderlo. Ahora la palabra *pescado* está en el titular.
   33 caracteres pasa a tres líneas a 1440 y cuatro a 375, y deja de leerse como
   titular. Ahí murió "Conectamos pescado argentino con el mundo", que era la más
   clara de todas porque suma el verbo del negocio.
-- **No pueden decir que exportan.** Phantus no toma posesión de la mercadería ni
-  toca el dinero. "De exportación" funciona porque **describe la mercadería y no
-  a la empresa**, igual que "calidad de exportación": es el término del rubro.
+- **No podían decir que exportan, y desde el 03/11 sí pueden.** Como bróker,
+  Phantus no tomaba posesión de la mercadería ni tocaba el dinero, así que
+  "exportamos" era falso; "de exportación" funcionaba porque **describe la
+  mercadería y no a la empresa**. Como trader compra y revende, y esa
+  restricción se cae: ya no descarta candidatos.
 - **No puede encerrarse en pescado.** Carnes es unidad de negocio, así que el
   titular dice "alimentos" y el rótulo de arriba nombra las dos —"Bróker de
   pescado, mariscos y carnes"—. Estuvo un rato en "pescado argentino de
